@@ -18,9 +18,9 @@
     {"name":"Shaders","order":6,"path":"folders/Shaders.yy",},
     {"name":"Sounds","order":3,"path":"folders/Sounds.yy",},
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
+    {"name":"Monsters","order":9,"path":"folders/Sprites/Monsters.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"Monsters","order":9,"path":"folders/Sprites/Monsters.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_menu_background","order":3,"path":"sprites/spr_menu_background/spr_menu_background.yy",},
