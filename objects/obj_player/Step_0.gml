@@ -1,3 +1,10 @@
+
+var jump = keyboard_check(vk_up) || keyboard_check(vk_space);
+var onGround = place_meeting(x, y+1, obj_block);
+	//returns 1 if wall to the left, or -1 if wall to the right
+var onWall = place_meeting(x-5, y, obj_block) - place_meeting(x+5, y, obj_block);
+
+
 // Left Movement
 if ((keyboard_check(vk_left) || keyboard_check(ord("A"))) && !instance_place(x-move_speed, y, obj_block)) {
     x -= move_speed;
@@ -18,11 +25,14 @@ if (keyboard_check(vk_up) || keyboard_check(vk_space)) {
     }
 }
 
+var falling;
 //Gravity
 if (place_meeting(x, y + 1, obj_block)) {
     gravity = 0;
+	falling = false;
 } else {
     gravity = 0.28;
+	falling = true;
 }
 
 //Limit vspeed
@@ -65,5 +75,29 @@ if (!climbing) {
         var sword_y = y; 
         instance_create_layer(sword_x, sword_y, "Instances", obj_sword); // Replace "Instances" with the actual layer name if needed
     }
+}
+
+
+movementLock = max(movementLock -1,0);
+
+//sliding down wall
+
+if (jump){
+	if (onWall) {
+		vspeed = jump_height;
+		hspeed = hspeed * 1.1;
+	}
+}
+
+
+if (onWall != 0 && falling == true){
+		//flip sprite
+	image_xscale = onWall;
+		//sprite_index = wallGrapple;
+	vspeed = 1;
+	if (jump){
+		vspeed = jump_height;
+		//hspeed = move_speed * onWall;
+	}
 }
 
