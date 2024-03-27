@@ -31,7 +31,7 @@ if (gamepad != undefined)
 
 	// This checks if the player instance exists, meaning we're in a game level. We're checking for the player instance and not
 	// a specific room like previous conditions, because there can be many game levels with different room names.
-	if (instance_exists(obj_player))
+	if (instance_exists(obj_playerTest))
 	{
 		// This gets the horizontal input from the left stick on the gamepad, which is used for moving left/right.
 		// The input range is from -1 to 1, where <0 is left and >0 is right.
@@ -45,7 +45,7 @@ if (gamepad != undefined)
 			// This block applies to obj_player.
 			// It runs the Key Down - Left event in it, causing the
 			// player to move left.
-			with (obj_player)
+			with (obj_playerTest)
 			{
 				event_perform(ev_keyboard, vk_left);
 			}
@@ -58,7 +58,7 @@ if (gamepad != undefined)
 			// This block applies to obj_player.
 			// It runs the Key Down - Right event in it, causing the
 			// player to move left.
-			with (obj_player)
+			with (obj_playerTest)
 			{
 				event_perform(ev_keyboard, vk_right);
 			}
@@ -70,7 +70,7 @@ if (gamepad != undefined)
 			// This block applies to obj_player.
 			// It runs the Key Down - Left event in it, causing the
 			// player to move left.
-			with (obj_player)
+			with (obj_playerTest)
 			{
 				event_perform(ev_keyboard, vk_left);
 			}
@@ -82,7 +82,7 @@ if (gamepad != undefined)
 			// This block applies to obj_player.
 			// It runs the Key Down - Right event in it, causing the
 			// player to move left.
-			with (obj_player)
+			with (obj_playerTest)
 			{
 				event_perform(ev_keyboard, vk_right);
 			}
@@ -95,7 +95,7 @@ if (gamepad != undefined)
 		{
 			// This block applies to obj_player.
 			// It runs the Key Press - Space event in it, causing the player to jump.
-			with (obj_player)
+			with (obj_playerTest)
 			{
 				event_perform(ev_keypress, vk_space);
 			}
