@@ -14,3 +14,6 @@ defeated_object = obj_player_defeated;
 wall_direction = 0;
 wall_jump_force = 12;
 wall_jumping = false;
+
+
+canDash = true;

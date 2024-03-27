@@ -1,1 +1,0 @@
-wall_direction = 0;
