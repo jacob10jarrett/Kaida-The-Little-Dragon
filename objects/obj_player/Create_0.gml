@@ -17,3 +17,4 @@ wall_jumping = false;
 
 
 canDash = true;
+

@@ -26,3 +26,8 @@ switch (sprite_index)
 		image_index = image_number - 1;
 		break;
 }
+
+if (state.stateOnEnd != undefined){
+		state_set(state.stateOnEnd);
+
+}

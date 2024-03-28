@@ -6,6 +6,8 @@ move_speed = 5;
 // This is applied in the Begin Step event. The friction is reduced when the character is in mid-air.
 friction_power = 0.7;
 
+
+
 // This is the jumping speed of the character.
 jump_speed = 23;
 
@@ -39,3 +41,15 @@ no_hurt_frames = 0;
 // This is the object that replaces the character once it is defeated. By default it's set to 'obj_player_defeated'
 // and its value may be changed in a child object.
 defeated_object = obj_player_defeated;
+
+//States for the player
+states = {
+	
+	idle: new State (spr_player_idle),
+	walk: new State (spr_player_walk),
+//	attack: new State(spr_player_attack),
+}
+//states.attack.StateOnEnd(states.idle);
+
+//Set initial State
+state = states.idle;

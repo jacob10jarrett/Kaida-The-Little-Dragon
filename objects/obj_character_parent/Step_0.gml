@@ -3,6 +3,8 @@
 // On each axis, it moves the character pixel-by-pixel until its velocity for that axis is covered, or a collision is found.
 // 'move_count' is how many total pixels the character needs to move this frame. It is the absolute value of the velocity on an axis.
 // 'move_once' is the amount of pixels it needs to move once, before checking for a collision. It is 1, 0, or -1.
+
+
 var _move_count = abs(vel_x);
 var _move_once = sign(vel_x);
 
@@ -58,4 +60,22 @@ repeat (_move_count)
 		// Then we break out of the Repeat loop, as no more collision checks are required.
 		break;
 	}
+}
+
+
+//Beginning of combat system in step event
+if (state == states.idle || state == states.walk){
+		if (obj_player.x != 0){
+			image_xscale = sign(obj_player.x);
+			state_set(states.walk);
+		}
+		else {
+			sprite_index = spr_player_idle;
+		}
+		
+		/*if (mouse_button){
+			state_set_attack(states.attack);
+		}
+		*/
+		
 }
