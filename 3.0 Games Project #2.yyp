@@ -122,6 +122,7 @@
     {"id":{"name":"obj_character_parent","path":"objects/obj_character_parent/obj_character_parent.yy",},},
     {"id":{"name":"spr_level","path":"sprites/spr_level/spr_level.yy",},},
     {"id":{"name":"snd_land_01","path":"sounds/snd_land_01/snd_land_01.yy",},},
+    {"id":{"name":"obj_newPlayer","path":"objects/obj_newPlayer/obj_newPlayer.yy",},},
     {"id":{"name":"seq_game_over","path":"sequences/seq_game_over/seq_game_over.yy",},},
     {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},},
     {"id":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},},

@@ -85,6 +85,7 @@
     {"name":"obj_character_parent","order":2,"path":"objects/obj_character_parent/obj_character_parent.yy",},
     {"name":"spr_level","order":12,"path":"sprites/spr_level/spr_level.yy",},
     {"name":"snd_land_01","order":6,"path":"sounds/snd_land_01/snd_land_01.yy",},
+    {"name":"obj_newPlayer","order":15,"path":"objects/obj_newPlayer/obj_newPlayer.yy",},
     {"name":"seq_game_over","order":1,"path":"sequences/seq_game_over/seq_game_over.yy",},
     {"name":"obj_button_parent","order":2,"path":"objects/obj_button_parent/obj_button_parent.yy",},
     {"name":"snd_button_press_01","order":1,"path":"sounds/snd_button_press_01/snd_button_press_01.yy",},
