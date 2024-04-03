@@ -1,4 +1,4 @@
-	
+
 	{																		/* user input (1 or 0) */
 	key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));			
 	key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));

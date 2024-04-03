@@ -2,13 +2,15 @@ hsp = 0;
 vsp = 0;
 grvt = 0.3;
 walkspeed = 8;
-jumpHeight = 13;
+jumpHeight = 10;
 
 falling = false;
 idle = true;
 canDash = false;
 dashDist = 250;
 dashTime = 15;
+
+
 
 StateFree = function()
 {
@@ -32,6 +34,8 @@ StateFree = function()
 		state = StateDash;
 	}
 
+
+
 	if (place_meeting(x+hsp, y, obj_block))									/* horizontal collision */
 	{
 		while (!place_meeting(x+sign(hsp),y, obj_block))
@@ -39,9 +43,11 @@ StateFree = function()
 		x = x + sign(hsp);
 	}
 		hsp = 0;
-	}
+	}	
+
 	x = x + hsp;
 
+	
 	if (place_meeting(x, y+vsp, obj_block))									/* vertical collision */
 	{
 		while (!place_meeting(x,y+sign(vsp), obj_block))
@@ -53,6 +59,12 @@ StateFree = function()
 		sprite_index = spr_player_idle;
 	}
 	y = y + vsp;
+	
+	if (key_jump) && (place_meeting(x+1, y, obj_block) || place_meeting(x-1, y, obj_block))
+	{
+	vsp = -jumpHeight;
+
+	}
 
 	/*-------------------------------------------ANIMATIONS----------------------------------------------------*/	
 	if (vsp > 0 || vsp < 0)
