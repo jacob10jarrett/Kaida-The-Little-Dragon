@@ -1,12 +1,8 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_newPlayer",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
-  ],
+  "name": "obj_bounds",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -30,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_player_idle",
-    "path": "sprites/spr_player_idle/spr_player_idle.yy",
+    "name": "spr_bounds",
+    "path": "sprites/spr_bounds/spr_bounds.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -52,4 +52,4 @@ states = {
 //states.attack.StateOnEnd(states.idle);
 
 //Set initial State
-state = states.idle;
+//state = states.idle;

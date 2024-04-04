@@ -62,7 +62,7 @@ repeat (_move_count)
 	}
 }
 
-
+/**
 //Beginning of combat system in step event
 if (state == states.idle || state == states.walk){
 		if (obj_player.x != 0){
@@ -77,5 +77,6 @@ if (state == states.idle || state == states.walk){
 			state_set_attack(states.attack);
 		}
 		*/
+
 		
-}
+

@@ -117,6 +117,10 @@
     {"name":"inst_C9B8A85","path":"rooms/rm_prologue/rm_prologue.yy",},
     {"name":"inst_52B3938F","path":"rooms/rm_prologue/rm_prologue.yy",},
     {"name":"inst_FA647E7","path":"rooms/rm_prologue/rm_prologue.yy",},
+    {"name":"inst_702CF9C0","path":"rooms/rm_prologue/rm_prologue.yy",},
+    {"name":"inst_6A306582","path":"rooms/rm_prologue/rm_prologue.yy",},
+    {"name":"inst_3DA32E43","path":"rooms/rm_prologue/rm_prologue.yy",},
+    {"name":"inst_2E4E5DF4","path":"rooms/rm_prologue/rm_prologue.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -131,6 +135,10 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_C9B8A85","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"properties":[],"rotation":0.0,"scaleX":7.0,"scaleY":1.0,"x":1376.0,"y":1120.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_52B3938F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"properties":[],"rotation":0.0,"scaleX":12.0,"scaleY":1.0,"x":992.0,"y":960.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_FA647E7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":10.0,"x":1184.0,"y":960.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_702CF9C0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_enemyTwo","path":"objects/obj_enemyTwo/obj_enemyTwo.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1184.0,"y":960.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6A306582","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_enemyTwo","path":"objects/obj_enemyTwo/obj_enemyTwo.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1440.0,"y":1120.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3DA32E43","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_bounds","path":"objects/obj_bounds/obj_bounds.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1627.0,"y":1088.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2E4E5DF4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_bounds","path":"objects/obj_bounds/obj_bounds.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1350.0,"y":1088.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Assets2","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_3FBDF6D","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"rotation":0.0,"scaleX":1.2727273,"scaleY":1.1818181,"spriteId":{"name":"spr_cherryblossom_placeholder","path":"sprites/spr_cherryblossom_placeholder/spr_cherryblossom_placeholder.yy",},"x":480.0,"y":1600.0,},
