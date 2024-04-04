@@ -6,7 +6,7 @@ jumpHeight = 10;
 
 falling = false;
 idle = true;
-canDash = false;
+canDash = true;
 dashDist = 250;
 dashTime = 15;
 

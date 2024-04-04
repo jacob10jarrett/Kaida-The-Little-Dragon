@@ -27,6 +27,7 @@
 		}
 		vsp = 0;
 		sprite_index = spr_player_idle;
+		canDash = true;
 	}
 	y = y + vsp;
 
