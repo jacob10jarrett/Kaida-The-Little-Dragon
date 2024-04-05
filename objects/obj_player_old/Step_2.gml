@@ -12,7 +12,7 @@ switch (sprite_index)
 		image_speed = 1;
 	
 		// This checks if the X velocity is 0, meaning the player is not moving horizontally.
-		if (vel_x == 0)
+		if (hsp == 0)
 		{
 			// In that case we change its sprite to the idle one.
 			sprite_index = spr_player_idle;
@@ -20,7 +20,7 @@ switch (sprite_index)
 	
 		// This checks if the Y velocity of the player is greater than 1, meaning it is falling down.
 		// This would happen when the player walks off a ledge.
-		if (vel_y > 1)
+		if (vsp > 1)
 		{
 			// In that case we change its sprite to the fall one, and reset the frame to 0.
 			sprite_index = spr_player_fly;
@@ -31,7 +31,7 @@ switch (sprite_index)
 	// Code under this case runs if the assigned sprite is 'spr_player_jump', meaning the player was in the middle of a jump.
 	case spr_player_jump:
 		// This checks if the Y velocity is equal to, or greater than 0, meaning the player has now started falling downward.
-		if (vel_y >= 0)
+		if (vsp >= 0)
 		{
 			// In that case we change its sprite to the fall sprite, and reset the frame to 0.
 			sprite_index = spr_player_fly;

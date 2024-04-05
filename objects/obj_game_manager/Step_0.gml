@@ -2,12 +2,12 @@
 if (layer_exists("EffectLeaf"))
 {
 	// If the player exists,
-	if (instance_exists(obj_player))
+	if (instance_exists(obj_player_old))
 	{
 		// If the player is colliding with a  "stop leaf effect" instance,
 		var _player_colliding = false;
 		
-		with (obj_player) {
+		with (obj_player_old) {
 			_player_colliding = place_meeting(x, y, obj_stop_leaf_effect);
 		}
 		

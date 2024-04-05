@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Player",
-    "path": "folders/Objects/Characters/Player.yy",
+    "name": "Player (REFERENCE + doesn't work)",
+    "path": "folders/Objects/Characters/Player (REFERENCE + doesn't work).yy",
   },
   "parentObjectId": null,
   "persistent": false,

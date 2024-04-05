@@ -5,8 +5,8 @@
 // 'move_once' is the amount of pixels it needs to move once, before checking for a collision. It is 1, 0, or -1.
 
 
-var _move_count = abs(vel_x);
-var _move_once = sign(vel_x);
+var _move_count = abs(hsp);
+var _move_once = sign(hsp);
 
 // This runs a loop, which runs 'move_count' times. All code in this block is repeated that many amount of times.
 repeat (_move_count)
@@ -26,7 +26,7 @@ repeat (_move_count)
 	else
 	{
 		// In that case, we reset the X velocity to 0, so the character stops its movement on that axis.
-		vel_x = 0;
+		hsp = 0;
 	
 		// Then we break out of the Repeat loop, as no more collision checks are required.
 		break;
@@ -35,8 +35,8 @@ repeat (_move_count)
 
 // We now repeat all of the previous steps to check for collisions on the Y axis.
 // Everything is the same, but vel_x is replaced by vel_y, and the check_collision function takes a Y value (its second argument).
-var _move_count = abs(vel_y);
-var _move_once = sign(vel_y);
+var _move_count = abs(vsp);
+var _move_once = sign(vsp);
 
 // This runs a loop, which runs 'move_count' times. All actions attached to this are repeated that many amount of times.
 repeat (_move_count)
@@ -55,7 +55,7 @@ repeat (_move_count)
 	else
 	{
 		// In that case, we reset the Y velocity to 0, so the character stops its movement on that axis.
-		vel_y = 0;
+		vsp = 0;
 	
 		// Then we break out of the Repeat loop, as no more collision checks are required.
 		break;

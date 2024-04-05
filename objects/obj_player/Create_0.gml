@@ -1,20 +1,22 @@
-// This runs the Create event of the parent, ensuring the player gets all variables from the character parent.
-event_inherited();
+hsp = 0;
+vsp = 0;
+grvt = 0.7;
+walkspeed = 8;
 
-// This variable stores the number of coins the player has collected.
-coins = 0;
+isJumping = false; 
+jumpPressedTime = 1; 
+maxJumpPressedTime = 10; 
+jumpForce = 1; 
+jumpHeight = 7;
 
-// This variable tells whether the player is currently in knockback (from being hit by an enemy). It will be true if it is, and false if not.
-in_knockback = false;
-
-// This is the object that replaces the player once it is defeated.
-defeated_object = obj_player_defeated;
-
-//Wall jumping
-wall_direction = 0;
-wall_jump_force = 12;
-wall_jumping = false;
-
-
+falling = false;
+idle = true;
 canDash = true;
+dashDist = 250;
+dashTime = 15;
 
+wallJumping = false;
+lastWallJumpDir = 0; 
+wallSlideSpeed = 2;
+
+state = 0;
