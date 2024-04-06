@@ -34,7 +34,7 @@ y = y + vsp;
 wallLeft = place_meeting(x-1, y, obj_wall);
 wallRight = place_meeting(x+1, y, obj_wall);
 
-// charges tracking
+// fireball charges 
 if (charges >= 3)	canFire = true; else canFire = false;
 
 // spawn fireball
@@ -81,6 +81,29 @@ if (mouse_check_button_pressed(mb_right) && canFire)
 		}
 		
 /*------------------------------------------- States ----------------------------------------------------*/	
+
+	// Melee proc	S -> 1
+    if (mouse_check_button_pressed(mb_left))
+    {
+		state = 2;
+    }
+	
+	// Melee proc	S -> 2
+    if (mouse_check_button_pressed(mb_right))
+    {
+		state = 3;	
+    }
+	
+	// Dash proc	S -> 3
+    if (canDash && key_dash)					
+    {
+        canDash = false;
+        dashDirection = point_direction(0, 0, key_right - key_left, key_down - key_up);
+        dashSpeed = dashDist / dashTime;
+        dashEnergy = dashDist;
+        state = 1;
+    }
+
 
 if (state == 0)																/* normal */
 {
@@ -146,27 +169,7 @@ if (state == 0)																/* normal */
 	    isJumping = false;
 	}
 
-	// Dash proc
-    if (canDash && key_dash)					
-    {
-        canDash = false;
-        dashDirection = point_direction(0, 0, key_right - key_left, key_down - key_up);
-        dashSpeed = dashDist / dashTime;
-        dashEnergy = dashDist;
-        state = 1;
-    }
 
-	// Melee proc
-    if (mouse_check_button_pressed(mb_left))
-    {
-		state = 2;	
-    }
-	
-	// Melee proc
-    if (mouse_check_button_pressed(mb_right))
-    {
-		state = 3;	
-    }
 	
 }
 
@@ -198,7 +201,9 @@ if (state == 1)																/* dash */
 
 if (state == 2)																/* melee */
 {
+	
 	show_debug_message("STATE = MELEE");
+	image_speed = .75
 	vsp += grvt;
 	
 	if (vsp != 0 && !place_meeting(x,y+sign(vsp), obj_block))
@@ -210,17 +215,20 @@ if (state == 2)																/* melee */
 		sprite_index = spr_player_sideAttack
 	}
 
-	instance_create_layer(x,y,"player", obj_melee);
-	
-	if image_index == 3
+	instance_create_layer(x,y,"Player", obj_melee);
+
+	if  (image_index >= 3 && image_index < 4)
 	{
 		state = 0;
 	}
+	
+	if (keyboard_check_pressed(ord("X"))) state = 0;
 }
 
 if (state == 3)																/* fireball */
 {
 	show_debug_message("STATE = FIREBALL");
+	image_speed = .75
 	vsp += grvt;
 	
 	if (vsp != 0 && !place_meeting(x,y+sign(vsp), obj_block))
@@ -232,7 +240,7 @@ if (state == 3)																/* fireball */
 		sprite_index = spr_player_sideAttack
 	}
 	
-	if image_index == 3
+	if (image_index >= 3 && image_index < 4)
 	{
 		state = 0;
 	}
