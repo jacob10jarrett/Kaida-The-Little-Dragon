@@ -19,4 +19,7 @@ wallJumping = false;
 lastWallJumpDir = 0; 
 wallSlideSpeed = 2;
 
+charges = 3;
+canFire = true;
+
 state = 0;

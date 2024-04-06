@@ -34,34 +34,86 @@ y = y + vsp;
 wallLeft = place_meeting(x-1, y, obj_wall);
 wallRight = place_meeting(x+1, y, obj_wall);
 
-// Wall sliding logic
-if ((wallLeft || wallRight) && !place_meeting(x, y+1, obj_block) && !place_meeting(x, y+1, obj_wall) && vsp > 0)
+// charges tracking
+if (charges >= 3)	canFire = true; else canFire = false;
+
+// spawn fireball
+if (mouse_check_button_pressed(mb_right) && canFire)
 {
-    vsp = min(vsp, wallSlideSpeed); 
+	charges -= 3;
+	instance_create_layer(x,y,"player", obj_fireball);
 }
 
-// Wall jumping
-if (key_jump_pressed && (wallLeft || wallRight) && !place_meeting(x,y+1,obj_block) && !place_meeting(x,y+1,obj_wall))
+
+/*----------------------------------------- ANIMATIONS --------------------------------------------------*/	
+	if (vsp > 0 || vsp < 0)
+	{
+		idle = false;
+		falling = true;
+	}
+
+	if (hsp != 0)														/* Sprite direction */
+	{
+		image_xscale=(sign(hsp));
+	}
+
+	if (!place_meeting(x,y+1,obj_block))								    /* fly Anim */
+	{
+		sprite_index = spr_player_fly;
+		if (sign(vsp) > 0 || sign(vsp) < 0)
+		{
+			sprite_index = spr_player_fly; 
+		}
+		else 
+		{
+			sprite_index = spr_player_idle;
+		}
+	}
+	else 
+		if (hsp == 0)													   /* idle Anim */
+		{
+			sprite_index = spr_player_idle
+		}
+		else															   /* walk Anim */
+		{
+			idle = false;
+			sprite_index = spr_player_walk;
+		}
+		
+/*------------------------------------------- States ----------------------------------------------------*/	
+
+if (state == 0)																/* normal */
 {
-    vsp = -jumpHeight; 
-    wallJumping = true;
-    isJumping = true; 
-    jumpPressedTime = 1; 
-    if (wallLeft)
-    {
-        hsp = walkspeed; 
-        lastWallJumpDir = 1;
-    }
-    else if (wallRight)
-    {
-        hsp = -walkspeed;
-        lastWallJumpDir = -1;
-    }
-}
-else if (place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_wall))
-{
-    wallJumping = false; 
-}
+	show_debug_message("STATE = NORMAL");
+
+	// Wall sliding logic
+	if ((wallLeft || wallRight) && !place_meeting(x, y+1, obj_block) && !place_meeting(x, y+1, obj_wall) && vsp > 0)
+	{
+		vsp = min(vsp, wallSlideSpeed); 
+	}
+
+	// Wall Jump Proc
+	if (key_jump_pressed && (wallLeft || wallRight) && !place_meeting(x,y+1,obj_block) && !place_meeting(x,y+1,obj_wall))
+	{
+		vsp = -jumpHeight; 
+		wallJumping = true;
+		isJumping = true; 
+		jumpPressedTime = 1; 
+		if (wallLeft)
+		{
+			hsp = walkspeed; 
+			lastWallJumpDir = 1;
+		}
+		else if (wallRight)
+		{
+			hsp = -walkspeed;
+			lastWallJumpDir = -1;
+		}
+	}
+	else if (place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_wall))
+	{
+		wallJumping = false; 
+	}
     
     if (!wallJumping)
     {
@@ -75,8 +127,7 @@ else if (place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_wall))
     
     vsp += grvt;
    
-
-    // Regular jump
+    // Jump Proc
 	if (key_jump_pressed && place_meeting(x, y+1, obj_block))
 	{
 	    vsp = -jumpHeight;
@@ -95,8 +146,8 @@ else if (place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_wall))
 	    isJumping = false;
 	}
 
-    // Dashing
-    if (canDash && key_dash)
+	// Dash proc
+    if (canDash && key_dash)					
     {
         canDash = false;
         dashDirection = point_direction(0, 0, key_right - key_left, key_down - key_up);
@@ -105,49 +156,24 @@ else if (place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_wall))
         state = 1;
     }
 
-    if (keyboard_check_pressed(ord("Z")))
+	// Melee proc
+    if (mouse_check_button_pressed(mb_left))
     {
-        state = 2;
+		state = 2;	
     }
 	
+	// Melee proc
+    if (mouse_check_button_pressed(mb_right))
+    {
+		state = 3;	
+    }
+	
+}
 
-	/*-------------------------------------------ANIMATIONS----------------------------------------------------*/	
-	if (vsp > 0 || vsp < 0)
-	{
-		idle = false;
-		falling = true;
-	}
-
-	if (hsp != 0)															  /* Sprite direction */
-	{
-		image_xscale=(sign(hsp));
-	}
-
-	if (!place_meeting(x,y+1,obj_block))									       /* fly Anim */
-	{
-		sprite_index = spr_player_fly;
-		if (sign(vsp) > 0 || sign(vsp) < 0)
-		{
-			sprite_index = spr_player_fly; 
-		}
-		else 
-		{
-			sprite_index = spr_player_idle;
-		}
-	}
-	else 
-		if (hsp == 0)														      /* idle Anim */
-		{
-			sprite_index = spr_player_idle
-		}
-		else																      /* walk Anim */
-		{
-			idle = false;
-			sprite_index = spr_player_walk;
-		}
-		
-if (state == 1)																		/* dash */
+if (state == 1)																/* dash */
 {
+	show_debug_message("STATE = DASHING");
+	
 	sprite_index = spr_player_dash										          /* dash Anim*/
 	hsp = lengthdir_x(dashSpeed, dashDirection);
 	vsp = lengthdir_y(dashSpeed, dashDirection);
@@ -170,14 +196,45 @@ if (state == 1)																		/* dash */
 	}
 }
 
-if (state == 2)
+if (state == 2)																/* melee */
 {
+	show_debug_message("STATE = MELEE");
+	vsp += grvt;
 	
-	sprite_index = spr_player_sideAttack
+	if (vsp != 0 && !place_meeting(x,y+sign(vsp), obj_block))
+	{
+		sprite_index = spr_player_sideAttackAir
+	}
+	else
+	{
+		sprite_index = spr_player_sideAttack
+	}
 
 	instance_create_layer(x,y,"player", obj_melee);
 	
-	alarm[0] = 5;
-	state = 0;
+	if image_index == 3
+	{
+		state = 0;
+	}
+}
+
+if (state == 3)																/* fireball */
+{
+	show_debug_message("STATE = FIREBALL");
+	vsp += grvt;
+	
+	if (vsp != 0 && !place_meeting(x,y+sign(vsp), obj_block))
+	{
+		sprite_index = spr_player_sideAttackAir
+	}
+	else
+	{
+		sprite_index = spr_player_sideAttack
+	}
+	
+	if image_index == 3
+	{
+		state = 0;
+	}
 }
 
