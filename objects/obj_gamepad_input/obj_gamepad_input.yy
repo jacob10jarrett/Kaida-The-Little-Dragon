@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Managers",
-    "path": "folders/Objects/Managers.yy",
+    "name": "Managers (REFERENCE ONLY)",
+    "path": "folders/Objects/Managers (REFERENCE ONLY).yy",
   },
   "parentObjectId": null,
   "persistent": true,

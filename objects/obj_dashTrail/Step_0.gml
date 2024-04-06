@@ -1,11 +1,4 @@
-//if (global.paused) return;
-
-image_alpha -= 0.1;
-
-if (image_alpha <= 0) 
-{
-    instance_destroy();
-}
-
-
-
+image_alpha -= fadeRate;
+image_xscale *= sizeDecay; 
+image_yscale *= sizeDecay; 
+if (image_alpha <= 0) instance_destroy();

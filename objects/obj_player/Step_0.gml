@@ -19,15 +19,19 @@ if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall))
 x = x + hsp;
 
 // Vertical collision with obj_block or obj_wall
-if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall))
-{
-    while (!place_meeting(x,y+sign(vsp), obj_block) && !place_meeting(x,y+sign(vsp), obj_wall))
-    {
+if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall)) {
+    if (!place_meeting(x, y+1, obj_block)) { 
+        if (isAirborne) {
+            canDash = true; 
+            hasDashed = false;
+            isAirborne = false;
+        }
+    }
+    while (!place_meeting(x,y+sign(vsp), obj_block) && !place_meeting(x,y+sign(vsp), obj_wall)) {
         y = y + sign(vsp);
     }
     vsp = 0;
     sprite_index = spr_player_idle;
-    canDash = true; 
 }
 y = y + vsp;
 
@@ -54,30 +58,41 @@ if (mouse_check_button_pressed(mb_right) && canFire)
 
 	if (hsp != 0)														/* Sprite direction */
 	{
-		image_xscale=(sign(hsp));
+	    image_xscale = 0.75 * sign(hsp);
+	    image_yscale = 0.75;
 	}
 
 	if (!place_meeting(x,y+1,obj_block))								    /* fly Anim */
 	{
 		sprite_index = spr_player_fly;
+		image_xscale = (image_xscale < 0 ? -0.75 : 0.75);
+	    image_yscale = 0.75;
 		if (sign(vsp) > 0 || sign(vsp) < 0)
 		{
 			sprite_index = spr_player_fly; 
+			image_xscale = (image_xscale < 0 ? -0.75 : 0.75);
+			image_yscale = 0.75;
 		}
 		else 
 		{
 			sprite_index = spr_player_idle;
+			image_xscale = (image_xscale < 0 ? -0.75 : 0.75);
+			image_yscale = 0.75;
 		}
 	}
 	else 
 		if (hsp == 0)													   /* idle Anim */
 		{
 			sprite_index = spr_player_idle
+			image_xscale = (image_xscale < 0 ? -0.75 : 0.75);
+			image_yscale = 0.75;
 		}
 		else															   /* walk Anim */
 		{
 			idle = false;
 			sprite_index = spr_player_walk;
+			image_xscale = (image_xscale < 0 ? -0.75 : 0.75);
+			image_yscale = 0.75;
 		}
 		
 /*------------------------------------------- States ----------------------------------------------------*/	
@@ -95,14 +110,15 @@ if (mouse_check_button_pressed(mb_right) && canFire)
     }
 	
 	// Dash proc	S -> 3
-    if (canDash && key_dash)					
-    {
-        canDash = false;
-        dashDirection = point_direction(0, 0, key_right - key_left, key_down - key_up);
-        dashSpeed = dashDist / dashTime;
-        dashEnergy = dashDist;
-        state = 1;
-    }
+	if (canDash && key_dash) {
+	    canDash = false; 
+	    hasDashed = true; 
+	    dashDirection = point_direction(0, 0, key_right - key_left, key_down - key_up);
+	    dashSpeed = dashDist / dashTime;
+	    dashEnergy = dashDist;
+	    state = 1;
+	}
+
 
 
 if (state == 0)																/* normal */
@@ -151,17 +167,16 @@ if (state == 0)																/* normal */
     vsp += grvt;
    
     // Jump Proc
-	if (key_jump_pressed && place_meeting(x, y+1, obj_block))
-	{
-	    vsp = -jumpHeight;
+	if (key_jump_pressed && place_meeting(x, y+1, obj_block)) {
+	    vsp = -jumpHeight; // Apply jump
 	    isJumping = true;
 	    jumpPressedTime = 1;
+		isAirborne = true;
+		canDash = true;
 	}
-
-	// Continue applying jump force if jump is held
 	if (isJumping && key_jump && jumpPressedTime < maxJumpPressedTime)
 	{
-	    vsp -= jumpForce; // Apply additional jump force
+	    vsp -= jumpForce; 
 	    jumpPressedTime++;
 	}
 	else
@@ -173,30 +188,34 @@ if (state == 0)																/* normal */
 	
 }
 
-if (state == 1)																/* dash */
+if (state == 1) // Dash
 {
-	show_debug_message("STATE = DASHING");
+    show_debug_message("STATE = DASHING");
 	
-	sprite_index = spr_player_dash										          /* dash Anim*/
-	hsp = lengthdir_x(dashSpeed, dashDirection);
-	vsp = lengthdir_y(dashSpeed, dashDirection);
-	
-	with (instance_create_depth(x,y,depth+1, obj_dashTrail))					  /* dash trail*/
-	{
-		sprite_index = other.sprite_index;
-		image_blend = c_ltgray;
-		image_alpha = .7;
-	}
-	
-	
-	
-	dashEnergy -= dashSpeed;
-	if (dashEnergy <= 0)
-	{
-		vsp = 0;	
-		hsp = 0;
-		state = 0;													   /* revert state */
-	}
+    sprite_index = spr_player_dash; 
+    image_xscale = (image_xscale < 0 ? -0.75 : 0.75);
+    image_yscale = 0.75;
+    hsp = lengthdir_x(dashSpeed, dashDirection);
+    vsp = lengthdir_y(dashSpeed, dashDirection);
+
+    // Create a dash trail instance
+    var trail = instance_create_depth(x, y, depth + 1, obj_dashTrail);
+    with (trail)
+    {
+        sprite_index = other.sprite_index;
+        image_xscale = other.image_xscale;
+        image_yscale = other.image_yscale;
+        image_blend = c_ltgray;
+        image_alpha = 0.7; 
+    }
+
+    dashEnergy -= dashSpeed;
+    if (dashEnergy <= 0)
+    {
+        vsp = 0;
+        hsp = 0;
+        state = 0; 
+    }
 }
 
 if (state == 2)																/* melee */

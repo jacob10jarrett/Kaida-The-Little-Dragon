@@ -1,0 +1,1 @@
+audio_sound_gain(snd_prologue, 0, 500)
