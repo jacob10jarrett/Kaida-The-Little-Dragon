@@ -25,7 +25,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_treeCherry2",
+    "path": "sprites/spr_treeCherry2/spr_treeCherry2.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
