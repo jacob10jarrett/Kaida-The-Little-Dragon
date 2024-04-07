@@ -1,0 +1,1 @@
+audio_sound_gain(snd_song4, 0, 500)
