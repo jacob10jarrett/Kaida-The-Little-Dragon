@@ -24,4 +24,8 @@ wallSlideSpeed = 2;
 charges = 3;
 canFire = true;
 
+global.isPulling = false;
+global.pullingCrate = noone;
+global.pushingForce = 0.5;
+
 state = 0;
