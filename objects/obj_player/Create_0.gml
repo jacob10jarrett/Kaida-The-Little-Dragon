@@ -25,7 +25,7 @@ charges = 3;
 canFire = true;
 
 global.isPulling = false;
-pullingCrate = noone;
-pushingForce = 0.5;
+global.pullingCrate = noone;
+global.pushingForce = 0.5;
 
 state = 0;

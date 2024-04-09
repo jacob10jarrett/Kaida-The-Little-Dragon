@@ -6,11 +6,15 @@ key_down = keyboard_check(vk_down);
 key_dash = keyboard_check_pressed(vk_shift);
 key_jump = keyboard_check(vk_space); 
 key_jump_pressed = keyboard_check_pressed(vk_space);
+key_pull = keyboard_check(ord("E"));
 
-// Horizontal collision with obj_block or obj_wall
-if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall))
+var onGround = place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_crate);
+isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate));
+
+// Horizontal collision with obj_block or obj_wall or obj_crate
+if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || place_meeting(x+hsp, y, obj_crate))
 {
-    while (!place_meeting(x+sign(hsp),y, obj_block) && !place_meeting(x+sign(hsp),y, obj_wall))
+    while (!place_meeting(x+sign(hsp),y, obj_block) && !place_meeting(x+sign(hsp),y, obj_wall) && !place_meeting(x+sign(hsp),y, obj_crate))
     {
         x = x + sign(hsp);
     }
@@ -19,15 +23,15 @@ if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall))
 x = x + hsp;
 
 // Vertical collision with obj_block or obj_wall
-if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || (place_meeting(x, y + vsp, obj_crate) && !place_meeting(x, y - 1, obj_crate))) {
-    if (!place_meeting(x, y+1, obj_block)) { 
+if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || (place_meeting(x, y+vsp, obj_crate))) {
+    if (!place_meeting(x, y+1, obj_block)) {
         if (isAirborne) {
             canDash = true; 
             hasDashed = false;
             isAirborne = false;
         }
     }
-    while (!place_meeting(x,y+sign(vsp), obj_block) && !place_meeting(x,y+sign(vsp), obj_wall)) {
+    while (!place_meeting(x,y+sign(vsp), obj_block) && !place_meeting(x,y+sign(vsp), obj_wall) && !place_meeting(x,y+sign(vsp), obj_crate)) {
         y = y + sign(vsp);
     }
     vsp = 0;
@@ -48,28 +52,23 @@ if (mouse_check_button_pressed(mb_right) && canFire)
 	instance_create_layer(x,y,"player", obj_fireball);
 }
 
-// Crate pulling
+// Crate pushing
 
-key_pull = keyboard_check(ord("E")); 
-
-if (key_pull) {
-    var _crate = instance_nearest(x, y, obj_crate);
-    if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 32) { // Close enough to push
-        var _directionToCrate = point_direction(x, y, _crate.x, _crate.y);
-        var _isFacingCrate = (image_xscale * cos(degtorad(_directionToCrate)) > 0); // Check if player is facing the crate
-
-        if (_isFacingCrate) {
-            isPulling = false; 
-            _crate.hsp = hsp * pushingForce;
-        }
+var _isFacingCrate = false;
+var _crate = instance_nearest(x, y, obj_crate);
+if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150) {
+    var _directionToCrate = point_direction(x, y, _crate.x, _crate.y);
+    var _isFacingCrate = (image_xscale * cos(degtorad(_directionToCrate)) > 0);
+    
+    if (key_pull && _isFacingCrate) {
+        state = 4; 
+        global.pullingCrate = _crate; 
     }
-} else {
-    isPulling = false;
-    if (instance_exists(pullingCrate)) {
-        pullingCrate.hsp = 0; 
+} else if (!key_pull || !_isFacingCrate) {
+    if (state == 4) {
+        state = 0; 
     }
 }
-
 
 /*----------------------------------------- ANIMATIONS --------------------------------------------------*/	
 	if (vsp > 0 || vsp < 0)
@@ -189,8 +188,8 @@ if (state == 0)																/* normal */
     vsp += grvt;
    
     // Jump Proc
-	if (key_jump_pressed && place_meeting(x, y+1, obj_block)) {
-	    vsp = -jumpHeight; // Apply jump
+	if (key_jump_pressed && onGround) {
+	    vsp = -jumpHeight; 
 	    isJumping = true;
 	    jumpPressedTime = 1;
 		isAirborne = true;
@@ -287,3 +286,30 @@ if (state == 3)																/* fireball */
 	}
 }
 
+if (state == 4 && instance_exists(global.pullingCrate)) {						/* crate pushing */
+	vsp += grvt;
+    if (!place_meeting(global.pullingCrate.x, global.pullingCrate.y + 1, obj_block)) {
+        state = 0; 
+        global.pullingCrate = noone;
+    } else {
+        var moving = key_right - key_left;
+        hsp = moving * walkspeed; 
+        global.pullingCrate.hsp = hsp;
+    }
+}
+
+if (key_pull && state != 4) {
+    var _crate = instance_nearest(x, y, obj_crate);
+    if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 32) {
+        var _isFacingCrate = (image_xscale == 1 && _crate.x > x) || (image_xscale == -1 && _crate.x < x);
+        if (_isFacingCrate) {
+            state = 4;
+            global.isPulling = true;
+            global.pullingCrate = _crate;
+        }
+    }
+} else if (key_pull && state == 4) {
+    state = 0;
+    global.isPulling = false;
+    global.pullingCrate = noone;
+}
