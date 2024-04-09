@@ -19,7 +19,7 @@ if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall))
 x = x + hsp;
 
 // Vertical collision with obj_block or obj_wall
-if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall)) {
+if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || (place_meeting(x, y + vsp, obj_crate) && !place_meeting(x, y - 1, obj_crate))) {
     if (!place_meeting(x, y+1, obj_block)) { 
         if (isAirborne) {
             canDash = true; 
@@ -46,6 +46,28 @@ if (mouse_check_button_pressed(mb_right) && canFire)
 {
 	charges -= 3;
 	instance_create_layer(x,y,"player", obj_fireball);
+}
+
+// Crate pulling
+
+key_pull = keyboard_check(ord("E")); 
+
+if (key_pull) {
+    var _crate = instance_nearest(x, y, obj_crate);
+    if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 32) { // Close enough to push
+        var _directionToCrate = point_direction(x, y, _crate.x, _crate.y);
+        var _isFacingCrate = (image_xscale * cos(degtorad(_directionToCrate)) > 0); // Check if player is facing the crate
+
+        if (_isFacingCrate) {
+            isPulling = false; 
+            _crate.hsp = hsp * pushingForce;
+        }
+    }
+} else {
+    isPulling = false;
+    if (instance_exists(pullingCrate)) {
+        pullingCrate.hsp = 0; 
+    }
 }
 
 
