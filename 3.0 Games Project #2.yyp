@@ -61,6 +61,7 @@
     {"id":{"name":"spr_sign3","path":"sprites/spr_sign3/spr_sign3.yy",},},
     {"id":{"name":"spr_menu_background","path":"sprites/spr_menu_background/spr_menu_background.yy",},},
     {"id":{"name":"spr_player_dash","path":"sprites/spr_player_dash/spr_player_dash.yy",},},
+    {"id":{"name":"rm_caves","path":"rooms/rm_caves/rm_caves.yy",},},
     {"id":{"name":"spr_death","path":"sprites/spr_death/spr_death.yy",},},
     {"id":{"name":"spr_player_fly","path":"sprites/spr_player_fly/spr_player_fly.yy",},},
     {"id":{"name":"spr_marker","path":"sprites/spr_marker/spr_marker.yy",},},
@@ -153,6 +154,7 @@
     {"id":{"name":"spr_level","path":"sprites/spr_level/spr_level.yy",},},
     {"id":{"name":"spr_sign1","path":"sprites/spr_sign1/spr_sign1.yy",},},
     {"id":{"name":"snd_land_01","path":"sounds/snd_land_01/snd_land_01.yy",},},
+    {"id":{"name":"obj_goto_caves","path":"objects/obj_goto_caves/obj_goto_caves.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"seq_game_over","path":"sequences/seq_game_over/seq_game_over.yy",},},
     {"id":{"name":"spr_sign2","path":"sprites/spr_sign2/spr_sign2.yy",},},
@@ -174,6 +176,7 @@
     {"roomId":{"name":"rm_prologue","path":"rooms/rm_prologue/rm_prologue.yy",},},
     {"roomId":{"name":"rm_end","path":"rooms/rm_end/rm_end.yy",},},
     {"roomId":{"name":"rm_village","path":"rooms/rm_village/rm_village.yy",},},
+    {"roomId":{"name":"rm_caves","path":"rooms/rm_caves/rm_caves.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
