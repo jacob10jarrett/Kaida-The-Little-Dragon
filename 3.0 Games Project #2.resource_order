@@ -81,6 +81,7 @@
     {"name":"obj_ladder","order":9,"path":"objects/obj_ladder/obj_ladder.yy",},
     {"name":"rm_village","order":3,"path":"rooms/rm_village/rm_village.yy",},
     {"name":"obj_player_defeated","order":1,"path":"objects/obj_player_defeated/obj_player_defeated.yy",},
+    {"name":"spr_titlescreen","order":37,"path":"sprites/spr_titlescreen/spr_titlescreen.yy",},
     {"name":"snd_song3","order":3,"path":"sounds/snd_song3/snd_song3.yy",},
     {"name":"spr_button_red","order":1,"path":"sprites/spr_button_red/spr_button_red.yy",},
     {"name":"obj_MovingPlatform","order":31,"path":"objects/obj_MovingPlatform/obj_MovingPlatform.yy",},
