@@ -131,6 +131,7 @@
     {"name":"spr_enemyOne","order":25,"path":"sprites/spr_enemyOne/spr_enemyOne.yy",},
     {"name":"obj_button_parent","order":2,"path":"objects/obj_button_parent/obj_button_parent.yy",},
     {"name":"obj_bounds","order":19,"path":"objects/obj_bounds/obj_bounds.yy",},
+    {"name":"spr_cherryblossomleaf","order":38,"path":"sprites/spr_cherryblossomleaf/spr_cherryblossomleaf.yy",},
     {"name":"snd_button_press_01","order":1,"path":"sounds/snd_button_press_01/snd_button_press_01.yy",},
     {"name":"obj_button_parent_1","order":4,"path":"objects/obj_button_parent_1/obj_button_parent_1.yy",},
     {"name":"music_prologue","order":22,"path":"objects/music_prologue/music_prologue.yy",},

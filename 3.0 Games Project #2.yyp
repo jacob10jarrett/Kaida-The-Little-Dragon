@@ -171,6 +171,7 @@
     {"id":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},},
     {"id":{"name":"obj_persistent_manager","path":"objects/obj_persistent_manager/obj_persistent_manager.yy",},},
     {"id":{"name":"obj_bounds","path":"objects/obj_bounds/obj_bounds.yy",},},
+    {"id":{"name":"spr_cherryblossomleaf","path":"sprites/spr_cherryblossomleaf/spr_cherryblossomleaf.yy",},},
     {"id":{"name":"snd_button_press_01","path":"sounds/snd_button_press_01/snd_button_press_01.yy",},},
     {"id":{"name":"spr_flyer","path":"sprites/spr_flyer/spr_flyer.yy",},},
     {"id":{"name":"obj_button_parent_1","path":"objects/obj_button_parent_1/obj_button_parent_1.yy",},},
