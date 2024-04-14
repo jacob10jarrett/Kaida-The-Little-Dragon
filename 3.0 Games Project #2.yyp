@@ -132,6 +132,7 @@
     {"id":{"name":"State","path":"scripts/State/State.yy",},},
     {"id":{"name":"ts_draw","path":"tilesets/ts_draw/ts_draw.yy",},},
     {"id":{"name":"path_crate","path":"paths/path_crate/path_crate.yy",},},
+    {"id":{"name":"obj_fade_in_caves","path":"objects/obj_fade_in_caves/obj_fade_in_caves.yy",},},
     {"id":{"name":"music_village1","path":"objects/music_village1/music_village1.yy",},},
     {"id":{"name":"obj_player_defeat_transition","path":"objects/obj_player_defeat_transition/obj_player_defeat_transition.yy",},},
     {"id":{"name":"spr_dashTrail","path":"sprites/spr_dashTrail/spr_dashTrail.yy",},},

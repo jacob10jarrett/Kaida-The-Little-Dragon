@@ -101,6 +101,7 @@
     {"name":"snd_song2","order":2,"path":"sounds/snd_song2/snd_song2.yy",},
     {"name":"State","order":1,"path":"scripts/State/State.yy",},
     {"name":"ts_draw","order":1,"path":"tilesets/ts_draw/ts_draw.yy",},
+    {"name":"obj_fade_in_caves","order":33,"path":"objects/obj_fade_in_caves/obj_fade_in_caves.yy",},
     {"name":"music_village1","order":24,"path":"objects/music_village1/music_village1.yy",},
     {"name":"spr_mushroom","order":11,"path":"sprites/spr_mushroom/spr_mushroom.yy",},
     {"name":"spr_crate","order":34,"path":"sprites/spr_crate/spr_crate.yy",},
