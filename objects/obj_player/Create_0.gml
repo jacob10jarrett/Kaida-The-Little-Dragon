@@ -2,7 +2,7 @@ hsp = 0;
 vsp = 0;
 grvt = 0.7;
 walkspeed = 8;
-
+hp = 100;
 isJumping = false; 
 jumpPressedTime = 1; 
 maxJumpPressedTime = 12; 
