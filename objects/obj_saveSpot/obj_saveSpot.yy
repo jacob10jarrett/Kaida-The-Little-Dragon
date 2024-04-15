@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_torii",
-    "path": "sprites/spr_torii/spr_torii.yy",
+    "name": "spr_block_wall",
+    "path": "sprites/spr_block_wall/spr_block_wall.yy",
   },
   "spriteMaskId": null,
   "visible": true,
