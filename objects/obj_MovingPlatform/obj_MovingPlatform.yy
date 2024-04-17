@@ -29,7 +29,7 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": false,
+  "solid": true,
   "spriteId": {
     "name": "spr_block_platforming",
     "path": "sprites/spr_block_platforming/spr_block_platforming.yy",
