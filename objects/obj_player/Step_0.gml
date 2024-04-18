@@ -8,13 +8,40 @@ key_jump = keyboard_check(vk_space);
 key_jump_pressed = keyboard_check_pressed(vk_space);
 key_pull = keyboard_check(ord("E"));
 
-var onGround = place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_crate);
-isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate));
+var onGround = place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_crate) || place_meeting(x, y + 1, obj_MovingAirPlatform);
+isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate) && !place_meeting(x, y+1, obj_MovingAirPlatform));
 
-// Horizontal collision with obj_block or obj_wall or obj_crate or obj_MovingPlatform
-if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || place_meeting(x+hsp, y, obj_crate) || place_meeting(x+hsp, y, obj_MovingPlatform))
+var playerMovement = key_right - key_left;
+
+// Moving platform logic 
+var platform = instance_place(x, y + 1, obj_MovingAirPlatform);
+var isOnPlatform = (platform != noone);
+
+if (isOnPlatform) {
+	
+	hsp = playerMovement * walkspeed;
+    var playerMovement = key_right - key_left; 
+
+    if (platform.moving_right) {
+        hsp += platform.hspd; 
+    } else if (platform.moving_left) {
+        hsp -= platform.hspd; 
+    }
+
+    if (key_right) {
+        image_xscale = 0.75;  
+    } else if (key_left) {
+        image_xscale = -0.75; 
+    } else {
+        image_xscale = image_xscale;
+    }
+}
+
+
+// Horizontal collision with obj_block or obj_wall or obj_crate or obj_MovingPlatform or obj_MovingAirPlatform
+if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || place_meeting(x+hsp, y, obj_crate) || place_meeting(x+hsp, y, obj_MovingPlatform) || place_meeting(x+hsp, y, obj_MovingAirPlatform))
 {
-    while (!place_meeting(x+sign(hsp),y, obj_block) && !place_meeting(x+sign(hsp),y, obj_wall) && !place_meeting(x+sign(hsp),y, obj_crate) && !place_meeting(x+sign(hsp),y, obj_MovingPlatform))
+    while (!place_meeting(x+sign(hsp),y, obj_block) && !place_meeting(x+sign(hsp),y, obj_wall) && !place_meeting(x+sign(hsp),y, obj_crate) && !place_meeting(x+sign(hsp),y, obj_MovingPlatform) && !place_meeting(x+sign(hsp),y, obj_MovingAirPlatform))
     {
         x += sign(hsp);
     }
@@ -22,8 +49,8 @@ if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || p
 }
 x += hsp;
 
-// Vertical collision with obj_block or obj_wall
-if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || (place_meeting(x, y+vsp, obj_crate) || place_meeting(x, y+vsp, obj_MovingPlatform))) {
+// Vertical collision with obj_block or obj_wall or obj_MovingPlatform or obj_MovingAirPlatform
+if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || (place_meeting(x, y+vsp, obj_crate) || place_meeting(x, y+vsp, obj_MovingPlatform) || place_meeting(x, y+vsp, obj_MovingAirPlatform))) {
     if (!place_meeting(x, y+1, obj_block)) {
         if (isAirborne) {
             canDash = true; 
@@ -31,7 +58,7 @@ if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || (
             isAirborne = false;
         }
     }
-    while (!place_meeting(x,y+sign(vsp), obj_block) && !place_meeting(x,y+sign(vsp), obj_wall) && !place_meeting(x,y+sign(vsp), obj_crate) && !place_meeting(x,y+sign(vsp), obj_MovingPlatform)) {
+    while (!place_meeting(x,y+sign(vsp), obj_block) && !place_meeting(x,y+sign(vsp), obj_wall) && !place_meeting(x,y+sign(vsp), obj_crate) && !place_meeting(x,y+sign(vsp), obj_MovingPlatform) && !place_meeting(x,y+sign(vsp), obj_MovingAirPlatform)) {
         y = y + sign(vsp);
     }
     vsp = 0;
@@ -42,10 +69,10 @@ y = y + vsp;
 wallLeft = place_meeting(x-1, y, obj_wall);
 wallRight = place_meeting(x+1, y, obj_wall);
 
-// fireball charges 
+// Fireball charges 
 if (charges >= 3)	canFire = true; else canFire = false;
 
-// spawn fireball
+// Spawn fireball
 if (mouse_check_button_pressed(mb_right) && canFire)
 {
 	charges -= 3;
@@ -70,51 +97,43 @@ if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150) 
     }
 }
 
-/*----------------------------------------- ANIMATIONS --------------------------------------------------*/	
-	if (vsp > 0 || vsp < 0)
-	{
-		idle = false;
-		falling = true;
-	}
+/*----------------------------------------- ANIMATIONS --------------------------------------------------*/
+if (vsp > 0 || vsp < 0)
+{
+    idle = false;
+    falling = true;
+}
 
-	if (hsp != 0)														/* Sprite direction */
-	{
-	    image_xscale = 0.75 * sign(hsp);
-	    image_yscale = 0.75;
-	}
+if (!isOnPlatform) {
+    if (hsp != 0) {                                                      /* Sprite direction */
+        image_xscale = 0.75 * sign(hsp);
+        image_yscale = 0.75;
+    }
+}
 
-	if (!place_meeting(x,y+1,obj_block))								    /* fly Anim */
-	{
-		sprite_index = spr_player_fly;
-		image_xscale = (image_xscale < 0 ? -0.75 : 0.75);
-	    image_yscale = 0.75;
-		if (sign(vsp) > 0 || sign(vsp) < 0)
-		{
-			sprite_index = spr_player_fly; 
-			image_xscale = (image_xscale < 0 ? -0.75 : 0.75);
-			image_yscale = 0.75;
-		}
-		else 
-		{
-			sprite_index = spr_player_idle;
-			image_xscale = (image_xscale < 0 ? -0.75 : 0.75);
-			image_yscale = 0.75;
-		}
-	}
-	else 
-		if (hsp == 0)													   /* idle Anim */
-		{
-			sprite_index = spr_player_idle
-			image_xscale = (image_xscale < 0 ? -0.75 : 0.75);
-			image_yscale = 0.75;
-		}
-		else															   /* walk Anim */
-		{
-			idle = false;
-			sprite_index = spr_player_walk;
-			image_xscale = (image_xscale < 0 ? -0.75 : 0.75);
-			image_yscale = 0.75;
-		}
+if (!place_meeting(x, y + 1, obj_block)) {                               /* Fly Anim */
+    sprite_index = spr_player_fly;
+    if (sign(vsp) > 0 || sign(vsp) < 0) {
+        sprite_index = spr_player_fly; 
+    } else {
+        sprite_index = spr_player_idle;
+    }
+
+    image_xscale = (key_right - key_left != 0) ? 0.75 * sign(key_right - key_left) : image_xscale;
+    image_yscale = 0.75;
+} else {
+
+    if (hsp == 0) {                                                      /* Idle Anim */
+        sprite_index = spr_player_idle;
+        image_xscale = (key_right - key_left != 0) ? 0.75 * sign(key_right - key_left) : image_xscale;
+        image_yscale = 0.75;
+    } else {                                                             /* Walk Anim */
+        idle = false;
+        sprite_index = spr_player_walk;
+        image_xscale = 0.75 * sign(hsp);
+        image_yscale = 0.75;
+    }
+}
 		
 /*------------------------------------------- States ----------------------------------------------------*/	
 
@@ -188,12 +207,13 @@ if (state == 0)																/* normal */
     vsp += grvt;
    
     // Jump Proc
-	if (key_jump_pressed && onGround) {
+	if (key_jump_pressed && (onGround || isOnPlatform)) {
 	    vsp = -jumpHeight; 
 	    isJumping = true;
 	    jumpPressedTime = 1;
-		isAirborne = true;
-		canDash = true;
+	    isAirborne = true;
+	    canDash = true;
+	    hsp = playerMovement * walkspeed; 
 	}
 	if (isJumping && key_jump && jumpPressedTime < maxJumpPressedTime)
 	{
