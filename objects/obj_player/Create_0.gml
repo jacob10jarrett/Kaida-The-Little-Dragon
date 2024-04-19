@@ -9,6 +9,9 @@ maxJumpPressedTime = 12;
 jumpForce = 1; 
 jumpHeight = 7;
 
+image_xscale = 0.75; 
+image_yscale = 0.75; 
+
 falling = false;
 idle = true;
 canDash = true;

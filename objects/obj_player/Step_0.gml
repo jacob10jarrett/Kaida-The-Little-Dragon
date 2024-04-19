@@ -8,19 +8,17 @@ key_jump = keyboard_check(vk_space);
 key_jump_pressed = keyboard_check_pressed(vk_space);
 key_pull = keyboard_check(ord("E"));
 
+var playerMovement = key_right - key_left;
 var onGround = place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_crate) || place_meeting(x, y + 1, obj_MovingAirPlatform);
 isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate) && !place_meeting(x, y+1, obj_MovingAirPlatform));
 
-var playerMovement = key_right - key_left;
-
 // Moving platform logic 
 var platform = instance_place(x, y + 1, obj_MovingAirPlatform);
-var isOnPlatform = (platform != noone);
+var isOnPlatform = place_meeting(x, y + 1, obj_MovingAirPlatform);
 
 if (isOnPlatform) {
 	
 	hsp = playerMovement * walkspeed;
-    var playerMovement = key_right - key_left; 
 
     if (platform.moving_right) {
         hsp += platform.hspd; 
@@ -98,36 +96,32 @@ if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150) 
 }
 
 /*----------------------------------------- ANIMATIONS --------------------------------------------------*/
-if (vsp > 0 || vsp < 0)
-{
+if (vsp > 0 || vsp < 0) {
     idle = false;
     falling = true;
 }
 
-if (!isOnPlatform) {
-    if (hsp != 0) {                                                      /* Sprite direction */
-        image_xscale = 0.75 * sign(hsp);
+if (!isOnPlatform && !wallJumping) {  
+    if (hsp != 0) {
+        image_xscale = 0.75 * sign(hsp);									/* Sprite direction */
         image_yscale = 0.75;
     }
 }
 
-if (!place_meeting(x, y + 1, obj_block)) {                               /* Fly Anim */
-    sprite_index = spr_player_fly;
-    if (sign(vsp) > 0 || sign(vsp) < 0) {
-        sprite_index = spr_player_fly; 
-    } else {
-        sprite_index = spr_player_idle;
+if (!place_meeting(x, y + 1, obj_block)) {											/* Fly Anim */
+    sprite_index = (sign(vsp) != 0) ? spr_player_fly : spr_player_idle;
+    if (!wallJumping) {  // Prevent direction change during wall jump
+        image_xscale = (key_right - key_left != 0) ? 0.75 * sign(key_right - key_left) : image_xscale;
     }
-
-    image_xscale = (key_right - key_left != 0) ? 0.75 * sign(key_right - key_left) : image_xscale;
     image_yscale = 0.75;
 } else {
-
-    if (hsp == 0) {                                                      /* Idle Anim */
+    if (hsp == 0) {																	/* Idle Anim */
         sprite_index = spr_player_idle;
-        image_xscale = (key_right - key_left != 0) ? 0.75 * sign(key_right - key_left) : image_xscale;
+        if (!wallJumping) {  
+            image_xscale = (key_right - key_left != 0) ? 0.75 * sign(key_right - key_left) : image_xscale;
+        }
         image_yscale = 0.75;
-    } else {                                                             /* Walk Anim */
+    } else {																		/* Walk Anim */
         idle = false;
         sprite_index = spr_player_walk;
         image_xscale = 0.75 * sign(hsp);
@@ -171,33 +165,50 @@ if (state == 0)																/* normal */
 		vsp = min(vsp, wallSlideSpeed); 
 	}
 
-	// Wall Jump Proc
-	if (key_jump_pressed && (wallLeft || wallRight) && !place_meeting(x,y+1,obj_block) && !place_meeting(x,y+1,obj_wall))
-	{
-		vsp = -jumpHeight; 
-		wallJumping = true;
-		isJumping = true; 
-		jumpPressedTime = 1; 
-		if (wallLeft)
-		{
-			hsp = walkspeed; 
-			lastWallJumpDir = 1;
-		}
-		else if (wallRight)
-		{
-			hsp = -walkspeed;
-			lastWallJumpDir = -1;
-		}
-	}
-	else if (place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_wall))
-	{
-		wallJumping = false; 
-	}
+if (state == 0) // normal
+{
+    show_debug_message("STATE = NORMAL");
+
+    // Wall sliding logic
+    if ((wallLeft || wallRight) && !place_meeting(x, y+1, obj_block) && !place_meeting(x, y+1, obj_wall) && vsp > 0)
+    {
+        vsp = min(vsp, wallSlideSpeed); 
+    }
+
+    // Wall Jump Proc
+    if (key_jump_pressed && (wallLeft || wallRight) && !place_meeting(x,y+1,obj_block) && !place_meeting(x,y+1,obj_wall))
+    {
+        vsp = -jumpHeight; 
+        wallJumping = true;
+        isJumping = true; 
+        jumpPressedTime = 1; 
+        if (wallLeft)
+        {
+            hsp = walkspeed; 
+            lastWallJumpDir = 1;
+            image_xscale = 0.75; // Fixed scale direction when wall jumping
+        }
+        else if (wallRight)
+        {
+            hsp = -walkspeed;
+            lastWallJumpDir = -1;
+            image_xscale = -0.75; // Fixed scale direction when wall jumping
+        }
+    }
+    else if (place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_wall))
+    {
+        wallJumping = false; 
+    }
     
     if (!wallJumping)
     {
         var moving = key_right - key_left;
         hsp = moving * walkspeed;
+
+        // Only allow change of image_xscale when not wall jumping
+        if (moving != 0) {
+            image_xscale = 0.75 * sign(moving);
+        }
     }
     else
     {
@@ -207,26 +218,24 @@ if (state == 0)																/* normal */
     vsp += grvt;
    
     // Jump Proc
-	if (key_jump_pressed && (onGround || isOnPlatform)) {
-	    vsp = -jumpHeight; 
-	    isJumping = true;
-	    jumpPressedTime = 1;
-	    isAirborne = true;
-	    canDash = true;
-	    hsp = playerMovement * walkspeed; 
-	}
-	if (isJumping && key_jump && jumpPressedTime < maxJumpPressedTime)
-	{
-	    vsp -= jumpForce; 
-	    jumpPressedTime++;
-	}
-	else
-	{
-	    isJumping = false;
-	}
-
-
-	
+    if (key_jump_pressed && (onGround || isOnPlatform)) {
+        vsp = -jumpHeight; 
+        isJumping = true;
+        jumpPressedTime = 1;
+        isAirborne = true;
+        canDash = true;
+        hsp = playerMovement * walkspeed; 
+    }
+    if (isJumping && key_jump && jumpPressedTime < maxJumpPressedTime)
+    {
+        vsp -= jumpForce; 
+        jumpPressedTime++;
+    }
+    else
+    {
+        isJumping = false;
+    }
+}
 }
 
 if (state == 1) // Dash
