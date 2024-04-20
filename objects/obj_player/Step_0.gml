@@ -64,8 +64,6 @@ if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || (
 }
 y += vsp;
 
-
-
 wallLeft = place_meeting(x-1, y, obj_wall);
 wallRight = place_meeting(x+1, y, obj_wall);
 
@@ -95,6 +93,12 @@ if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150) 
     if (state == 4) {
         state = 0; 
     }
+}
+
+//check if dead! 
+if (hp <= 0) 
+{
+	room_goto(rm_gameOver);
 }
 
 /*----------------------------------------- ANIMATIONS --------------------------------------------------*/
@@ -136,10 +140,11 @@ if (!place_meeting(x, y + 1, obj_block)) {											/* Fly Anim */
 	// Melee proc	State -> 1
     if (mouse_check_button_pressed(mb_left))
     {
+		instance_create_layer(x,y,"Player", obj_melee);
 		state = 2;
     }
 	
-	// Melee proc	State -> 2
+	// Fireball proc	State -> 2
     if (mouse_check_button_pressed(mb_right))
     {
 		state = 3;	
@@ -286,7 +291,7 @@ if (state == 2)																/* melee */
 		sprite_index = spr_player_sideAttack
 	}
 
-	instance_create_layer(x,y,"Player", obj_melee);
+	//instance_create_layer(x,y,"Player", obj_melee);
 
 	if  (image_index >= 3 && image_index < 4)
 	{

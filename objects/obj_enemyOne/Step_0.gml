@@ -1,13 +1,42 @@
 if (instance_exists(obj_player))
 {
-	//check if player is in range
-	if (distance_to_object(obj_player) < attackRange)
+	//proc aggro	
+	if (distance_to_object(obj_player) < aggroRange)
 	{		
 		aggro = true;
 	}
+	
+	//break aggro
+	if (distance_to_object(obj_player) > aggroRange + 200)
+	{		
+		aggro = false;
+	}
+	
+	//flip sprite
+	if (obj_player.x > x)
+	{
+		image_xscale = 1;
+	}
+	if (obj_player.x < x)
+	{
+		image_xscale = -1
+	}
+	
+	//pause and attack
+	if (distance_to_object(obj_player) < attackRange && canAttack)
+	{		
+		
+		attacking = true;
+		canAttack = false;
+		hsp = 0;
+		alarm[0] = 100;
+		alarm[1] = 30;
+		alarm[2] = 70;
+		
+	}
 }
 
-if (aggro == true)
+if (aggro && !attacking)
 {
 	if (obj_player.x > x)
 	{
@@ -21,19 +50,27 @@ if (aggro == true)
 
 vsp += grvt;
 
-// Horizontal collision with obj_block or obj_wall or obj_crate or obj_MovingPlatform or obj_MovingAirPlatform
+// Horizontal collision
 if (place_meeting(x+hsp, y, obj_block))
 {
-	vsp = - 7
 	hsp = 0;
+	if (canJump)
+	{
+		vsp = - 7
+		canJump = false;
+		alarm[3] = 60;
+	}
 }
 x += hsp;
 
+// Vertical collision
 if (place_meeting(x, y+vsp, obj_block))
 {
     vsp = 0;
 }
 y += vsp;
+
+if (hp <= 0) instance_destroy();
 
 
 
