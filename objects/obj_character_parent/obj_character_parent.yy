@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Characters",
-    "path": "folders/Objects/Characters.yy",
+    "name": "(Reference) Junk",
+    "path": "folders/Objects/(Reference) Junk.yy",
   },
   "parentObjectId": null,
   "persistent": false,

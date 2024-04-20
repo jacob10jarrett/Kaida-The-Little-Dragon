@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Platforms",
+    "path": "folders/Objects/Environment/Platforms.yy",
   },
   "parentObjectId": {
     "name": "obj_MovingAirPlatform",

@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "RoomEditor",
+    "path": "folders/Objects/Environment/RoomEditor.yy",
   },
   "parentObjectId": null,
   "persistent": false,

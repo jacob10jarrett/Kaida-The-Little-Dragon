@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Player (REFERENCE + doesn't work)",
-    "path": "folders/Objects/Characters/Player (REFERENCE + doesn't work).yy",
+    "path": "folders/Objects/(Reference) Junk/Player (REFERENCE + doesn't work).yy",
   },
   "parentObjectId": null,
   "persistent": false,
