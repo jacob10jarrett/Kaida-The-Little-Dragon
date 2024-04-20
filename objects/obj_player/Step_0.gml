@@ -16,7 +16,8 @@ isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(
 var platform = instance_place(x, y + 1, obj_MovingAirPlatform);
 var isOnPlatform = place_meeting(x, y + 1, obj_MovingAirPlatform);
 
-if (isOnPlatform) {
+if (isOnPlatform) 
+{
 	
 	hsp = playerMovement * walkspeed;
 
@@ -81,7 +82,8 @@ if (mouse_check_button_pressed(mb_right) && canFire)
 
 var _isFacingCrate = false;
 var _crate = instance_nearest(x, y, obj_crate);
-if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150) {
+if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150) 
+{
     var _directionToCrate = point_direction(x, y, _crate.x, _crate.y);
     var _isFacingCrate = (image_xscale * cos(degtorad(_directionToCrate)) > 0);
     
@@ -90,7 +92,8 @@ if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150) 
         global.pullingCrate = _crate; 
     }
 } else if (!key_pull || !_isFacingCrate) {
-    if (state == 4) {
+    if (state == 4) 
+	{
         state = 0; 
     }
 }
@@ -102,12 +105,14 @@ if (hp <= 0)
 }
 
 /*----------------------------------------- ANIMATIONS --------------------------------------------------*/
-if (vsp > 0 || vsp < 0) {
+if (vsp > 0 || vsp < 0) 
+{
     idle = false;
     falling = true;
 }
 
-if (!isOnPlatform && !wallJumping) {  
+if (!isOnPlatform && !wallJumping) 
+{  
     if (hsp != 0) {
         image_xscale = 0.75 * sign(hsp);									/* Sprite direction */
         image_yscale = 0.75;
@@ -116,12 +121,13 @@ if (!isOnPlatform && !wallJumping) {
 
 if (!place_meeting(x, y + 1, obj_block)) {											/* Fly Anim */
     sprite_index = (sign(vsp) != 0) ? spr_player_fly : spr_player_idle;
-    if (!wallJumping) {  // Prevent direction change during wall jump
+    if (!wallJumping && state != 5) {  // Prevent direction change during wall jump
         image_xscale = (key_right - key_left != 0) ? 0.75 * sign(key_right - key_left) : image_xscale;
     }
     image_yscale = 0.75;
 } else {
-    if (hsp == 0) {																	/* Idle Anim */
+    if (hsp == 0) 
+	{																	/* Idle Anim */
         sprite_index = spr_player_idle;
         if (!wallJumping) {  
             image_xscale = (key_right - key_left != 0) ? 0.75 * sign(key_right - key_left) : image_xscale;
@@ -138,7 +144,7 @@ if (!place_meeting(x, y + 1, obj_block)) {											/* Fly Anim */
 /*------------------------------------------- States ----------------------------------------------------*/	
 
 	// Melee proc	State -> 1
-    if (mouse_check_button_pressed(mb_left))
+    if (mouse_check_button_pressed(mb_left) && state != 5)
     {
 		instance_create_layer(x,y,"Player", obj_melee);
 		state = 2;
@@ -348,4 +354,47 @@ if (key_pull && state != 4) {
     state = 0;
     global.isPulling = false;
     global.pullingCrate = noone;
+}
+
+if (state == 5)																/* staggered */
+{
+	show_debug_message("STATE = STAGGERED");
+	
+	//hsp = sign(image_index) * 6;
+	
+	
+	if (isStaggered)
+	{
+		vsp = -3
+		isStaggered = false;
+	}
+	
+	vsp += grvt;
+	
+	if (place_meeting(x, y+vsp, obj_block))
+	{
+		while (!place_meeting(x,y+sign(vsp), obj_block))
+		{
+			y += sign(vsp);
+		}
+		vsp = 0;
+	}
+	y += vsp;
+	
+	if (place_meeting(x+hsp, y, obj_block))
+	{
+		while (!place_meeting(x+sign(hsp),y, obj_block))
+		{
+			x += sign(hsp);
+		}
+		hsp = 0;
+	}
+	x += hsp;
+	
+	if (place_meeting(x, y + 1, obj_block))
+	{
+		isHit = false;
+		state = 0;
+	}
+	
 }

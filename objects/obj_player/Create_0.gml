@@ -6,7 +6,6 @@ isJumping = false;
 jumpPressedTime = 1; 
 maxJumpPressedTime = 12; 
 jumpForce = 1; 
-jumpHeight = 7;
 
 image_xscale = 0.75; 
 image_yscale = 0.75; 
@@ -18,6 +17,7 @@ hasDashed = false;
 dashDist = 250;
 dashTime = 15;
 isAirborne = false;
+isStaggered = false;	isHit = false;
 
 wallJumping = false;
 lastWallJumpDir = 0; 
