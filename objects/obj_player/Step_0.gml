@@ -62,7 +62,9 @@ if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || (
     vsp = 0;
     sprite_index = spr_player_idle;
 }
-y = y + vsp;
+y += vsp;
+
+
 
 wallLeft = place_meeting(x-1, y, obj_wall);
 wallRight = place_meeting(x+1, y, obj_wall);
@@ -131,19 +133,19 @@ if (!place_meeting(x, y + 1, obj_block)) {											/* Fly Anim */
 		
 /*------------------------------------------- States ----------------------------------------------------*/	
 
-	// Melee proc	S -> 1
+	// Melee proc	State -> 1
     if (mouse_check_button_pressed(mb_left))
     {
 		state = 2;
     }
 	
-	// Melee proc	S -> 2
+	// Melee proc	State -> 2
     if (mouse_check_button_pressed(mb_right))
     {
 		state = 3;	
     }
 	
-	// Dash proc	S -> 3
+	// Dash proc	State -> 3
 	if (canDash && key_dash) {
 	    canDash = false; 
 	    hasDashed = true; 
@@ -238,7 +240,7 @@ if (state == 0) // normal
 }
 }
 
-if (state == 1) // Dash
+if (state == 1) 															/* dash */
 {
     show_debug_message("STATE = DASHING");
 	
@@ -315,7 +317,7 @@ if (state == 3)																/* fireball */
 	}
 }
 
-if (state == 4 && instance_exists(global.pullingCrate)) {						/* crate pushing */
+if (state == 4 && instance_exists(global.pullingCrate)) {				/* crate pushing */
 	vsp += grvt;
     if (!place_meeting(global.pullingCrate.x, global.pullingCrate.y + 1, obj_block)) {
         state = 0; 
