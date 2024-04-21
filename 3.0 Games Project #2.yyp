@@ -206,6 +206,7 @@
     {"id":{"name":"obj_goto_caves","path":"objects/obj_goto_caves/obj_goto_caves.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"seq_game_over","path":"sequences/seq_game_over/seq_game_over.yy",},},
+    {"id":{"name":"load_previous_room","path":"scripts/load_previous_room/load_previous_room.yy",},},
     {"id":{"name":"spr_sign2","path":"sprites/spr_sign2/spr_sign2.yy",},},
     {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},},
     {"id":{"name":"obj_enemyTwo","path":"objects/obj_enemyTwo/obj_enemyTwo.yy",},},
