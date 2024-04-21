@@ -8,6 +8,7 @@ key_jump = keyboard_check(vk_space);
 key_jump_pressed = keyboard_check_pressed(vk_space);
 key_pull = keyboard_check(ord("E"));
 
+
 var playerMovement = key_right - key_left;
 var onGround = place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_crate) || place_meeting(x, y + 1, obj_MovingAirPlatform);
 isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate) && !place_meeting(x, y+1, obj_MovingAirPlatform));
@@ -96,9 +97,8 @@ if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150) 
 }
 
 //check if dead! 
-if (hp <= 0) 
-{
-	room_goto(rm_gameOver);
+if (hp <= 0) {
+    trigger_game_over();  
 }
 
 /*----------------------------------------- ANIMATIONS --------------------------------------------------*/
@@ -116,7 +116,11 @@ if (!isOnPlatform && !wallJumping) {
 
 if (!place_meeting(x, y + 1, obj_block)) {											/* Fly Anim */
     sprite_index = (sign(vsp) != 0) ? spr_player_fly : spr_player_idle;
+<<<<<<< Updated upstream
     if (!wallJumping) {  // Prevent direction change during wall jump
+=======
+    if (!wallJumping && state != 5) {  
+>>>>>>> Stashed changes
         image_xscale = (key_right - key_left != 0) ? 0.75 * sign(key_right - key_left) : image_xscale;
     }
     image_yscale = 0.75;

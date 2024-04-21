@@ -5,15 +5,32 @@
     {"name":"Fonts","order":7,"path":"folders/Fonts.yy",},
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
     {"name":"Objects","order":9,"path":"folders/Objects.yy",},
+<<<<<<< Updated upstream
     {"name":"Characters","order":10,"path":"folders/Objects/Characters.yy",},
     {"name":"Enemies","order":3,"path":"folders/Objects/Characters/Enemies.yy",},
     {"name":"Player (REFERENCE + doesn't work)","order":1,"path":"folders/Objects/Characters/Player (REFERENCE + doesn't work).yy",},
+=======
+    {"name":"(Reference) Junk","order":10,"path":"folders/Objects/(Reference) Junk.yy",},
+    {"name":"Enemies","order":3,"path":"folders/Objects/(Reference) Junk/Enemies.yy",},
+    {"name":"Player (REFERENCE + doesn't work)","order":1,"path":"folders/Objects/(Reference) Junk/Player (REFERENCE + doesn't work).yy",},
+    {"name":"(Reference) Managers","order":1,"path":"folders/Objects/(Reference) Managers.yy",},
+>>>>>>> Stashed changes
     {"name":"Effects","order":13,"path":"folders/Objects/Effects.yy",},
     {"name":"Environment","order":11,"path":"folders/Objects/Environment.yy",},
+<<<<<<< Updated upstream
     {"name":"Editor","order":2,"path":"folders/Objects/Environment/Editor.yy",},
     {"name":"Interactive","order":1,"path":"folders/Objects/Environment/Interactive.yy",},
     {"name":"Items","order":3,"path":"folders/Objects/Environment/Items.yy",},
     {"name":"Managers (REFERENCE ONLY)","order":1,"path":"folders/Objects/Managers (REFERENCE ONLY).yy",},
+=======
+    {"name":"Interactive","order":1,"path":"folders/Objects/Environment/Interactive.yy",},
+    {"name":"Items","order":3,"path":"folders/Objects/Environment/Items.yy",},
+    {"name":"Platforms","order":4,"path":"folders/Objects/Environment/Platforms.yy",},
+    {"name":"RoomEditor","order":2,"path":"folders/Objects/Environment/RoomEditor.yy",},
+    {"name":"RoomTransitions","order":5,"path":"folders/Objects/Environment/RoomTransitions.yy",},
+    {"name":"Music","order":48,"path":"folders/Objects/Music.yy",},
+    {"name":"Player","order":47,"path":"folders/Objects/Player.yy",},
+>>>>>>> Stashed changes
     {"name":"UI","order":2,"path":"folders/Objects/UI.yy",},
     {"name":"Buttons","order":1,"path":"folders/Objects/UI/Buttons.yy",},
     {"name":"Main Menu","order":1,"path":"folders/Objects/UI/Buttons/Main Menu.yy",},
@@ -27,19 +44,32 @@
     {"name":"Shaders","order":6,"path":"folders/Shaders.yy",},
     {"name":"Sounds","order":3,"path":"folders/Sounds.yy",},
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
+<<<<<<< Updated upstream
     {"name":"Environment","order":14,"path":"folders/Sprites/Environment.yy",},
     {"name":"Editor","order":2,"path":"folders/Sprites/Environment/Editor.yy",},
     {"name":"Interactive","order":1,"path":"folders/Sprites/Environment/Interactive.yy",},
     {"name":"Items","order":15,"path":"folders/Sprites/Items.yy",},
     {"name":"Monsters","order":8,"path":"folders/Sprites/Monsters.yy",},
+=======
+    {"name":"Enemies","order":8,"path":"folders/Sprites/Enemies.yy",},
+    {"name":"Environment","order":14,"path":"folders/Sprites/Environment.yy",},
+    {"name":"Interactive","order":1,"path":"folders/Sprites/Environment/Interactive.yy",},
+    {"name":"RoomEditor","order":2,"path":"folders/Sprites/Environment/RoomEditor.yy",},
+    {"name":"Signs","order":4,"path":"folders/Sprites/Environment/Signs.yy",},
+    {"name":"Trees","order":3,"path":"folders/Sprites/Environment/Trees.yy",},
+    {"name":"Items","order":15,"path":"folders/Sprites/Items.yy",},
+>>>>>>> Stashed changes
     {"name":"Particles","order":16,"path":"folders/Sprites/Particles.yy",},
     {"name":"Player","order":13,"path":"folders/Sprites/Player.yy",},
     {"name":"Temp","order":17,"path":"folders/Sprites/Temp.yy",},
     {"name":"UI","order":1,"path":"folders/Sprites/UI.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+<<<<<<< Updated upstream
     {"name":"EnemySystem","order":46,"path":"folders/Objects/EnemySystem.yy",},
     {"name":"EnemySystem","order":42,"path":"folders/Sprites/EnemySystem.yy",},
+=======
+>>>>>>> Stashed changes
   ],
   "ResourceOrderSettings": [
     {"name":"spr_sign3","order":30,"path":"sprites/spr_sign3/spr_sign3.yy",},
@@ -76,12 +106,22 @@
     {"name":"obj_marker","order":7,"path":"objects/obj_marker/obj_marker.yy",},
     {"name":"snd_song4","order":4,"path":"sounds/snd_song4/snd_song4.yy",},
     {"name":"spr_game_logo","order":2,"path":"sprites/spr_game_logo/spr_game_logo.yy",},
+<<<<<<< Updated upstream
     {"name":"spr_treeCherry1","order":20,"path":"sprites/spr_treeCherry1/spr_treeCherry1.yy",},
     {"name":"obj_MovingAirPlatform3","order":43,"path":"objects/obj_MovingAirPlatform3/obj_MovingAirPlatform3.yy",},
     {"name":"spr_torii_pixelated","order":27,"path":"sprites/spr_torii_pixelated/spr_torii_pixelated.yy",},
     {"name":"spr_treeGreen","order":19,"path":"sprites/spr_treeGreen/spr_treeGreen.yy",},
     {"name":"spr_block","order":6,"path":"sprites/spr_block/spr_block.yy",},
+=======
+    {"name":"spr_treeCherry1","order":2,"path":"sprites/spr_treeCherry1/spr_treeCherry1.yy",},
+    {"name":"obj_MovingAirPlatform3","order":2,"path":"objects/obj_MovingAirPlatform3/obj_MovingAirPlatform3.yy",},
+    {"name":"spr_torii_pixelated","order":6,"path":"sprites/spr_torii_pixelated/spr_torii_pixelated.yy",},
+    {"name":"obj_majorCheckpoint","order":9,"path":"objects/obj_majorCheckpoint/obj_majorCheckpoint.yy",},
+    {"name":"spr_treeGreen","order":4,"path":"sprites/spr_treeGreen/spr_treeGreen.yy",},
+    {"name":"spr_block","order":1,"path":"sprites/spr_block/spr_block.yy",},
+>>>>>>> Stashed changes
     {"name":"obj_game_manager","order":2,"path":"objects/obj_game_manager/obj_game_manager.yy",},
+    {"name":"button_continue_pressed","order":4,"path":"scripts/button_continue_pressed/button_continue_pressed.yy",},
     {"name":"spr_player_sideAttackAir","order":6,"path":"sprites/spr_player_sideAttackAir/spr_player_sideAttackAir.yy",},
     {"name":"ts_area1","order":2,"path":"tilesets/ts_area1/ts_area1.yy",},
     {"name":"obj_crate","order":26,"path":"objects/obj_crate/obj_crate.yy",},
@@ -90,6 +130,11 @@
     {"name":"obj_fade_in","order":25,"path":"objects/obj_fade_in/obj_fade_in.yy",},
     {"name":"obj_deathZone","order":35,"path":"objects/obj_deathZone/obj_deathZone.yy",},
     {"name":"rm_village","order":3,"path":"rooms/rm_village/rm_village.yy",},
+<<<<<<< Updated upstream
+=======
+    {"name":"save_checkpoint","order":6,"path":"scripts/save_checkpoint/save_checkpoint.yy",},
+    {"name":"spr_kappaAttack","order":3,"path":"sprites/spr_kappaAttack/spr_kappaAttack.yy",},
+>>>>>>> Stashed changes
     {"name":"obj_player_defeated","order":1,"path":"objects/obj_player_defeated/obj_player_defeated.yy",},
     {"name":"obj_MovingAirPlatform","order":39,"path":"objects/obj_MovingAirPlatform/obj_MovingAirPlatform.yy",},
     {"name":"spr_titlescreen","order":35,"path":"sprites/spr_titlescreen/spr_titlescreen.yy",},
@@ -109,19 +154,35 @@
     {"name":"obj_melee","order":16,"path":"objects/obj_melee/obj_melee.yy",},
     {"name":"snd_song5","order":8,"path":"sounds/snd_song5/snd_song5.yy",},
     {"name":"obj_grapple_point","order":41,"path":"objects/obj_grapple_point/obj_grapple_point.yy",},
+<<<<<<< Updated upstream
     {"name":"spr_torii","order":26,"path":"sprites/spr_torii/spr_torii.yy",},
     {"name":"obj_death","order":5,"path":"objects/obj_death/obj_death.yy",},
+=======
+    {"name":"spr_torii","order":5,"path":"sprites/spr_torii/spr_torii.yy",},
+    {"name":"seq_dead","order":2,"path":"sequences/seq_dead/seq_dead.yy",},
+    {"name":"obj_death","order":2,"path":"objects/obj_death/obj_death.yy",},
+>>>>>>> Stashed changes
     {"name":"snd_song2","order":2,"path":"sounds/snd_song2/snd_song2.yy",},
     {"name":"State","order":1,"path":"scripts/State/State.yy",},
     {"name":"ts_draw","order":1,"path":"tilesets/ts_draw/ts_draw.yy",},
     {"name":"obj_per_manager","order":36,"path":"objects/obj_per_manager/obj_per_manager.yy",},
+    {"name":"obj_button_checkpoint","order":1,"path":"objects/obj_button_checkpoint/obj_button_checkpoint.yy",},
     {"name":"music_village1","order":24,"path":"objects/music_village1/music_village1.yy",},
     {"name":"obj_save","order":33,"path":"objects/obj_save/obj_save.yy",},
+<<<<<<< Updated upstream
     {"name":"spr_grapple_point","order":39,"path":"sprites/spr_grapple_point/spr_grapple_point.yy",},
     {"name":"spr_mushroom","order":10,"path":"sprites/spr_mushroom/spr_mushroom.yy",},
     {"name":"spr_crate","order":32,"path":"sprites/spr_crate/spr_crate.yy",},
     {"name":"spr_area1","order":18,"path":"sprites/spr_area1/spr_area1.yy",},
     {"name":"obj_MovingAirPlatform2","order":40,"path":"objects/obj_MovingAirPlatform2/obj_MovingAirPlatform2.yy",},
+=======
+    {"name":"spr_grapple_point","order":3,"path":"sprites/spr_grapple_point/spr_grapple_point.yy",},
+    {"name":"spr_mushroom","order":4,"path":"sprites/spr_mushroom/spr_mushroom.yy",},
+    {"name":"spr_crate","order":1,"path":"sprites/spr_crate/spr_crate.yy",},
+    {"name":"spr_area1","order":4,"path":"sprites/spr_area1/spr_area1.yy",},
+    {"name":"trigger_game_over","order":8,"path":"scripts/trigger_game_over/trigger_game_over.yy",},
+    {"name":"obj_MovingAirPlatform2","order":1,"path":"objects/obj_MovingAirPlatform2/obj_MovingAirPlatform2.yy",},
+>>>>>>> Stashed changes
     {"name":"obj_button_play","order":1,"path":"objects/obj_button_play/obj_button_play.yy",},
     {"name":"spr_block_wall","order":24,"path":"sprites/spr_block_wall/spr_block_wall.yy",},
     {"name":"obj_spikes","order":42,"path":"objects/obj_spikes/obj_spikes.yy",},
@@ -129,7 +190,12 @@
     {"name":"rm_menu","order":1,"path":"rooms/rm_menu/rm_menu.yy",},
     {"name":"rm_end","order":2,"path":"rooms/rm_end/rm_end.yy",},
     {"name":"spr_button_green_1","order":4,"path":"sprites/spr_button_green_1/spr_button_green_1.yy",},
+<<<<<<< Updated upstream
     {"name":"spr_bounds","order":5,"path":"sprites/spr_bounds/spr_bounds.yy",},
+=======
+    {"name":"load_checkpoint","order":7,"path":"scripts/load_checkpoint/load_checkpoint.yy",},
+    {"name":"spr_bounds","order":9,"path":"sprites/spr_bounds/spr_bounds.yy",},
+>>>>>>> Stashed changes
     {"name":"obj_gamepad_input","order":1,"path":"objects/obj_gamepad_input/obj_gamepad_input.yy",},
     {"name":"obj_circle_effect","order":32,"path":"objects/obj_circle_effect/obj_circle_effect.yy",},
     {"name":"obj_goto_village","order":23,"path":"objects/obj_goto_village/obj_goto_village.yy",},
@@ -152,7 +218,6 @@
     {"name":"obj_bounds","order":19,"path":"objects/obj_bounds/obj_bounds.yy",},
     {"name":"spr_cherryblossomleaf","order":36,"path":"sprites/spr_cherryblossomleaf/spr_cherryblossomleaf.yy",},
     {"name":"snd_button_press_01","order":1,"path":"sounds/snd_button_press_01/snd_button_press_01.yy",},
-    {"name":"obj_button_parent_1","order":4,"path":"objects/obj_button_parent_1/obj_button_parent_1.yy",},
     {"name":"music_prologue","order":22,"path":"objects/music_prologue/music_prologue.yy",},
   ],
 }
