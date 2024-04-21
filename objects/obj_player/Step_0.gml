@@ -98,10 +98,10 @@ if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150)
     }
 }
 
-//check if dead! 
-if (hp <= 0) 
-{
-	room_goto(rm_gameOver);
+//Player death 
+if (hp <= 0) {
+    global.previous_room = room;
+    room_goto(rm_gameOver);
 }
 
 /*----------------------------------------- ANIMATIONS --------------------------------------------------*/
@@ -121,7 +121,7 @@ if (!isOnPlatform && !wallJumping)
 
 if (!place_meeting(x, y + 1, obj_block)) {											/* Fly Anim */
     sprite_index = (sign(vsp) != 0) ? spr_player_fly : spr_player_idle;
-    if (!wallJumping && state != 5) {  // Prevent direction change during wall jump
+    if (!wallJumping && state != 5) {  
         image_xscale = (key_right - key_left != 0) ? 0.75 * sign(key_right - key_left) : image_xscale;
     }
     image_yscale = 0.75;

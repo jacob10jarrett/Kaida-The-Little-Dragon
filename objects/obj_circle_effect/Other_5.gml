@@ -1,4 +1,4 @@
-if (surface_exists(global.darknessSurface)) {
+if (surface_exists(global.darknessSurface) && global.darknessSurface != -1) {
     surface_free(global.darknessSurface);
-    global.darknessSurface = undefined;
+    global.darknessSurface = -1; 
 }

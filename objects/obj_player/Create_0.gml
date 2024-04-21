@@ -6,6 +6,7 @@ isJumping = false;
 jumpPressedTime = 1; 
 maxJumpPressedTime = 12; 
 jumpForce = 1; 
+game_over_initiated = false;
 
 image_xscale = 0.75; 
 image_yscale = 0.75; 
