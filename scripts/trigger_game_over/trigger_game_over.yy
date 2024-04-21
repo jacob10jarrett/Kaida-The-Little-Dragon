@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Collisions",
+  "name": "trigger_game_over",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
