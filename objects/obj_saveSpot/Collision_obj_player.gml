@@ -1,3 +1,7 @@
+//Checkpoint update
+
+
+
 ini_open("checkpoint.ini");
 
 ini_write_real("player", "x", other.x);

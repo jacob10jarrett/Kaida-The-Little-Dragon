@@ -1,15 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_majorCheckpoint",
+  "name": "obj_end_gate",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "RoomEditor",
-    "path": "folders/Objects/Environment/RoomEditor.yy",
+    "name": "Interactive",
+    "path": "folders/Objects/Environment/Interactive.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -28,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_coin",
-    "path": "sprites/spr_coin/spr_coin.yy",
+    "name": "spr_end_gate",
+    "path": "sprites/spr_end_gate/spr_end_gate.yy",
   },
   "spriteMaskId": null,
   "visible": true,

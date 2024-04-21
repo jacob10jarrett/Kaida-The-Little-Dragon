@@ -13,8 +13,8 @@
     "path": "folders/Objects/UI/Buttons/Pause Menu.yy",
   },
   "parentObjectId": {
-    "name": "obj_button_parent",
-    "path": "objects/obj_button_parent/obj_button_parent.yy",
+    "name": "obj_button_parent_1",
+    "path": "objects/obj_button_parent_1/obj_button_parent_1.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
