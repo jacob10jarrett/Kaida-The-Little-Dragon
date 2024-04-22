@@ -9,7 +9,7 @@ key_jump_pressed = keyboard_check_pressed(vk_space);
 key_pull = keyboard_check(ord("E"));
 
 var playerMovement = key_right - key_left;
-var onGround = place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_crate) || place_meeting(x, y + 1, obj_MovingAirPlatform);
+var onGround = place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_crate) || place_meeting(x, y + 1, obj_MovingAirPlatform) || place_meeting(x, y + 1, obj_PressurePlate);
 isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate) && !place_meeting(x, y+1, obj_MovingAirPlatform));
 
 // Moving platform logic 
