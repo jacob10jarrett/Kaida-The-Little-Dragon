@@ -1,3 +1,3 @@
-hsp = 30;
-vsp = 10;
+hsp = 0;
+vsp = 0;
 grvt = 0.7;
