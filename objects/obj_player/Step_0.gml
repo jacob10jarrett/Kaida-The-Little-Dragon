@@ -9,10 +9,10 @@ key_jump_pressed = keyboard_check_pressed(vk_space);
 key_pull = keyboard_check(ord("E"));
 
 var playerMovement = key_right - key_left;
-var onGround = place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_crate) || place_meeting(x, y + 1, obj_MovingAirPlatform) || place_meeting(x, y + 1, obj_PressurePlate);
-isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate) && !place_meeting(x, y+1, obj_MovingAirPlatform));
+var onGround = place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_crate) || place_meeting(x, y + 1, obj_MovingAirPlatform) || place_meeting(x, y + 8, obj_PressurePlate2);
+isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate) && !place_meeting(x, y+1, obj_MovingAirPlatform) && !place_meeting(x, y+1, obj_PressurePlate2));
 
-// Moving platform logic 
+// Moving air platform logic 
 var platform = instance_place(x, y + 1, obj_MovingAirPlatform);
 var isOnPlatform = place_meeting(x, y + 1, obj_MovingAirPlatform);
 
@@ -36,11 +36,20 @@ if (isOnPlatform)
     }
 }
 
+// Moving platform + standing on pressure plate logic 
+var onMovingPlatform = instance_place(x, y + 1, obj_MovingPlatform3) || instance_place(x, y + 1, obj_PressurePlate2);
+var movingPlatform = instance_place(x, y + 1, obj_MovingPlatform3);
+var pressurePlate = instance_place(x, y + 1, obj_PressurePlate2);
 
-// Horizontal collision with obj_block or obj_wall or obj_crate or obj_MovingPlatform or obj_MovingAirPlatform
-if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || place_meeting(x+hsp, y, obj_crate) || place_meeting(x+hsp, y, obj_MovingPlatform) || place_meeting(x+hsp, y, obj_MovingAirPlatform))
+//if (onMovingPlatform) {
+//hsp = playerMovement * walkspeed;
+//}
+
+
+// Horizontal collision
+if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || place_meeting(x+hsp, y, obj_crate) || place_meeting(x+hsp, y, obj_MovingPlatform) || place_meeting(x+hsp, y, obj_MovingAirPlatform) || place_meeting(x+hsp, y, obj_PressurePlate2))
 {
-    while (!place_meeting(x+sign(hsp),y, obj_block) && !place_meeting(x+sign(hsp),y, obj_wall) && !place_meeting(x+sign(hsp),y, obj_crate) && !place_meeting(x+sign(hsp),y, obj_MovingPlatform) && !place_meeting(x+sign(hsp),y, obj_MovingAirPlatform))
+    while (!place_meeting(x+sign(hsp),y, obj_block) && !place_meeting(x+sign(hsp),y, obj_wall) && !place_meeting(x+sign(hsp),y, obj_crate) && !place_meeting(x+sign(hsp),y, obj_MovingPlatform) && !place_meeting(x+sign(hsp),y, obj_MovingAirPlatform) && !place_meeting(x+sign(hsp),y, obj_PressurePlate2))
     {
         x += sign(hsp);
     }
@@ -48,8 +57,8 @@ if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || p
 }
 x += hsp;
 
-// Vertical collision with obj_block or obj_wall or obj_MovingPlatform or obj_MovingAirPlatform
-if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || (place_meeting(x, y+vsp, obj_crate) || place_meeting(x, y+vsp, obj_MovingPlatform) || place_meeting(x, y+vsp, obj_MovingAirPlatform))) {
+// Vertical collision 
+if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || (place_meeting(x, y+vsp, obj_crate) || place_meeting(x, y+vsp, obj_MovingAirPlatform) || place_meeting(x, y+vsp, obj_PressurePlate2))) {
     if (!place_meeting(x, y+1, obj_block)) {
         if (isAirborne) {
             canDash = true; 
@@ -57,8 +66,8 @@ if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || (
             isAirborne = false;
         }
     }
-    while (!place_meeting(x,y+sign(vsp), obj_block) && !place_meeting(x,y+sign(vsp), obj_wall) && !place_meeting(x,y+sign(vsp), obj_crate) && !place_meeting(x,y+sign(vsp), obj_MovingPlatform) && !place_meeting(x,y+sign(vsp), obj_MovingAirPlatform)) {
-        y = y + sign(vsp);
+    while (!place_meeting(x,y+sign(vsp), obj_block) && !place_meeting(x,y+sign(vsp), obj_wall) && !place_meeting(x,y+sign(vsp), obj_crate) && !place_meeting(x,y+sign(vsp), obj_MovingAirPlatform) && !place_meeting(x,y+sign(vsp), obj_PressurePlate2)) {
+        y += sign(vsp);
     }
     vsp = 0;
     sprite_index = spr_player_idle;
@@ -79,7 +88,6 @@ if (mouse_check_button_pressed(mb_right) && canFire)
 }
 
 // Crate pushing
-
 var _isFacingCrate = false;
 var _crate = instance_nearest(x, y, obj_crate);
 if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150) 
@@ -165,8 +173,6 @@ if (!place_meeting(x, y + 1, obj_block)) {											/* Fly Anim */
 	    dashEnergy = dashDist;
 	    state = 1;
 	}
-
-
 
 if (state == 0)																/* normal */
 {

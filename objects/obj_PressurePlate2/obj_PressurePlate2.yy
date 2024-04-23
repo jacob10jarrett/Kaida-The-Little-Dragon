@@ -35,10 +35,10 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": false,
+  "solid": true,
   "spriteId": {
-    "name": "spr_block_wall",
-    "path": "sprites/spr_block_wall/spr_block_wall.yy",
+    "name": "spr_pressure_plate",
+    "path": "sprites/spr_pressure_plate/spr_pressure_plate.yy",
   },
   "spriteMaskId": null,
   "visible": true,

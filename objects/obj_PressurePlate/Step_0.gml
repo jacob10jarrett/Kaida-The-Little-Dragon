@@ -6,6 +6,7 @@ if (playerAbove && !activated && canBeActivated) {
         alarm[0] = room_speed * 2; 
     }
     activated = true;
+	audio_play_sound(snd_pressureplate, 0, 0)
     canBeActivated = false; 
     alarm[2] = room_speed * 4; 
 } 

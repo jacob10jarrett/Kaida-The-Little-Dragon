@@ -1,2 +1,2 @@
-vertical_speed = -4; 
-alarm[1] = room_speed * 9.2;
+vertical_speed = 4; 
+alarm[1] = 540;

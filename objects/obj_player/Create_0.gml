@@ -19,6 +19,7 @@ dashDist = 250;
 dashTime = 15;
 isAirborne = false;
 isStaggered = false;	isHit = false;
+onPressurePlate = false;
 
 wallJumping = false;
 lastWallJumpDir = 0; 
