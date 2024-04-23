@@ -35,7 +35,7 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": true,
+  "solid": false,
   "spriteId": {
     "name": "spr_pressure_plate",
     "path": "sprites/spr_pressure_plate/spr_pressure_plate.yy",
