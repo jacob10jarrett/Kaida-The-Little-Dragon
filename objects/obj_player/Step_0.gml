@@ -10,7 +10,7 @@ key_pull = keyboard_check(ord("E"));
 
 var playerMovement = key_right - key_left;
 var onGround = place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_crate) || place_meeting(x, y+1, obj_MovingAirPlatform) || instance_place(x, y+1, obj_MovingPlatform3);
-isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate) && !place_meeting(x, y+1, obj_MovingAirPlatform) && !place_meeting(x, y+38, obj_PressurePlate2));
+isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate) && !place_meeting(x, y+1, obj_MovingAirPlatform) && !place_meeting(x, y+12, obj_PressurePlate2));
 
 // Moving air platform logic 
 var platform = instance_place(x, y + 1, obj_MovingAirPlatform);
@@ -38,7 +38,7 @@ if (isOnPlatform)
 
 // Moving platform + standing on pressure plate logic 
 var movingPlatform = instance_place(x, y+1, obj_MovingPlatform3);
-var pressurePlate = instance_place(x, y+38, obj_PressurePlate2);
+var pressurePlate = instance_place(x, y+12, obj_PressurePlate2);
 var isFallingOnPlate2 = (vsp != 0) && (pressurePlate != noone) && (pressurePlate.pp_vertical_speed < 0);
 var onMovingPlatform = (movingPlatform != noone);
 var onPressurePlate = (pressurePlate != noone);
@@ -62,7 +62,7 @@ if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || p
 x += hsp;
 
 // Vertical collision 
-if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || place_meeting(x, y+vsp, obj_crate) || place_meeting(x, y+vsp, obj_MovingAirPlatform) || place_meeting(x, y+38, obj_PressurePlate2)) {
+if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || place_meeting(x, y+vsp, obj_crate) || place_meeting(x, y+vsp, obj_MovingAirPlatform) || place_meeting(x, y+vsp, obj_PressurePlate2)) {
     if (!place_meeting(x, y+1, obj_block) && !place_meeting(x, y+1, obj_PressurePlate2)) {
         if (isAirborne) {
             canDash = true; 
@@ -120,20 +120,26 @@ if (hp <= 0) {
 var isMovingDown = (pressurePlate != noone) && (obj_PressurePlate2.pp_vertical_speed < 0);
 var isFallingOnPlate2 = (vsp > 0 || vsp < 0) && isMovingDown && pressurePlate;
 
+
+
+ // Check if pressure plate 2 is moving down
+
 if (isFallingOnPlate2) {
+    // Player is falling or flying on top of pressure plate 2 as it moves down
     idle = false;
     falling = true;
-    sprite_index = spr_player_fly; 
+    sprite_index = spr_player_fly; // Set sprite to falling/flying animation
 } else {
+    // Previous animation logic remains the same
     if (!isOnPlatform && !wallJumping) {  
         if (hsp != 0) {
-            image_xscale = 0.75 * sign(hsp);  
+            image_xscale = 0.75 * sign(hsp);  // Sprite direction
             image_yscale = 0.75;
         }
     }
 
     if (!place_meeting(x, y + 1, obj_block) && !place_meeting(x, y + 1, obj_PressurePlate2)) {
-        																/* air */
+        // Player is in the air
         sprite_index = (sign(vsp) != 0) ? spr_player_fly : spr_player_idle;
         if (!wallJumping && state != 5) {  
             image_xscale = (key_right - key_left != 0) ? 0.75 * sign(key_right - key_left) : image_xscale;
@@ -141,14 +147,14 @@ if (isFallingOnPlate2) {
         image_yscale = 0.75;
     } else {
         if (hsp == 0) {
-            																/* idle */
+            // Player is idle
             sprite_index = spr_player_idle;
             if (!wallJumping) {  
                 image_xscale = (key_right - key_left != 0) ? 0.75 * sign(key_right - key_left) : image_xscale;
             }
             image_yscale = 0.75;
         } else {
-														             		/* walking */
+            // Player is walking
             idle = false;
             sprite_index = spr_player_walk;
             image_xscale = 0.75 * sign(hsp);
@@ -247,7 +253,7 @@ if (state == 0) // normal
     vsp += grvt;
    
     // Jump Proc
-    if (key_jump_pressed && (onGround || isOnPlatform)) {
+    if (key_jump_pressed && (onGround || isOnPlatform || onPressurePlate)) {
         vsp = -jumpHeight; 
         isJumping = true;
         jumpPressedTime = 1;

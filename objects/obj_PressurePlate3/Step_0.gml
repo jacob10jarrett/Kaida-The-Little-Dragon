@@ -8,7 +8,7 @@ if (playerAbove && !activated && canBeActivated) {
     activated = true;
 	audio_play_sound(snd_pressureplate, 0, 0)
     canBeActivated = false; 
-    alarm[2] = 180; 
+    alarm[2] = 360; 
 } 
 else if (!playerAbove && activated) {
     activated = false;

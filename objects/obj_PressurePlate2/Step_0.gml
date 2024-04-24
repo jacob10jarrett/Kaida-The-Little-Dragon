@@ -1,8 +1,7 @@
 y += pp_vertical_speed;
 
 if (activated) {
-    // Adjust the pressure plate's position directly based on the platform's movement
-    y = obj_MovingPlatform3.y - sprite_height; // sprite_height should be the height of the pressure plate sprite
+    y = obj_MovingPlatform3.y - sprite_height; 
 }
 
 var playerAbove = instance_place(x, y - 12, obj_player);
@@ -12,8 +11,9 @@ if (playerAbove && !activated && canBeActivated) {
         alarm[0] = 540;
     }
     activated = true;
-    audio_play_sound(snd_pressureplate, 0, false);
     canBeActivated = false;
+	audio_play_sound(snd_pressureplate, 0, false);
+	audio_play_sound(snd_rumble, 0, 0.1, 1, false);
     alarm[2] = 1080;
 }
 else if (!playerAbove && activated) {
