@@ -1,3 +1,3 @@
-speed = 4; 
+speed = 6; 
 direction = 180;
-image_blend = c_blue; 
+image_angle = direction; 
