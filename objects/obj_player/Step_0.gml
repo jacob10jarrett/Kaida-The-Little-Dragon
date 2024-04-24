@@ -1,12 +1,14 @@
 // User input
-key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
-key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
-key_up = keyboard_check(vk_up);
-key_down = keyboard_check(vk_down);
-key_dash = keyboard_check_pressed(vk_shift);
-key_jump = keyboard_check(vk_space); 
-key_jump_pressed = keyboard_check_pressed(vk_space);
-key_pull = keyboard_check(ord("E"));
+if (can_control) {
+	key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
+	key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
+	key_up = keyboard_check(vk_up);
+	key_down = keyboard_check(vk_down);
+	key_dash = keyboard_check_pressed(vk_shift);
+	key_jump = keyboard_check(vk_space); 
+	key_jump_pressed = keyboard_check_pressed(vk_space);
+	key_pull = keyboard_check(ord("E"));
+}
 
 var playerMovement = key_right - key_left;
 var onGround = place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_crate) || place_meeting(x, y+1, obj_MovingAirPlatform) || instance_place(x, y+1, obj_MovingPlatform3);
@@ -121,19 +123,14 @@ var isMovingDown = (pressurePlate != noone) && (obj_PressurePlate2.pp_vertical_s
 var isFallingOnPlate2 = (vsp > 0 || vsp < 0) && isMovingDown && pressurePlate;
 
 
-
- // Check if pressure plate 2 is moving down
-
 if (isFallingOnPlate2) {
-    // Player is falling or flying on top of pressure plate 2 as it moves down
     idle = false;
     falling = true;
-    sprite_index = spr_player_fly; // Set sprite to falling/flying animation
+    sprite_index = spr_player_fly; 
 } else {
-    // Previous animation logic remains the same
     if (!isOnPlatform && !wallJumping) {  
         if (hsp != 0) {
-            image_xscale = 0.75 * sign(hsp);  // Sprite direction
+            image_xscale = 0.75 * sign(hsp); 
             image_yscale = 0.75;
         }
     }
@@ -162,8 +159,6 @@ if (isFallingOnPlate2) {
         }
     }
 }
-
-
 		
 /*------------------------------------------- States ----------------------------------------------------*/	
 
