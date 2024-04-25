@@ -15,11 +15,11 @@ if (instance_exists(obj_player))
 	//flip sprite
 	if (obj_player.x > x)
 	{
-		image_xscale = 1;
+		image_xscale = -1;
 	}
 	if (obj_player.x < x)
 	{
-		image_xscale = -1
+		image_xscale = 1
 	}
 	
 	//pause and attack
@@ -30,7 +30,7 @@ if (instance_exists(obj_player))
 		canAttack = false;
 		hsp = 0;
 		alarm[0] = 100;
-		alarm[1] = 30;
+		alarm[1] = 20;
 		alarm[2] = 70;
 		
 	}
@@ -70,7 +70,19 @@ if (place_meeting(x, y+vsp, obj_block))
 }
 y += vsp;
 
+if (isHit)
+{
+	if (place_meeting(x, y + 1, obj_block))
+	{
+		isHit = false;
+		hsp = 0;
+		vsp = 0;
+	}
+}
+
 if (hp <= 0) instance_destroy();
+
+
 
 
 

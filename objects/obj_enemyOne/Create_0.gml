@@ -8,3 +8,4 @@ aggro = false;
 attacking = false;
 canAttack = true;
 canJump = true
+isHit = false;

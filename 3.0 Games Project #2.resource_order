@@ -9,7 +9,10 @@
     {"name":"Enemies","order":3,"path":"folders/Objects/(Reference) Junk/Enemies.yy",},
     {"name":"Player (REFERENCE + doesn't work)","order":1,"path":"folders/Objects/(Reference) Junk/Player (REFERENCE + doesn't work).yy",},
     {"name":"(Reference) Managers","order":1,"path":"folders/Objects/(Reference) Managers.yy",},
+<<<<<<< HEAD
     {"name":"BossFight","order":49,"path":"folders/Objects/BossFight.yy",},
+=======
+>>>>>>> chonny
     {"name":"Effects","order":13,"path":"folders/Objects/Effects.yy",},
     {"name":"EnemySystem","order":46,"path":"folders/Objects/EnemySystem.yy",},
     {"name":"Environment","order":11,"path":"folders/Objects/Environment.yy",},
@@ -32,16 +35,28 @@
     {"name":"Shaders","order":6,"path":"folders/Shaders.yy",},
     {"name":"Sounds","order":3,"path":"folders/Sounds.yy",},
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
+<<<<<<< HEAD
     {"name":"Enemies","order":2,"path":"folders/Sprites/Enemies.yy",},
     {"name":"Environment","order":5,"path":"folders/Sprites/Environment.yy",},
+=======
+    {"name":"Enemies","order":8,"path":"folders/Sprites/Enemies.yy",},
+    {"name":"Environment","order":14,"path":"folders/Sprites/Environment.yy",},
+>>>>>>> chonny
     {"name":"Interactive","order":1,"path":"folders/Sprites/Environment/Interactive.yy",},
     {"name":"RoomEditor","order":2,"path":"folders/Sprites/Environment/RoomEditor.yy",},
     {"name":"Signs","order":4,"path":"folders/Sprites/Environment/Signs.yy",},
     {"name":"Trees","order":3,"path":"folders/Sprites/Environment/Trees.yy",},
+<<<<<<< HEAD
     {"name":"Items","order":6,"path":"folders/Sprites/Items.yy",},
     {"name":"Particles","order":7,"path":"folders/Sprites/Particles.yy",},
     {"name":"Player","order":4,"path":"folders/Sprites/Player.yy",},
     {"name":"Temp","order":8,"path":"folders/Sprites/Temp.yy",},
+=======
+    {"name":"Items","order":15,"path":"folders/Sprites/Items.yy",},
+    {"name":"Particles","order":16,"path":"folders/Sprites/Particles.yy",},
+    {"name":"Player","order":13,"path":"folders/Sprites/Player.yy",},
+    {"name":"Temp","order":17,"path":"folders/Sprites/Temp.yy",},
+>>>>>>> chonny
     {"name":"UI","order":1,"path":"folders/Sprites/UI.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
@@ -59,7 +74,6 @@
     {"name":"spr_marker","order":6,"path":"sprites/spr_marker/spr_marker.yy",},
     {"name":"obj_enemyMelee","order":2,"path":"objects/obj_enemyMelee/obj_enemyMelee.yy",},
     {"name":"spr_player_walk","order":2,"path":"sprites/spr_player_walk/spr_player_walk.yy",},
-    {"name":"music_caves","order":29,"path":"objects/music_caves/music_caves.yy",},
     {"name":"obj_effect_jump","order":1,"path":"objects/obj_effect_jump/obj_effect_jump.yy",},
     {"name":"obj_fire","order":10,"path":"objects/obj_fire/obj_fire.yy",},
     {"name":"obj_PressurePlate2","order":4,"path":"objects/obj_PressurePlate2/obj_PressurePlate2.yy",},
@@ -89,6 +103,7 @@
     {"name":"ts_cave","order":3,"path":"tilesets/ts_cave/ts_cave.yy",},
     {"name":"rm_gameOver","order":6,"path":"rooms/rm_gameOver/rm_gameOver.yy",},
     {"name":"obj_block_diagonal","order":1,"path":"objects/obj_block_diagonal/obj_block_diagonal.yy",},
+    {"name":"spr_kappaMelee","order":7,"path":"sprites/spr_kappaMelee/spr_kappaMelee.yy",},
     {"name":"spr_sign4","order":3,"path":"sprites/spr_sign4/spr_sign4.yy",},
     {"name":"obj_marker","order":4,"path":"objects/obj_marker/obj_marker.yy",},
     {"name":"snd_song4","order":4,"path":"sounds/snd_song4/snd_song4.yy",},
@@ -112,7 +127,7 @@
     {"name":"obj_crate","order":1,"path":"objects/obj_crate/obj_crate.yy",},
     {"name":"obj_treeCherry2","order":3,"path":"objects/obj_treeCherry2/obj_treeCherry2.yy",},
     {"name":"spr_fireball","order":10,"path":"sprites/spr_fireball/spr_fireball.yy",},
-    {"name":"obj_fade_in","order":25,"path":"objects/obj_fade_in/obj_fade_in.yy",},
+    {"name":"obj_fade_in","order":3,"path":"objects/obj_fade_in/obj_fade_in.yy",},
     {"name":"obj_deathZone","order":3,"path":"objects/obj_deathZone/obj_deathZone.yy",},
     {"name":"spr_cutscene_caves","order":13,"path":"sprites/spr_cutscene_caves/spr_cutscene_caves.yy",},
     {"name":"rm_village","order":3,"path":"rooms/rm_village/rm_village.yy",},
@@ -151,16 +166,25 @@
     {"name":"State","order":1,"path":"scripts/State/State.yy",},
     {"name":"ts_draw","order":1,"path":"tilesets/ts_draw/ts_draw.yy",},
     {"name":"obj_per_manager","order":36,"path":"objects/obj_per_manager/obj_per_manager.yy",},
+<<<<<<< HEAD
     {"name":"snd_rumble","order":10,"path":"sounds/snd_rumble/snd_rumble.yy",},
     {"name":"obj_caves_cutscene1","order":6,"path":"objects/obj_caves_cutscene1/obj_caves_cutscene1.yy",},
     {"name":"obj_MovingAirPlatform5","order":6,"path":"objects/obj_MovingAirPlatform5/obj_MovingAirPlatform5.yy",},
     {"name":"music_village1","order":24,"path":"objects/music_village1/music_village1.yy",},
+=======
+    {"name":"obj_fade_in_caves","order":4,"path":"objects/obj_fade_in_caves/obj_fade_in_caves.yy",},
+    {"name":"music_village1","order":2,"path":"objects/music_village1/music_village1.yy",},
+>>>>>>> chonny
     {"name":"spr_heart","order":7,"path":"sprites/spr_heart/spr_heart.yy",},
     {"name":"obj_save","order":33,"path":"objects/obj_save/obj_save.yy",},
     {"name":"snd_pressureplate","order":9,"path":"sounds/snd_pressureplate/snd_pressureplate.yy",},
     {"name":"ts_doors","order":7,"path":"tilesets/ts_doors/ts_doors.yy",},
     {"name":"spr_grapple_point","order":3,"path":"sprites/spr_grapple_point/spr_grapple_point.yy",},
+<<<<<<< HEAD
     {"name":"spr_fire","order":8,"path":"sprites/spr_fire/spr_fire.yy",},
+=======
+    {"name":"obj_kappa","order":3,"path":"objects/obj_kappa/obj_kappa.yy",},
+>>>>>>> chonny
     {"name":"spr_mushroom","order":4,"path":"sprites/spr_mushroom/spr_mushroom.yy",},
     {"name":"spr_crate","order":1,"path":"sprites/spr_crate/spr_crate.yy",},
     {"name":"spr_area1","order":4,"path":"sprites/spr_area1/spr_area1.yy",},
@@ -176,11 +200,12 @@
     {"name":"spr_button_green_1","order":4,"path":"sprites/spr_button_green_1/spr_button_green_1.yy",},
     {"name":"spr_bounds","order":9,"path":"sprites/spr_bounds/spr_bounds.yy",},
     {"name":"obj_gamepad_input","order":1,"path":"objects/obj_gamepad_input/obj_gamepad_input.yy",},
-    {"name":"obj_circle_effect","order":32,"path":"objects/obj_circle_effect/obj_circle_effect.yy",},
+    {"name":"obj_circle_effect","order":5,"path":"objects/obj_circle_effect/obj_circle_effect.yy",},
     {"name":"obj_goto_village","order":1,"path":"objects/obj_goto_village/obj_goto_village.yy",},
     {"name":"spr_melee","order":8,"path":"sprites/spr_melee/spr_melee.yy",},
     {"name":"obj_character_parent","order":2,"path":"objects/obj_character_parent/obj_character_parent.yy",},
     {"name":"obj_gamemanage","order":37,"path":"objects/obj_gamemanage/obj_gamemanage.yy",},
+    {"name":"obj_kappaMelee","order":4,"path":"objects/obj_kappaMelee/obj_kappaMelee.yy",},
     {"name":"scrSaving","order":2,"path":"scripts/scrSaving/scrSaving.yy",},
     {"name":"spr_deathpit","order":5,"path":"sprites/spr_deathpit/spr_deathpit.yy",},
     {"name":"spr_level","order":3,"path":"sprites/spr_level/spr_level.yy",},
@@ -199,8 +224,13 @@
     {"name":"spr_cherryblossomleaf","order":1,"path":"sprites/spr_cherryblossomleaf/spr_cherryblossomleaf.yy",},
     {"name":"load_game_state","order":5,"path":"scripts/load_game_state/load_game_state.yy",},
     {"name":"snd_button_press_01","order":1,"path":"sounds/snd_button_press_01/snd_button_press_01.yy",},
+<<<<<<< HEAD
     {"name":"music_prologue","order":22,"path":"objects/music_prologue/music_prologue.yy",},
     {"name":"spr_backgroundlayer3_caves","order":16,"path":"sprites/spr_backgroundlayer3_caves/spr_backgroundlayer3_caves.yy",},
+=======
+    {"name":"obj_button_parent_1","order":4,"path":"objects/obj_button_parent_1/obj_button_parent_1.yy",},
+    {"name":"music_prologue","order":1,"path":"objects/music_prologue/music_prologue.yy",},
+>>>>>>> chonny
     {"name":"spr_kasaobake","order":2,"path":"sprites/spr_kasaobake/spr_kasaobake.yy",},
   ],
 }

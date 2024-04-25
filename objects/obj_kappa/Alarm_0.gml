@@ -1,0 +1,4 @@
+/// @description idle
+
+attacking =  false;
+		

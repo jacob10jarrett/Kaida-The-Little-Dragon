@@ -1,5 +1,5 @@
 image_xscale = obj_enemyOne.image_xscale;
-alarm[0] = 6;
+alarm[0] = 5;
 
 
 

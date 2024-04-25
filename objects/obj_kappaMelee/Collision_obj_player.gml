@@ -16,4 +16,3 @@ if (x > other.x)
 {
 	other.hsp = -6;
 }
-
