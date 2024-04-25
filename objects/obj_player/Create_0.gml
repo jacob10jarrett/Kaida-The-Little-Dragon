@@ -1,3 +1,6 @@
+// Create Event of obj_player
+
+// Initialize basic movement and state variables
 hsp = 0;
 vsp = 0;
 grvt = 0.7;
@@ -18,7 +21,8 @@ hasDashed = false;
 dashDist = 250;
 dashTime = 15;
 isAirborne = false;
-isStaggered = false;	isHit = false;
+isStaggered = false;
+isHit = false;
 onPressurePlate = false;
 can_control = true;
 rotating_cutscene_caves = false;
