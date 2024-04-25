@@ -5,12 +5,14 @@ if (instance_exists(obj_player))
 	if (distance_to_object(obj_player) < aggroRange)
 	{		
 		aggro = true;
+		image_speed = 1;
 	}
 	
 	//break aggro
 	if (distance_to_object(obj_player) > aggroRange + 200)
 	{		
 		aggro = false;
+		image_speed = 0;
 	}
 	
 	//flip sprite

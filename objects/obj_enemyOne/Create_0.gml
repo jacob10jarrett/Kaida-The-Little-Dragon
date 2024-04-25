@@ -1,6 +1,7 @@
 
 //hspeed = 4;
 
+image_speed = 0;
 
 vsp =  0;
 hsp = 0;

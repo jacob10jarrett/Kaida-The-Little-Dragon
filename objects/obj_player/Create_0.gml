@@ -17,12 +17,17 @@ image_yscale = 0.75;
 falling = false;
 idle = true;
 canDash = true;
+canMelee = true
+canFireball = true;
+
 hasDashed = false;
 dashDist = 250;
 dashTime = 15;
+
 isAirborne = false;
 isStaggered = false;
 isHit = false;
+
 onPressurePlate = false;
 can_control = true;
 rotating_cutscene_caves = false;

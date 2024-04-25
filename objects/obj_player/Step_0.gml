@@ -94,9 +94,10 @@ if (keyboard_check_pressed(vk_tab)) {
 if (charges >= 3)	canFire = true; else canFire = false;
 
 // Spawn fireball
-if (mouse_check_button_pressed(mb_right) && canFire)
+if (mouse_check_button_pressed(mb_right) && canFireball)
 {
-	charges -= 3;
+	canFireball = false;
+	alarm[1] = 175;
 	instance_create_layer(x,y,"player", obj_fireball);
 }
 
@@ -169,20 +170,22 @@ if (isFallingOnPlate2) {
 		
 /*------------------------------------------- States ----------------------------------------------------*/	
 
-	// Melee proc	State -> 1
-    if (mouse_check_button_pressed(mb_left) && state != 5)
+	// Melee proc	State -> 2
+    if (mouse_check_button_pressed(mb_left) && state != 5 && canMelee)
     {
 		instance_create_layer(x,y,"Player", obj_melee);
+		canMelee = false;
+		alarm[0] = 50;
 		state = 2;
     }
 	
-	// Fireball proc	State -> 2
+	// Fireball proc	State -> 3
     if (mouse_check_button_pressed(mb_right))
     {
 		state = 3;	
     }
 	
-	// Dash proc	State -> 3
+	// Dash proc	State -> 1
 	if (canDash && key_dash) {
 	    canDash = false; 
 	    hasDashed = true; 
@@ -327,6 +330,8 @@ if (state == 2)																/* melee */
 	{
 		state = 0;
 	}
+	
+	if (!key_right && !key_left) hsp = 0;
 	
 	if (keyboard_check_pressed(ord("X"))) state = 0;
 }
