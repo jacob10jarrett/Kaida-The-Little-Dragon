@@ -1,15 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_background_controller",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-  ],
+  "name": "obj_caves_cutscene2",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Interactive",
+    "path": "folders/Objects/Environment/Interactive.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -27,7 +25,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_coin",
+    "path": "sprites/spr_coin/spr_coin.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

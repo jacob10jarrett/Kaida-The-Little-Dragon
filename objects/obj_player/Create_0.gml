@@ -39,4 +39,6 @@ global.isPulling = false;
 global.pullingCrate = noone;
 global.pushingForce = 0.5;
 
+global.near_player = false;
+
 state = 0;
