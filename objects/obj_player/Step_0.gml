@@ -175,9 +175,17 @@ if (isFallingOnPlate2) {
     if (mouse_check_button_pressed(mb_left) && state != 5 && canMelee)
     {
 		instance_create_layer(x,y,"Player", obj_melee);
+		if (sign(image_xscale) == 1)
+		{
+			instance_create_layer(x+75,y, "Player", obj_scratch);
+		}
+		else	instance_create_layer(x-75,y, "Player", obj_scratch);
+		
+		
 		canMelee = false;
 		alarm[0] = 50;
 		state = 2;
+	
     }
 	
 	// Fireball proc	State -> 3
