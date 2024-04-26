@@ -24,8 +24,6 @@ if (instance_exists(obj_player))
 		image_xscale = 1
 	}
 	
-
-	
 	if (distance_to_object(obj_player) < attackRange && canAttack && !attacking)
 	{		
 		attacking = true;	

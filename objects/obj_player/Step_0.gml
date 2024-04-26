@@ -177,13 +177,13 @@ if (isFallingOnPlate2) {
 		instance_create_layer(x,y,"Player", obj_melee);
 		if (sign(image_xscale) == 1)
 		{
-			instance_create_layer(x+75,y, "Player", obj_scratch);
+			instance_create_layer(x+125,y, "Player", obj_scratch);
 		}
-		else	instance_create_layer(x-75,y, "Player", obj_scratch);
+		else	instance_create_layer(x-125,y, "Player", obj_scratch);
 		
 		
 		canMelee = false;
-		alarm[0] = 50;
+		alarm[0] = 10;
 		state = 2;
 	
     }

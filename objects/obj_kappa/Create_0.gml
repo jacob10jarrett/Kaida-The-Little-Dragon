@@ -10,7 +10,6 @@ moving = false;
 swinging = false;
 isHit = false;
 
-
 canAttack = true;
 canJump = true
 awake = false;
