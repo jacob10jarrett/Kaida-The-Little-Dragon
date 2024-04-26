@@ -8,6 +8,7 @@ if (can_control) {
 	key_jump = keyboard_check(vk_space); 
 	key_jump_pressed = keyboard_check_pressed(vk_space);
 	key_pull = keyboard_check(ord("E"));
+	key_firebreath = keyboard_check_pressed(vk_control);
 }
 
 var playerMovement = key_right - key_left;
@@ -186,13 +187,28 @@ if (isFallingOnPlate2) {
     }
 	
 	// Dash proc	State -> 1
-	if (canDash && key_dash) {
+	if (canDash && key_dash)
+	{
 	    canDash = false; 
 	    hasDashed = true; 
 	    dashDirection = point_direction(0, 0, key_right - key_left, key_down - key_up);
 	    dashSpeed = dashDist / dashTime;
 	    dashEnergy = dashDist;
 	    state = 1;
+	}
+		
+	if (key_firebreath && canFirebreath)
+	{
+		canFirebreath = false;
+		alarm[1] = 250;
+		
+		if (sign(image_xscale) > 0)
+		{
+			instance_create_layer(x+120,y,"player", obj_fireBreath);
+		}
+		else instance_create_layer(x-120,y,"player", obj_fireBreath);
+		
+		state = 2;
 	}
 
 if (state == 0)																/* normal */

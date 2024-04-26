@@ -19,6 +19,7 @@ idle = true;
 canDash = true;
 canMelee = true
 canFireball = true;
+canFirebreath = true;  //CHANGE!!!
 
 hasDashed = false;
 dashDist = 250;
