@@ -1,4 +1,4 @@
-alarm[0] = room_speed * 3;
+alarm[0] = room_speed * 1;
 var inst;
 var offsetX = 5; 
 var offsetY = 10;  

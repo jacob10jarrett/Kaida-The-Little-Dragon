@@ -39,12 +39,12 @@ if (distance_to_player <= 200) {
 //    audio_play_sound(snd_horror, 1, false);
 //}
 
-//if (distance_to_player <= 250 && !cutscene2_triggered) {
-//    global.trigger_caves_cutscene2 = true;
-//    cutscene2_triggered = true;
-//    alarm[2] = room_speed * 2;  
-//    audio_play_sound(snd_fire, 1, false);
-//}
+if (distance_to_player <= 250 && !cutscene2_triggered) {
+    global.trigger_caves_cutscene2 = true;
+    cutscene2_triggered = true;
+    alarm[2] = room_speed * 2;  
+    audio_play_sound(snd_fire, 1, false);
+}
 
 if (distance_to_player > 1000) {
     cutscene1_triggered = false;
