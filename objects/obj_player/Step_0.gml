@@ -8,7 +8,7 @@ if (can_control) {
 	key_jump = keyboard_check(vk_space); 
 	key_jump_pressed = keyboard_check_pressed(vk_space);
 	key_pull = keyboard_check(ord("E"));
-	key_firebreath = keyboard_check_pressed(vk_control);
+	key_firebreath = keyboard_check_pressed(vk_tab);
 }
 
 var playerMovement = key_right - key_left;
@@ -83,13 +83,6 @@ y += vsp;
 
 wallLeft = place_meeting(x-1, y, obj_wall);
 wallRight = place_meeting(x+1, y, obj_wall);
-
-// Fire breath
-if (keyboard_check_pressed(vk_tab)) { 
-    var dir = image_xscale > 0 ? 0 : 180; 
-    var hitbox = instance_create_layer(x + image_xscale * 16, y, "Instances", obj_fire_hitbox);
-    hitbox.direction = image_xscale > 0 ? 0 : 180;
-}
 
 // Fireball charges 
 if (charges >= 3)	canFire = true; else canFire = false;

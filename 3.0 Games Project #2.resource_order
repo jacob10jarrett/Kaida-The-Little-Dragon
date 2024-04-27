@@ -158,6 +158,7 @@
     {"name":"ts_draw","order":1,"path":"tilesets/ts_draw/ts_draw.yy",},
     {"name":"obj_per_manager","order":36,"path":"objects/obj_per_manager/obj_per_manager.yy",},
     {"name":"snd_rumble","order":10,"path":"sounds/snd_rumble/snd_rumble.yy",},
+    {"name":"spr_ghost2","order":9,"path":"sprites/spr_ghost2/spr_ghost2.yy",},
     {"name":"obj_caves_cutscene1","order":6,"path":"objects/obj_caves_cutscene1/obj_caves_cutscene1.yy",},
     {"name":"obj_MovingAirPlatform5","order":6,"path":"objects/obj_MovingAirPlatform5/obj_MovingAirPlatform5.yy",},
     {"name":"music_village1","order":24,"path":"objects/music_village1/music_village1.yy",},
@@ -184,6 +185,7 @@
     {"name":"obj_gamepad_input","order":1,"path":"objects/obj_gamepad_input/obj_gamepad_input.yy",},
     {"name":"obj_circle_effect","order":32,"path":"objects/obj_circle_effect/obj_circle_effect.yy",},
     {"name":"obj_goto_village","order":1,"path":"objects/obj_goto_village/obj_goto_village.yy",},
+    {"name":"obj_heart_powerup","order":8,"path":"objects/obj_heart_powerup/obj_heart_powerup.yy",},
     {"name":"spr_melee","order":8,"path":"sprites/spr_melee/spr_melee.yy",},
     {"name":"obj_character_parent","order":2,"path":"objects/obj_character_parent/obj_character_parent.yy",},
     {"name":"obj_gamemanage","order":37,"path":"objects/obj_gamemanage/obj_gamemanage.yy",},
@@ -208,6 +210,7 @@
     {"name":"snd_button_press_01","order":1,"path":"sounds/snd_button_press_01/snd_button_press_01.yy",},
     {"name":"music_prologue","order":22,"path":"objects/music_prologue/music_prologue.yy",},
     {"name":"spr_backgroundlayer3_caves","order":16,"path":"sprites/spr_backgroundlayer3_caves/spr_backgroundlayer3_caves.yy",},
+    {"name":"spr_ghost_particle2","order":18,"path":"sprites/spr_ghost_particle2/spr_ghost_particle2.yy",},
     {"name":"spr_kasaobake","order":2,"path":"sprites/spr_kasaobake/spr_kasaobake.yy",},
   ],
 }
