@@ -1,13 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_fire",
+  "name": "obj_rock_spawner",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "RoomEditor",
-    "path": "folders/Objects/Environment/RoomEditor.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -25,10 +25,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_fire",
-    "path": "sprites/spr_fire/spr_fire.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }
