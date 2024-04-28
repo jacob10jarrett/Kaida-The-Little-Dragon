@@ -8,7 +8,7 @@
   },
   "bitDepth": 1,
   "bitRate": 128,
-  "compression": 0,
+  "compression": 2,
   "conversionMode": 0,
   "duration": 199.99664,
   "parent": {
@@ -18,6 +18,6 @@
   "preload": false,
   "sampleRate": 44100,
   "soundFile": "snd_song8.mp3",
-  "type": 0,
+  "type": 1,
   "volume": 1.0,
 }

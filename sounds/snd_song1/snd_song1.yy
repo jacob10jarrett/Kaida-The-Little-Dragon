@@ -18,6 +18,6 @@
   "preload": false,
   "sampleRate": 44100,
   "soundFile": "snd_song1.mp3",
-  "type": 0,
+  "type": 1,
   "volume": 1.0,
 }
