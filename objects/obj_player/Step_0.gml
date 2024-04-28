@@ -12,28 +12,8 @@ if (can_control) {
 }
 
 var playerMovement = key_right - key_left;
-var onGround = place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_crate) || place_meeting(x, y+1, obj_crate_puzzle)|| place_meeting(x, y+1, obj_MovingAirPlatform) || instance_place(x, y+1, obj_MovingPlatform3) || place_meeting(x, y+1, obj_puzzle_block);
-isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate) && place_meeting(x, y+1, obj_crate_puzzle)  && place_meeting(x, y+1, obj_puzzle_block) && !place_meeting(x, y+1, obj_MovingAirPlatform) && !place_meeting(x, y+12, obj_PressurePlate2));
-
-// Bouncy platform
-var onBouncy = place_meeting(x, y+1, obj_bouncyPlatform);
-if (onBouncy && vsp >= 0) {
-    vsp = -jumpHeight * 3; 
-	audio_play_sound(snd_whoosh, 1, false)
-}
-
-var onBouncy = place_meeting(x, y+1, obj_bouncyPlatform2);
-if (onBouncy && vsp >= 0) {
-    vsp = -jumpHeight * 4.5; 
-	audio_play_sound(snd_whoosh, 1, false)
-}
-
-var onBouncy = place_meeting(x, y+1, obj_bouncyPlatform3);
-if (onBouncy && vsp >= 0) {
-    vsp = -jumpHeight * 6; 
-	audio_play_sound(snd_whoosh, 1, false)
-}
-
+var onGround = place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_crate) || place_meeting(x, y+1, obj_MovingAirPlatform) || instance_place(x, y+1, obj_MovingPlatform3);
+isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate) && !place_meeting(x, y+1, obj_MovingAirPlatform) && !place_meeting(x, y+12, obj_PressurePlate2));
 
 // Moving air platform logic 
 var platform = instance_place(x, y + 1, obj_MovingAirPlatform);
@@ -74,9 +54,9 @@ if (onMovingPlatform || onPressurePlate) {
 }
 
 // Horizontal collision
-if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || place_meeting(x+hsp, y, obj_puzzle_block) || place_meeting(x+hsp, y, obj_crate) || place_meeting(x+hsp, y, obj_crate_puzzle) || place_meeting(x+hsp, y, obj_MovingPlatform) || place_meeting(x+hsp, y, obj_MovingAirPlatform) || place_meeting(x+hsp, y, obj_PressurePlate2))
+if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || place_meeting(x+hsp, y, obj_crate) || place_meeting(x+hsp, y, obj_MovingPlatform) || place_meeting(x+hsp, y, obj_MovingAirPlatform) || place_meeting(x+hsp, y, obj_PressurePlate2))
 {
-    while (!place_meeting(x+sign(hsp),y, obj_block) && !place_meeting(x+sign(hsp),y, obj_wall) && !place_meeting(x+sign(hsp),y, obj_puzzle_block) && !place_meeting(x+sign(hsp),y, obj_crate) && !place_meeting(x+sign(hsp),y, obj_crate_puzzle) && !place_meeting(x+sign(hsp),y, obj_MovingPlatform) && !place_meeting(x+sign(hsp),y, obj_MovingAirPlatform) && !place_meeting(x+sign(hsp),y, obj_PressurePlate2))
+    while (!place_meeting(x+sign(hsp),y, obj_block) && !place_meeting(x+sign(hsp),y, obj_wall) && !place_meeting(x+sign(hsp),y, obj_crate) && !place_meeting(x+sign(hsp),y, obj_MovingPlatform) && !place_meeting(x+sign(hsp),y, obj_MovingAirPlatform) && !place_meeting(x+sign(hsp),y, obj_PressurePlate2))
     {
         x += sign(hsp);
     }
@@ -85,7 +65,7 @@ if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || p
 x += hsp;
 
 // Vertical collision 
-if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || place_meeting(x, y+vsp, obj_puzzle_block) || place_meeting(x, y+vsp, obj_crate) || place_meeting(x, y+vsp, obj_crate_puzzle) || place_meeting(x, y+vsp, obj_MovingAirPlatform) || place_meeting(x, y+vsp, obj_PressurePlate2)) {
+if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || place_meeting(x, y+vsp, obj_crate) || place_meeting(x, y+vsp, obj_MovingAirPlatform) || place_meeting(x, y+vsp, obj_PressurePlate2)) {
     if (!place_meeting(x, y+1, obj_block) && !place_meeting(x, y+1, obj_PressurePlate2)) {
         if (isAirborne) {
             canDash = true; 
@@ -93,7 +73,7 @@ if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || p
             isAirborne = false;
         }
     }
-    while (!place_meeting(x,y+sign(vsp), obj_block) && !place_meeting(x,y+sign(vsp), obj_puzzle_block) && !place_meeting(x,y+sign(vsp), obj_wall) && !place_meeting(x,y+sign(vsp), obj_crate) && !place_meeting(x,y+sign(vsp), obj_crate_puzzle) && !place_meeting(x,y+sign(vsp), obj_MovingAirPlatform) && !place_meeting(x,y+sign(vsp), obj_PressurePlate2)) {
+    while (!place_meeting(x,y+sign(vsp), obj_block) && !place_meeting(x,y+sign(vsp), obj_wall) && !place_meeting(x,y+sign(vsp), obj_crate) && !place_meeting(x,y+sign(vsp), obj_MovingAirPlatform) && !place_meeting(x,y+sign(vsp), obj_PressurePlate2)) {
         y += sign(vsp);
     }
     vsp = 0;
@@ -103,11 +83,6 @@ y += vsp;
 
 wallLeft = place_meeting(x-1, y, obj_wall);
 wallRight = place_meeting(x+1, y, obj_wall);
-
-//Player can't melee when solving puzzle
-if place_meeting(x, y-1, obj_puzzle_block) {
-	canMelee = false;
-}
 
 // Fireball charges 
 if (charges >= 3)	canFire = true; else canFire = false;
@@ -123,7 +98,6 @@ if (mouse_check_button_pressed(mb_right) && canFireball)
 // Crate pushing
 var _isFacingCrate = false;
 var _crate = instance_nearest(x, y, obj_crate);
-var _crate = instance_nearest(x, y, obj_crate_puzzle);
 if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150) 
 {
     var _directionToCrate = point_direction(x, y, _crate.x, _crate.y);
@@ -191,19 +165,21 @@ if (isFallingOnPlate2) {
 /*------------------------------------------- States ----------------------------------------------------*/	
 
 	// Melee proc	State -> 2
-	if (mouse_check_button_pressed(mb_left) && state != 5 && canMelee) {
-    if (!place_meeting(x, y, obj_puzzle_block)) {
-        instance_create_layer(x, y, "Player", obj_melee);
-	        if (sign(image_xscale) == 1) {
-	            instance_create_layer(x + 125, y, "Player", obj_scratch);
-	        } else {
-	            instance_create_layer(x - 125, y, "Player", obj_scratch);
-			}
-        canMelee = false;
-        alarm[0] = 10;
-        state = 2;
+    if (mouse_check_button_pressed(mb_left) && state != 5 && canMelee)
+    {
+		instance_create_layer(x,y,"Player", obj_melee);
+		if (sign(image_xscale) == 1)
+		{
+			instance_create_layer(x+125,y, "Player", obj_scratch);
 		}
-	}
+		else	instance_create_layer(x-125,y, "Player", obj_scratch);
+		
+		
+		canMelee = false;
+		alarm[0] = 10;
+		state = 2;
+	
+    }
 	
 	// Fireball proc	State -> 3
     if (mouse_check_button_pressed(mb_right))
@@ -412,7 +388,6 @@ if (state == 4 && instance_exists(global.pullingCrate)) {				/* crate pushing */
 
 if (key_pull && state != 4) {
     var _crate = instance_nearest(x, y, obj_crate);
-	var _crate = instance_nearest(x, y, obj_crate_puzzle);
     if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 32) {
         var _isFacingCrate = (image_xscale == 1 && _crate.x > x) || (image_xscale == -1 && _crate.x < x);
         if (_isFacingCrate) {
