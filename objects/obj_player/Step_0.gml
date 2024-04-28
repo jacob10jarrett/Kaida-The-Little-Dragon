@@ -445,3 +445,6 @@ if (state == 5)																/* staggered */
 	}
 	
 }
+//cant walk out of bounds
+x=clamp(x, 0, room_width);
+y=clamp(y, 0, room_height);

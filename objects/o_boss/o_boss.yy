@@ -1,8 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "Object59",
-  "eventList": [],
+  "name": "o_boss",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -26,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Boss",
-    "path": "sprites/Boss/Boss.yy",
+    "name": "spr_flyer",
+    "path": "sprites/spr_flyer/spr_flyer.yy",
   },
   "spriteMaskId": null,
   "visible": true,
