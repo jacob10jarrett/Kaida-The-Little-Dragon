@@ -6,3 +6,5 @@ if (global.near_player) {
 	draw_set_colour(c_white);
     draw_text(text_x, text_y, "Press tab to use fire breath");
 }
+
+//draw_circle(0,0,300,false);

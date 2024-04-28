@@ -1,2 +1,2 @@
-other.hp -=2
+other.hp -=40
 instance_destroy()

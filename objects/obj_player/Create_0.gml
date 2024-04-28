@@ -24,6 +24,7 @@ canFirebreath = true;  //CHANGE!!!
 hasDashed = false;
 dashDist = 250;
 dashTime = 15;
+dashReset = true;
 
 isAirborne = false;
 isStaggered = false;

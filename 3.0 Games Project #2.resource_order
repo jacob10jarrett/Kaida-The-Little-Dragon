@@ -198,6 +198,7 @@
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
     {"name":"obj_kappaMelee","order":6,"path":"objects/obj_kappaMelee/obj_kappaMelee.yy",},
     {"name":"seq_game_over","order":1,"path":"sequences/seq_game_over/seq_game_over.yy",},
+    {"name":"spr_cooldownBar","order":20,"path":"sprites/spr_cooldownBar/spr_cooldownBar.yy",},
     {"name":"load_previous_room","order":6,"path":"scripts/load_previous_room/load_previous_room.yy",},
     {"name":"spr_sign2","order":1,"path":"sprites/spr_sign2/spr_sign2.yy",},
     {"name":"spr_backgroundlayer_caves","order":14,"path":"sprites/spr_backgroundlayer_caves/spr_backgroundlayer_caves.yy",},

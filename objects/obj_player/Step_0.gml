@@ -188,8 +188,9 @@ if (isFallingOnPlate2) {
     }
 	
 	// Dash proc	State -> 1
-	if (canDash && key_dash)
+	if (canDash && key_dash && dashReset)
 	{
+		dashReset = false;	alarm[3] = 60;
 	    canDash = false; 
 	    hasDashed = true; 
 	    dashDirection = point_direction(0, 0, key_right - key_left, key_down - key_up);
@@ -201,7 +202,7 @@ if (isFallingOnPlate2) {
 	if (key_firebreath && canFirebreath)
 	{
 		canFirebreath = false;
-		alarm[1] = 250;
+		alarm[2] = 250;
 		
 		if (sign(image_xscale) > 0)
 		{

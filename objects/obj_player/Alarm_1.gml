@@ -1,3 +1,3 @@
 /// @description fireball cooldown
 
-canFirebreath = true;
+canFireball = true;
