@@ -1,6 +1,3 @@
-// Create Event of obj_player
-
-// Initialize basic movement and state variables
 hsp = 0;
 vsp = 0;
 grvt = 0.7;
