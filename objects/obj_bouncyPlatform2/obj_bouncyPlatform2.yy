@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "RoomEditor",
-    "path": "folders/Objects/Environment/RoomEditor.yy",
+    "name": "Platforms",
+    "path": "folders/Objects/Environment/Platforms.yy",
   },
   "parentObjectId": null,
   "persistent": false,
