@@ -72,8 +72,16 @@
 >>>>>>> Stashed changes
   ],
   "ResourceOrderSettings": [
+<<<<<<< Updated upstream
     {"name":"spr_sign3","order":30,"path":"sprites/spr_sign3/spr_sign3.yy",},
     {"name":"spr_block_platforming","order":34,"path":"sprites/spr_block_platforming/spr_block_platforming.yy",},
+=======
+    {"name":"rm_finalboss","order":7,"path":"rooms/rm_finalboss/rm_finalboss.yy",},
+    {"name":"spr_sign3","order":2,"path":"sprites/spr_sign3/spr_sign3.yy",},
+    {"name":"obj_enemyMeleeTwo","order":8,"path":"objects/obj_enemyMeleeTwo/obj_enemyMeleeTwo.yy",},
+    {"name":"spr_block_platforming","order":2,"path":"sprites/spr_block_platforming/spr_block_platforming.yy",},
+    {"name":"obj_bouncyPlatform","order":8,"path":"objects/obj_bouncyPlatform/obj_bouncyPlatform.yy",},
+>>>>>>> Stashed changes
     {"name":"spr_menu_background","order":3,"path":"sprites/spr_menu_background/spr_menu_background.yy",},
     {"name":"spr_player_dash","order":7,"path":"sprites/spr_player_dash/spr_player_dash.yy",},
     {"name":"rm_caves","order":4,"path":"rooms/rm_caves/rm_caves.yy",},
@@ -88,9 +96,23 @@
     {"name":"obj_attackhitbox","order":14,"path":"objects/obj_attackhitbox/obj_attackhitbox.yy",},
     {"name":"obj_block","order":4,"path":"objects/obj_block/obj_block.yy",},
     {"name":"obj_treeGreen","order":1,"path":"objects/obj_treeGreen/obj_treeGreen.yy",},
+<<<<<<< Updated upstream
     {"name":"spr_enemyMelee","order":43,"path":"sprites/spr_enemyMelee/spr_enemyMelee.yy",},
     {"name":"obj_PressurePlate","order":30,"path":"objects/obj_PressurePlate/obj_PressurePlate.yy",},
     {"name":"obj_firebreath_obstacle","order":38,"path":"objects/obj_firebreath_obstacle/obj_firebreath_obstacle.yy",},
+=======
+    {"name":"spr_scratch","order":12,"path":"sprites/spr_scratch/spr_scratch.yy",},
+    {"name":"spr_kappaMelee","order":8,"path":"sprites/spr_kappaMelee/spr_kappaMelee.yy",},
+    {"name":"spr_enemyMelee","order":6,"path":"sprites/spr_enemyMelee/spr_enemyMelee.yy",},
+    {"name":"ts_inside_mountain","order":8,"path":"tilesets/ts_inside_mountain/ts_inside_mountain.yy",},
+    {"name":"obj_PressurePlate","order":3,"path":"objects/obj_PressurePlate/obj_PressurePlate.yy",},
+    {"name":"obj_firebreath_obstacle","order":8,"path":"objects/obj_firebreath_obstacle/obj_firebreath_obstacle.yy",},
+    {"name":"snd_whoosh","order":18,"path":"sounds/snd_whoosh/snd_whoosh.yy",},
+    {"name":"save_game_state","order":4,"path":"scripts/save_game_state/save_game_state.yy",},
+    {"name":"obj_background1_controller_mountain","order":59,"path":"objects/obj_background1_controller_mountain/obj_background1_controller_mountain.yy",},
+    {"name":"obj_checkpoint","order":55,"path":"objects/obj_checkpoint/obj_checkpoint.yy",},
+    {"name":"path_2","order":1,"path":"paths/path_2/path_2.yy",},
+>>>>>>> Stashed changes
     {"name":"spr_player_hurt","order":1,"path":"sprites/spr_player_hurt/spr_player_hurt.yy",},
     {"name":"snd_prologue","order":7,"path":"sounds/snd_prologue/snd_prologue.yy",},
     {"name":"spr_game_over_background","order":6,"path":"sprites/spr_game_over_background/spr_game_over_background.yy",},
@@ -148,10 +170,23 @@
     {"name":"obj_effect_parent","order":2,"path":"objects/obj_effect_parent/obj_effect_parent.yy",},
     {"name":"snd_jump","order":5,"path":"sounds/snd_jump/snd_jump.yy",},
     {"name":"spr_player_sideAttack","order":5,"path":"sprites/spr_player_sideAttack/spr_player_sideAttack.yy",},
+<<<<<<< Updated upstream
     {"name":"spr_player","order":2,"path":"sprites/spr_player/spr_player.yy",},
     {"name":"spr_ladder","order":12,"path":"sprites/spr_ladder/spr_ladder.yy",},
     {"name":"spr_treeCherry2","order":21,"path":"sprites/spr_treeCherry2/spr_treeCherry2.yy",},
     {"name":"obj_melee","order":16,"path":"objects/obj_melee/obj_melee.yy",},
+=======
+    {"name":"obj_caves_cutscene_controller","order":51,"path":"objects/obj_caves_cutscene_controller/obj_caves_cutscene_controller.yy",},
+    {"name":"spr_player","order":9,"path":"sprites/spr_player/spr_player.yy",},
+    {"name":"spr_dpuzzle5","order":28,"path":"sprites/spr_dpuzzle5/spr_dpuzzle5.yy",},
+    {"name":"spr_ghost_particle","order":12,"path":"sprites/spr_ghost_particle/spr_ghost_particle.yy",},
+    {"name":"obj_ghost_particle","order":4,"path":"objects/obj_ghost_particle/obj_ghost_particle.yy",},
+    {"name":"obj_blank","order":15,"path":"objects/obj_blank/obj_blank.yy",},
+    {"name":"spr_ladder","order":2,"path":"sprites/spr_ladder/spr_ladder.yy",},
+    {"name":"spr_treeCherry2","order":3,"path":"sprites/spr_treeCherry2/spr_treeCherry2.yy",},
+    {"name":"obj_melee","order":2,"path":"objects/obj_melee/obj_melee.yy",},
+    {"name":"spr_demon","order":10,"path":"sprites/spr_demon/spr_demon.yy",},
+>>>>>>> Stashed changes
     {"name":"snd_song5","order":8,"path":"sounds/snd_song5/snd_song5.yy",},
     {"name":"obj_grapple_point","order":41,"path":"objects/obj_grapple_point/obj_grapple_point.yy",},
 <<<<<<< Updated upstream
@@ -205,15 +240,35 @@
     {"name":"obj_character_parent","order":2,"path":"objects/obj_character_parent/obj_character_parent.yy",},
     {"name":"obj_gamemanage","order":37,"path":"objects/obj_gamemanage/obj_gamemanage.yy",},
     {"name":"scrSaving","order":2,"path":"scripts/scrSaving/scrSaving.yy",},
+<<<<<<< Updated upstream
     {"name":"spr_deathpit","order":37,"path":"sprites/spr_deathpit/spr_deathpit.yy",},
     {"name":"spr_level","order":11,"path":"sprites/spr_level/spr_level.yy",},
     {"name":"spr_sign1","order":28,"path":"sprites/spr_sign1/spr_sign1.yy",},
+=======
+    {"name":"spr_deathpit","order":5,"path":"sprites/spr_deathpit/spr_deathpit.yy",},
+    {"name":"obj_enemyTwo","order":7,"path":"objects/obj_enemyTwo/obj_enemyTwo.yy",},
+    {"name":"spr_level","order":3,"path":"sprites/spr_level/spr_level.yy",},
+>>>>>>> Stashed changes
     {"name":"snd_land_01","order":6,"path":"sounds/snd_land_01/snd_land_01.yy",},
     {"name":"obj_goto_caves","order":28,"path":"objects/obj_goto_caves/obj_goto_caves.yy",},
     {"name":"obj_player","order":15,"path":"objects/obj_player/obj_player.yy",},
     {"name":"seq_game_over","order":1,"path":"sequences/seq_game_over/seq_game_over.yy",},
+<<<<<<< Updated upstream
     {"name":"spr_sign2","order":29,"path":"sprites/spr_sign2/spr_sign2.yy",},
     {"name":"obj_enemyTwo","order":1,"path":"objects/obj_enemyTwo/obj_enemyTwo.yy",},
+=======
+    {"name":"spr_cooldownBar","order":20,"path":"sprites/spr_cooldownBar/spr_cooldownBar.yy",},
+    {"name":"load_previous_room","order":6,"path":"scripts/load_previous_room/load_previous_room.yy",},
+    {"name":"spr_sign2","order":1,"path":"sprites/spr_sign2/spr_sign2.yy",},
+    {"name":"spr_inside_mountain","order":30,"path":"sprites/spr_inside_mountain/spr_inside_mountain.yy",},
+    {"name":"spr_backgroundlayer_caves","order":14,"path":"sprites/spr_backgroundlayer_caves/spr_backgroundlayer_caves.yy",},
+    {"name":"snd_wind","order":17,"path":"sounds/snd_wind/snd_wind.yy",},
+    {"name":"spr_background_prologue","order":10,"path":"sprites/spr_background_prologue/spr_background_prologue.yy",},
+    {"name":"obj_puzzleController","order":16,"path":"objects/obj_puzzleController/obj_puzzleController.yy",},
+    {"name":"obj_enemy","order":1,"path":"objects/obj_enemy/obj_enemy.yy",},
+    {"name":"snd_trapdoor","order":11,"path":"sounds/snd_trapdoor/snd_trapdoor.yy",},
+    {"name":"spr_enemyOne","order":4,"path":"sprites/spr_enemyOne/spr_enemyOne.yy",},
+>>>>>>> Stashed changes
     {"name":"obj_button_parent","order":2,"path":"objects/obj_button_parent/obj_button_parent.yy",},
     {"name":"obj_bounds","order":19,"path":"objects/obj_bounds/obj_bounds.yy",},
     {"name":"spr_cherryblossomleaf","order":36,"path":"sprites/spr_cherryblossomleaf/spr_cherryblossomleaf.yy",},
