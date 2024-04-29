@@ -1,1 +1,1 @@
-instance_destroy();
+hp -= 3.34;
