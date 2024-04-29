@@ -1,3 +1,0 @@
-/// @description idle
-
-attacking =  false;
