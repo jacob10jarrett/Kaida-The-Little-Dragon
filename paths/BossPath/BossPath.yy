@@ -1,0 +1,25 @@
+{
+  "resourceType": "GMPath",
+  "resourceVersion": "1.0",
+  "name": "BossPath",
+  "closed": true,
+  "kind": 0,
+  "parent": {
+    "name": "BossFight",
+    "path": "folders/Objects/BossFight.yy",
+  },
+  "points": [
+    {"speed":100.0,"x":1824.0,"y":672.0,},
+    {"speed":100.0,"x":1408.0,"y":192.0,},
+    {"speed":100.0,"x":672.0,"y":192.0,},
+    {"speed":100.0,"x":192.0,"y":832.0,},
+    {"speed":100.0,"x":640.0,"y":960.0,},
+    {"speed":100.0,"x":704.0,"y":768.0,},
+    {"speed":100.0,"x":736.0,"y":960.0,},
+    {"speed":100.0,"x":832.0,"y":768.0,},
+    {"speed":100.0,"x":928.0,"y":960.0,},
+    {"speed":100.0,"x":1216.0,"y":960.0,},
+    {"speed":100.0,"x":1792.0,"y":864.0,},
+  ],
+  "precision": 4,
+}
