@@ -236,6 +236,7 @@
     {"name":"spr_backgroundlayer_caves","order":14,"path":"sprites/spr_backgroundlayer_caves/spr_backgroundlayer_caves.yy",},
     {"name":"snd_wind","order":17,"path":"sounds/snd_wind/snd_wind.yy",},
     {"name":"spr_background_prologue","order":10,"path":"sprites/spr_background_prologue/spr_background_prologue.yy",},
+    {"name":"obj_puzzleController","order":16,"path":"objects/obj_puzzleController/obj_puzzleController.yy",},
     {"name":"obj_enemyTwo","order":1,"path":"objects/obj_enemyTwo/obj_enemyTwo.yy",},
     {"name":"snd_trapdoor","order":11,"path":"sounds/snd_trapdoor/snd_trapdoor.yy",},
     {"name":"spr_enemyOne","order":4,"path":"sprites/spr_enemyOne/spr_enemyOne.yy",},
