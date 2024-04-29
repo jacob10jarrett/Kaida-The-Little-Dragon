@@ -65,6 +65,7 @@
     {"name":"spr_player_walk","order":2,"path":"sprites/spr_player_walk/spr_player_walk.yy",},
     {"name":"music_caves","order":29,"path":"objects/music_caves/music_caves.yy",},
     {"name":"obj_effect_jump","order":1,"path":"objects/obj_effect_jump/obj_effect_jump.yy",},
+    {"name":"snd_song9","order":19,"path":"sounds/snd_song9/snd_song9.yy",},
     {"name":"obj_fire","order":10,"path":"objects/obj_fire/obj_fire.yy",},
     {"name":"obj_PressurePlate2","order":4,"path":"objects/obj_PressurePlate2/obj_PressurePlate2.yy",},
     {"name":"obj_attackhitbox","order":14,"path":"objects/obj_attackhitbox/obj_attackhitbox.yy",},
@@ -250,6 +251,7 @@
     {"name":"spr_dpuzzle6","order":29,"path":"sprites/spr_dpuzzle6/spr_dpuzzle6.yy",},
     {"name":"spr_backgroundlayer3_caves","order":16,"path":"sprites/spr_backgroundlayer3_caves/spr_backgroundlayer3_caves.yy",},
     {"name":"spr_ghost_particle2","order":18,"path":"sprites/spr_ghost_particle2/spr_ghost_particle2.yy",},
+    {"name":"music_mountain2","order":62,"path":"objects/music_mountain2/music_mountain2.yy",},
     {"name":"spr_kasaobake","order":2,"path":"sprites/spr_kasaobake/spr_kasaobake.yy",},
   ],
 }
