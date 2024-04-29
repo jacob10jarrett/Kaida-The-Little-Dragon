@@ -1,4 +1,4 @@
-other.hp -= 2
+objother.hp -= 2
 
 
 
