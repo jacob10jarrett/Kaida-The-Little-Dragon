@@ -1,1 +1,3 @@
-image_angle = 0;
+
+path_start(BossPath, 3, path_action_continue, true);
+alarm[0] = room_speed * 1/3;
