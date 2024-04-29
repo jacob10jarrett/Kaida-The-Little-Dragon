@@ -15,6 +15,25 @@ var playerMovement = key_right - key_left;
 var onGround = place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_crate) || place_meeting(x, y+1, obj_MovingAirPlatform) || instance_place(x, y+1, obj_MovingPlatform3);
 isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate) && !place_meeting(x, y+1, obj_MovingAirPlatform) && !place_meeting(x, y+12, obj_PressurePlate2));
 
+// Bouncy Platform
+var onBouncy = place_meeting(x, y+1, obj_bouncyPlatform);
+if (onBouncy && vsp >= 0) {
+	vsp = -jumpHeight * 3;
+	audio_play_sound(snd_whoosh, 1, false)
+}
+
+var onBouncy = place_meeting(x, y+1, obj_bouncyPlatform2);
+if (onBouncy && vsp >= 0) {
+	vsp = -jumpHeight * 4.5;
+	audio_play_sound(snd_whoosh, 1, false)
+}
+
+var onBouncy = place_meeting(x, y+1, obj_bouncyPlatform3);
+if (onBouncy && vsp >= 0) {
+	vsp = -jumpHeight * 6;
+	audio_play_sound(snd_whoosh, 1, false)
+}
+
 // Moving air platform logic 
 var platform = instance_place(x, y + 1, obj_MovingAirPlatform);
 var isOnPlatform = place_meeting(x, y + 1, obj_MovingAirPlatform);
