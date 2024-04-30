@@ -949,6 +949,7 @@
     {"name":"inst_3172A394","path":"rooms/rm_caves/rm_caves.yy",},
     {"name":"inst_36C1E7E","path":"rooms/rm_caves/rm_caves.yy",},
     {"name":"inst_3EE7AF93","path":"rooms/rm_caves/rm_caves.yy",},
+    {"name":"inst_1B90874B","path":"rooms/rm_caves/rm_caves.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -1066,6 +1067,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3172A394","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_checkpoint","path":"objects/obj_checkpoint/obj_checkpoint.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":22816.0,"y":896.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_36C1E7E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_kappa","path":"objects/obj_kappa/obj_kappa.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":21120.0,"y":2880.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3EE7AF93","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_kappa","path":"objects/obj_kappa/obj_kappa.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":16928.0,"y":2848.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1B90874B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_saveSpot","path":"objects/obj_saveSpot/obj_saveSpot.yy",},"properties":[],"rotation":0.0,"scaleX":3.0,"scaleY":10.0,"x":2272.0,"y":2464.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5BABBA07","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_enemyOne","path":"objects/obj_enemyOne/obj_enemyOne.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":4736.0,"y":2720.0,},

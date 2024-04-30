@@ -12,8 +12,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Objects/UI/Buttons.yy",
+    "name": "RoomEditor",
+    "path": "folders/Objects/Environment/RoomEditor.yy",
   },
   "parentObjectId": null,
   "persistent": false,
