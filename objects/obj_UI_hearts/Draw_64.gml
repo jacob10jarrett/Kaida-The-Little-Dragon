@@ -2,15 +2,16 @@
 
 if (instance_exists(obj_player))
 {
-	for (var i=0; i<obj_player.hp; i++)
-	{
-		draw_sprite(spr_heart, 0, (50 + 75 * i), 50);
-	}
-
-
+	
+	draw_sprite(spr_hpBar, 0, 20, 60);										/* hp */
 	draw_sprite(spr_cooldownBar, 0, 20, 100);								/* fireball */
 	draw_sprite(spr_cooldownBar, 0, 20, 140);								/* dash */
 	draw_sprite(spr_cooldownBar, 0, 20, 180);								/* firebreath */
+	
+	for (var i=0; i<obj_player.hp; i++)
+	{
+		draw_sprite(spr_heartUI, 0, (17 + 35 * i), 53);
+	}
 	
 	draw_rectangle_colour(20, 100 ,222 - obj_player.alarm[1] ,120			/* fireball */
 					,c_green, c_lime, c_lime, c_green, false);
