@@ -218,7 +218,7 @@ if (isFallingOnPlate2) {
 	    state = 1;
 	}
 		
-	if (key_firebreath && canFirebreath)
+	if (key_firebreath && canFirebreath && firebreathUnlocked)
 	{
 		canFirebreath = false;
 		alarm[2] = 250;

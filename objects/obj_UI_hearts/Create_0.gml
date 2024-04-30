@@ -1,4 +1,4 @@
 
 
-global.previous_room = room;
+//global.previous_room = room;
 
