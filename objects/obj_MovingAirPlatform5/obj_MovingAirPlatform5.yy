@@ -34,9 +34,12 @@
   ],
   "solid": false,
   "spriteId": {
-    "name": "spr_block_wall",
-    "path": "sprites/spr_block_wall/spr_block_wall.yy",
+    "name": "spr_platformCaves",
+    "path": "sprites/spr_platformCaves/spr_platformCaves.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_platformCaves",
+    "path": "sprites/spr_platformCaves/spr_platformCaves.yy",
+  },
   "visible": true,
 }
