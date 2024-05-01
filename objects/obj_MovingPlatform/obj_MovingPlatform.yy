@@ -31,8 +31,8 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "spr_block_platforming",
-    "path": "sprites/spr_block_platforming/spr_block_platforming.yy",
+    "name": "spr_planks",
+    "path": "sprites/spr_planks/spr_planks.yy",
   },
   "spriteMaskId": null,
   "visible": true,
