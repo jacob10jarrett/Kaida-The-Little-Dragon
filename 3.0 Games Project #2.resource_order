@@ -49,6 +49,7 @@
   "ResourceOrderSettings": [
     {"name":"rm_finalboss","order":7,"path":"rooms/rm_finalboss/rm_finalboss.yy",},
     {"name":"spr_sign3","order":2,"path":"sprites/spr_sign3/spr_sign3.yy",},
+    {"name":"path_3","order":2,"path":"paths/path_3/path_3.yy",},
     {"name":"spr_block_platforming","order":2,"path":"sprites/spr_block_platforming/spr_block_platforming.yy",},
     {"name":"obj_bouncyPlatform","order":8,"path":"objects/obj_bouncyPlatform/obj_bouncyPlatform.yy",},
     {"name":"spr_menu_background","order":3,"path":"sprites/spr_menu_background/spr_menu_background.yy",},
@@ -95,6 +96,7 @@
     {"name":"spr_backgroundlayer2_caves","order":15,"path":"sprites/spr_backgroundlayer2_caves/spr_backgroundlayer2_caves.yy",},
     {"name":"obj_fade_in_mountain","order":58,"path":"objects/obj_fade_in_mountain/obj_fade_in_mountain.yy",},
     {"name":"obj_mountain_cutscene_controller","order":57,"path":"objects/obj_mountain_cutscene_controller/obj_mountain_cutscene_controller.yy",},
+    {"name":"obj_enemyThree3","order":12,"path":"objects/obj_enemyThree3/obj_enemyThree3.yy",},
     {"name":"spr_game_over_background","order":6,"path":"sprites/spr_game_over_background/spr_game_over_background.yy",},
     {"name":"spr_tileset_placeholder","order":6,"path":"sprites/spr_tileset_placeholder/spr_tileset_placeholder.yy",},
     {"name":"obj_PressurePlate3","order":5,"path":"objects/obj_PressurePlate3/obj_PressurePlate3.yy",},

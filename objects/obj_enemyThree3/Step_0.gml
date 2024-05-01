@@ -50,7 +50,7 @@ if (place_meeting(x+hsp, y, obj_block))
 x += hsp;
 
 // Handle vertical collisions
-if (place_meeting(x, y+1, obj_block))
+if (place_meeting(x, y+vsp, obj_block))
 {
     vsp = 0;
 }
