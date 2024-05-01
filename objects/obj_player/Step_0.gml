@@ -225,9 +225,14 @@ if (isFallingOnPlate2) {
 		
 		if (sign(image_xscale) > 0)
 		{
-			instance_create_layer(x+120,y,"player", obj_fireBreath);
+			instance_create_layer(x+49,y-15,"player", obj_fireBreathEffect);	//effect
+			instance_create_layer(x+115,y,"player", obj_fireBreath);			//hitbox
 		}
-		else instance_create_layer(x-120,y,"player", obj_fireBreath);
+		else 
+		{
+			instance_create_layer(x-49,y-15,"player", obj_fireBreathEffect);	//effect
+			instance_create_layer(x-115,y,"player", obj_fireBreath);			//hitbox
+		}
 		
 		state = 2;
 	}
@@ -387,6 +392,8 @@ if (state == 3)																/* fireball */
 	{
 		sprite_index = spr_player_sideAttack
 	}
+	
+	if (!key_right && !key_left) hsp = 0;
 	
 	if (image_index >= 3 && image_index < 4)
 	{
