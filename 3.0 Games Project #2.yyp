@@ -79,7 +79,7 @@
     {"id":{"name":"spr_death","path":"sprites/spr_death/spr_death.yy",},},
     {"id":{"name":"spr_enemyThree","path":"sprites/spr_enemyThree/spr_enemyThree.yy",},},
     {"id":{"name":"spr_player_fly","path":"sprites/spr_player_fly/spr_player_fly.yy",},},
-    {"id":{"name":"obj_UI_hearts","path":"objects/obj_UI_hearts/obj_UI_hearts.yy",},},
+    {"id":{"name":"obj_UI_TOPLEFT","path":"objects/obj_UI_TOPLEFT/obj_UI_TOPLEFT.yy",},},
     {"id":{"name":"spr_firebreath","path":"sprites/spr_firebreath/spr_firebreath.yy",},},
     {"id":{"name":"spr_marker","path":"sprites/spr_marker/spr_marker.yy",},},
     {"id":{"name":"obj_enemyMelee","path":"objects/obj_enemyMelee/obj_enemyMelee.yy",},},

@@ -59,7 +59,7 @@
     {"name":"spr_death","order":4,"path":"sprites/spr_death/spr_death.yy",},
     {"name":"spr_enemyThree","order":10,"path":"sprites/spr_enemyThree/spr_enemyThree.yy",},
     {"name":"spr_player_fly","order":4,"path":"sprites/spr_player_fly/spr_player_fly.yy",},
-    {"name":"obj_UI_hearts","order":1,"path":"objects/obj_UI_hearts/obj_UI_hearts.yy",},
+    {"name":"obj_UI_TOPLEFT","order":1,"path":"objects/obj_UI_TOPLEFT/obj_UI_TOPLEFT.yy",},
     {"name":"spr_firebreath","order":11,"path":"sprites/spr_firebreath/spr_firebreath.yy",},
     {"name":"spr_marker","order":6,"path":"sprites/spr_marker/spr_marker.yy",},
     {"name":"obj_enemyMelee","order":2,"path":"objects/obj_enemyMelee/obj_enemyMelee.yy",},
