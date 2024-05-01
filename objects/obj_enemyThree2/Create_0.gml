@@ -9,7 +9,7 @@ isHit = false;
 image_speed = 0;
 
 // Path initialization
-path_start(path_2, 2, path_action_continue, false);
+path_start(path_2, 8, path_action_continue, false);
 path_position = 0;
 path_active = true;
 previous_path_position = 0;

@@ -14,10 +14,10 @@ if (instance_exists(obj_player))
     // Aggro behavior
     if (aggro)
     {
-		path_active = false;
-        path_end()
-        image_xscale = (obj_player.x > x) ? -3 : 3;
-        
+//		path_active = false;
+//        path_end()
+//        image_xscale = (obj_player.x > x) ? -3 : 3;
+//        
         if (dist < attackRange && canAttack)
         {
             attacking = true;
@@ -27,10 +27,10 @@ if (instance_exists(obj_player))
             alarm[1] = 20;  
             alarm[2] = 70;  
         }
-        else if (!attacking)
-        {
-            hsp = (obj_player.x > x) ? 2 : -2; 
-        }
+//        else if (!attacking)
+//        {
+//            hsp = (obj_player.x > x) ? 2 : -2; 
+//        }
     }
 }
 
