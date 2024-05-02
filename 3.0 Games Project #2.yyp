@@ -92,6 +92,7 @@
     {"id":{"name":"obj_effect_jump","path":"objects/obj_effect_jump/obj_effect_jump.yy",},},
     {"id":{"name":"snd_song9","path":"sounds/snd_song9/snd_song9.yy",},},
     {"id":{"name":"obj_catFire","path":"objects/obj_catFire/obj_catFire.yy",},},
+    {"id":{"name":"spr_button_play","path":"sprites/spr_button_play/spr_button_play.yy",},},
     {"id":{"name":"obj_button_menu","path":"objects/obj_button_menu/obj_button_menu.yy",},},
     {"id":{"name":"obj_PressurePlate2","path":"objects/obj_PressurePlate2/obj_PressurePlate2.yy",},},
     {"id":{"name":"spr_platformCaves","path":"sprites/spr_platformCaves/spr_platformCaves.yy",},},

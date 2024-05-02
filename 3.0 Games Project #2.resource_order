@@ -71,6 +71,7 @@
     {"name":"obj_effect_jump","order":1,"path":"objects/obj_effect_jump/obj_effect_jump.yy",},
     {"name":"snd_song9","order":19,"path":"sounds/snd_song9/snd_song9.yy",},
     {"name":"obj_catFire","order":17,"path":"objects/obj_catFire/obj_catFire.yy",},
+    {"name":"spr_button_play","order":11,"path":"sprites/spr_button_play/spr_button_play.yy",},
     {"name":"obj_PressurePlate2","order":4,"path":"objects/obj_PressurePlate2/obj_PressurePlate2.yy",},
     {"name":"spr_platformCaves","order":38,"path":"sprites/spr_platformCaves/spr_platformCaves.yy",},
     {"name":"obj_attackhitbox","order":14,"path":"objects/obj_attackhitbox/obj_attackhitbox.yy",},
