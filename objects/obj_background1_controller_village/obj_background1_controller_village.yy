@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_background_village",
-    "path": "sprites/spr_background_village/spr_background_village.yy",
+    "name": "spr_backgroundlayer1_village",
+    "path": "sprites/spr_backgroundlayer1_village/spr_backgroundlayer1_village.yy",
   },
   "spriteMaskId": null,
   "visible": true,

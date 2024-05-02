@@ -298,14 +298,28 @@ if (state == 0) // normal
     }
     
     vsp += grvt;
+	
+	// Coyote time
+	if (onGround) {
+	    coyoteTimer = coyoteTime; 
+	    hasJumped = false; 
+	} else if (!hasJumped) {
+	    coyoteTimer -= (1/room_speed); 
+	}
+
+	if (onGround && vsp >= 0) {
+	    hasJumped = false; 
+	}
    
     // Jump Proc
-    if (key_jump_pressed && (onGround || isOnPlatform || onPressurePlate)) {
+    if (key_jump_pressed && ((onGround || coyoteTimer > 0) || isOnPlatform || onPressurePlate)) {
         vsp = -jumpHeight; 
         isJumping = true;
         jumpPressedTime = 1;
         isAirborne = true;
         canDash = true;
+		coyoteTimer = 0;
+		hasJumped = true;
         hsp = playerMovement * walkspeed; 
     }
     if (isJumping && key_jump && jumpPressedTime < maxJumpPressedTime)
