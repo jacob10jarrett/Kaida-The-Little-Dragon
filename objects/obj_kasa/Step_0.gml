@@ -5,14 +5,12 @@ if (instance_exists(obj_player))
 	if (distance_to_object(obj_player) < aggroRange)
 	{		
 		aggro = true;
-		image_speed = 1;
 	}
 	
 	//break aggro
 	if (distance_to_object(obj_player) > aggroRange + 200)
 	{		
 		aggro = false;
-		image_speed = 0;
 	}
 	
 	//flip sprite
@@ -26,28 +24,18 @@ if (instance_exists(obj_player))
 	}
 	
 	//pause and attack
-	if (distance_to_object(obj_player) < attackRange && canAttack)
-	{		
-		
-		attacking = true;
-		canAttack = false;
-		hsp = 0;
-		alarm[0] = 100;
-		alarm[1] = 20;
-		alarm[2] = 70;
-		
-	}
+	
 }
 
 if (aggro && !attacking)
 {
 	if (obj_player.x > x)
 	{
-		hsp = 2;
+		hsp = 3;
 	}
 	if (obj_player.x < x)
 	{
-		hsp = -2;
+		hsp = -3;
 	}
 }
 
@@ -59,7 +47,7 @@ if (place_meeting(x+hsp, y, obj_block))
 	hsp = 0;
 	if (canJump)
 	{
-		vsp = - 7
+		vsp = - jumpHeight
 		canJump = false;
 		alarm[3] = 60;
 	}
