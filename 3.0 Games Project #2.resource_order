@@ -115,6 +115,7 @@
     {"name":"spr_backgroundlayer2_prologue","order":28,"path":"sprites/spr_backgroundlayer2_prologue/spr_backgroundlayer2_prologue.yy",},
     {"name":"spr_enemyTwo","order":5,"path":"sprites/spr_enemyTwo/spr_enemyTwo.yy",},
     {"name":"obj_majorCheckpoint","order":9,"path":"objects/obj_majorCheckpoint/obj_majorCheckpoint.yy",},
+    {"name":"obj_heartPowerup","order":19,"path":"objects/obj_heartPowerup/obj_heartPowerup.yy",},
     {"name":"obj_MovingAirPlatform4","order":3,"path":"objects/obj_MovingAirPlatform4/obj_MovingAirPlatform4.yy",},
     {"name":"obj_background3_controller_caves","order":53,"path":"objects/obj_background3_controller_caves/obj_background3_controller_caves.yy",},
     {"name":"obj_treeCherry1","order":2,"path":"objects/obj_treeCherry1/obj_treeCherry1.yy",},
