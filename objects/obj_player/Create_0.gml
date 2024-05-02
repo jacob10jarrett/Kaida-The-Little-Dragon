@@ -28,6 +28,10 @@ isAirborne = false;
 isStaggered = false;
 isHit = false;
 
+coyoteTime = 0.2;
+coyoteTimer = 0; 
+hasJumped = false; 
+
 onPressurePlate = false;
 can_control = true;
 rotating_cutscene_caves = false;

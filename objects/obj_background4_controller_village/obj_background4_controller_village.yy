@@ -28,10 +28,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_background4_village",
-    "path": "sprites/spr_background4_village/spr_background4_village.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }
