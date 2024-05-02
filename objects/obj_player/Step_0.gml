@@ -199,14 +199,7 @@ if (mouse_check_button_pressed(mb_left) && state != 5 && canMelee)
 
     var movement_pressed = keyboard_check(vk_left) || keyboard_check(ord("A")) || keyboard_check(vk_right) || keyboard_check(ord("D"));
 
-    if (movement_pressed)
-    {
-        hsp *= 0.5;
-    }
-    else
-    {
-        hsp = 0;  
-    }
+
 
     canMelee = false;
     alarm[0] = 10;
@@ -383,6 +376,10 @@ if (state == 2)																/* melee */
 	show_debug_message("STATE = MELEE");
 	image_speed = .75
 	vsp += grvt;
+	
+	if (image_index >= sprite_get_number(spr_player_sideAttack) - 1) {
+        state = 0;  // Return to normal state after the animation finishes
+    }
 	
 	if (vsp != 0 && !place_meeting(x,y+sign(vsp), obj_block))
 	{
