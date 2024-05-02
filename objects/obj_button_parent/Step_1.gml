@@ -6,6 +6,9 @@ var _mouse_gui_x = device_mouse_x_to_gui(0);
 // Get the Y position of the mouse on the GUI layer
 var _mouse_gui_y = device_mouse_y_to_gui(0);
 
+image_xscale = .4;
+image_yscale = .4;
+
 // Check if the mouse point is colliding with this instance (using 'id').
 // This means the mouse is hovering on the button.
 if (collision_point(_mouse_gui_x, _mouse_gui_y, object_index, false, false) == id)
@@ -17,8 +20,8 @@ if (collision_point(_mouse_gui_x, _mouse_gui_y, object_index, false, false) == i
 	if (mouse_check_button_pressed(mb_left))
 	{
 		// Reduce the scale of the instance so it appears smaller while it's pressed
-		image_xscale = .3;
-		image_yscale = .3;
+		image_xscale = .4;
+		image_yscale = .4;
 	}
 
 	// If the left mouse button is released (which is when we register a click),
@@ -31,8 +34,7 @@ if (collision_point(_mouse_gui_x, _mouse_gui_y, object_index, false, false) == i
 		event_user(0);
 	
 		// Reset the scale so the button appears at its normal size
-		image_xscale = 1;
-		image_yscale = 1;
+
 	
 		// Play the button press sound effect
 		audio_play_sound(snd_button_press_01, 0, 0);
