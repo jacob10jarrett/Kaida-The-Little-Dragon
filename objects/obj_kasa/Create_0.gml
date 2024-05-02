@@ -10,3 +10,9 @@ attacking = false;
 canAttack = true;
 canJump = true
 isHit = false;
+
+flash_duration = 60; 
+flash_timer = 0;
+isFlashing = false; 
+original_color = c_white; 
+flash_color = c_red; 

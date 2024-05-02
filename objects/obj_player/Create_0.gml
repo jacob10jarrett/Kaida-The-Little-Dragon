@@ -51,3 +51,9 @@ global.pushingForce = 0.5;
 global.near_player = false;
 
 state = 0;
+
+flash_duration = 60; 
+flash_timer = 0;
+isFlashing = false; 
+original_color = c_white; 
+flash_color = c_red; 

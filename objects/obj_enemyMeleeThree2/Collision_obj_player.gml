@@ -17,5 +17,9 @@ if (x > other.x)
 {
 	other.hsp = -6;
 }
+
+isFlashing = true;
+flash_timer = flash_duration;
+
 //other.hsp = sign(image_index) * 6;
 

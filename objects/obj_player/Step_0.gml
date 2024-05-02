@@ -185,21 +185,33 @@ if (isFallingOnPlate2) {
 /*------------------------------------------- States ----------------------------------------------------*/	
 
 	// Melee proc	State -> 2
-    if (mouse_check_button_pressed(mb_left) && state != 5 && canMelee)
+if (mouse_check_button_pressed(mb_left) && state != 5 && canMelee)
+{
+    instance_create_layer(x, y, "Player", obj_melee);
+    if (sign(image_xscale) == 1)
     {
-		instance_create_layer(x,y,"Player", obj_melee);
-		if (sign(image_xscale) == 1)
-		{
-			instance_create_layer(x+125,y, "Player", obj_scratch);
-		}
-		else	instance_create_layer(x-125,y, "Player", obj_scratch);
-		
-		
-		canMelee = false;
-		alarm[0] = 10;
-		state = 2;
-	
+        instance_create_layer(x + 125, y, "Player", obj_scratch);
     }
+    else
+    {
+        instance_create_layer(x - 125, y, "Player", obj_scratch);
+    }
+
+    var movement_pressed = keyboard_check(vk_left) || keyboard_check(ord("A")) || keyboard_check(vk_right) || keyboard_check(ord("D"));
+
+    if (movement_pressed)
+    {
+        hsp *= 0.5;
+    }
+    else
+    {
+        hsp = 0;  
+    }
+
+    canMelee = false;
+    alarm[0] = 10;
+    state = 2;  
+	}
 	
 	// Fireball proc	State -> 3
     if (mouse_check_button_pressed(mb_right))
@@ -486,6 +498,19 @@ if (state == 5)																/* staggered */
 	}
 	
 }
-//cant walk out of bounds
+
+// Can't walk out of bounds
 x=clamp(x, 0, room_width);
 y=clamp(y, 0, room_height);
+
+// Flash player red when hurt
+if (isFlashing) {
+    flash_timer -= 1 / room_speed; 
+
+    if (flash_timer > 0) {
+        flash_color = (flash_timer * 10) mod 2 == 0 ? c_red : original_color; 
+    } else {
+        isFlashing = false; 
+        flash_color = original_color; 
+    }
+}
