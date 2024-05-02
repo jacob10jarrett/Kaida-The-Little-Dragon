@@ -17,8 +17,8 @@ if (collision_point(_mouse_gui_x, _mouse_gui_y, object_index, false, false) == i
 	if (mouse_check_button_pressed(mb_left))
 	{
 		// Reduce the scale of the instance so it appears smaller while it's pressed
-		image_xscale = 1.9;
-		image_yscale = 1.9;
+		image_xscale = .3;
+		image_yscale = .3;
 	}
 
 	// If the left mouse button is released (which is when we register a click),
@@ -45,6 +45,6 @@ else
 	image_index = 0;
 
 	// Reset the scale so the button appears at its normal size
-	image_xscale = 2.5;
-	image_yscale = 2.5;
+	image_xscale = .45;
+	image_yscale = .45;
 }

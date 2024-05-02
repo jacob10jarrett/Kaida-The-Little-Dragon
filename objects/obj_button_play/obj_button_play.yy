@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_button_play",
-    "path": "sprites/spr_button_play/spr_button_play.yy",
+    "name": "spr_button_highres",
+    "path": "sprites/spr_button_highres/spr_button_highres.yy",
   },
   "spriteMaskId": null,
   "visible": true,
