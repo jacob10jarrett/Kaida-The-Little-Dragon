@@ -322,6 +322,7 @@
     {"id":{"name":"spr_deathpit","path":"sprites/spr_deathpit/spr_deathpit.yy",},},
     {"id":{"name":"spr_level","path":"sprites/spr_level/spr_level.yy",},},
     {"id":{"name":"spr_sign1","path":"sprites/spr_sign1/spr_sign1.yy",},},
+    {"id":{"name":"obj_gameOver_text","path":"objects/obj_gameOver_text/obj_gameOver_text.yy",},},
     {"id":{"name":"snd_land_01","path":"sounds/snd_land_01/snd_land_01.yy",},},
     {"id":{"name":"obj_goto_caves","path":"objects/obj_goto_caves/obj_goto_caves.yy",},},
     {"id":{"name":"o_dropper","path":"objects/o_dropper/o_dropper.yy",},},

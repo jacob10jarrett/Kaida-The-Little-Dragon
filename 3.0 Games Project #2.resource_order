@@ -274,6 +274,7 @@
     {"name":"obj_background1_controller_prologue","order":63,"path":"objects/obj_background1_controller_prologue/obj_background1_controller_prologue.yy",},
     {"name":"spr_deathpit","order":5,"path":"sprites/spr_deathpit/spr_deathpit.yy",},
     {"name":"spr_level","order":3,"path":"sprites/spr_level/spr_level.yy",},
+    {"name":"obj_gameOver_text","order":3,"path":"objects/obj_gameOver_text/obj_gameOver_text.yy",},
     {"name":"snd_land_01","order":6,"path":"sounds/snd_land_01/snd_land_01.yy",},
     {"name":"o_dropper","order":2,"path":"objects/o_dropper/o_dropper.yy",},
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
