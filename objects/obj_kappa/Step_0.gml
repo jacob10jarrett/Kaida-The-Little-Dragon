@@ -45,7 +45,6 @@ if (isHit)
 	{
 		awake_time++
 		hsp = 0
-		vsp = 0
 			
 	}
 	if (awake_time >= 100)

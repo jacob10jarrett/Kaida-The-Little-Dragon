@@ -14,6 +14,6 @@ if (x > other.x)
 
 if (other.isHit == false) 
 {
-	other.hp -=34;
+	other.hp -=51;
 	other.isHit = true;
 }
