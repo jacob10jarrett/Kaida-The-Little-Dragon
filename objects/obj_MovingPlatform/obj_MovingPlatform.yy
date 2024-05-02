@@ -14,7 +14,10 @@
     "name": "Platforms",
     "path": "folders/Objects/Environment/Platforms.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_block",
+    "path": "objects/obj_block/obj_block.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
