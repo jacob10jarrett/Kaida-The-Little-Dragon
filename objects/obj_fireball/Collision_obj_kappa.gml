@@ -17,13 +17,13 @@
 	{
 		if(other.sprite_index = spr_kappaAwaken && other.image_index = 0)
 		{
-		other.hp -= 0;
+		other.hp -= 34;
 		other.awake = true
 		other.image_speed = 1
 		}
 		else
 		{
-		other.hp -=31;
+		other.hp -=34;
 		other.isHit = true;
 		}
 	}
