@@ -85,7 +85,8 @@ if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || p
 x += hsp;
 
 // Vertical collision 
-if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || place_meeting(x, y+vsp, obj_crate) || place_meeting(x, y+vsp, obj_MovingAirPlatform) || place_meeting(x, y+vsp, obj_PressurePlate2)) {
+if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || place_meeting(x, y+vsp, obj_crate) || place_meeting(x, y+vsp, obj_MovingAirPlatform) || place_meeting(x, y+vsp, obj_PressurePlate2)) 
+{
     if (!place_meeting(x, y+1, obj_block) && !place_meeting(x, y+1, obj_PressurePlate2)) {
         if (isAirborne) {
             canDash = true; 
@@ -227,12 +228,12 @@ if (isFallingOnPlate2) {
 		if (sign(image_xscale) > 0)
 		{
 			instance_create_layer(x+49,y-15,"player", obj_fireBreathEffect);	//effect
-			instance_create_layer(x+115,y,"player", obj_fireBreath);			//hitbox
+			instance_create_layer(x+115,y+10,"player", obj_fireBreath);			//hitbox
 		}
 		else 
 		{
 			instance_create_layer(x-49,y-15,"player", obj_fireBreathEffect);	//effect
-			instance_create_layer(x-115,y,"player", obj_fireBreath);			//hitbox
+			instance_create_layer(x-115,y+10,"player", obj_fireBreath);			//hitbox
 		}
 		
 		state = 2;

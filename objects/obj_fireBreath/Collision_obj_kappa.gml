@@ -1,4 +1,4 @@
-objother.hp -= 2
+objother.hp -= 1.3
 
 
 

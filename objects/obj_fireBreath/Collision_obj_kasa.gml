@@ -1,4 +1,4 @@
-other.hp -= 2
+other.hp -= 1.3
 
 
 
