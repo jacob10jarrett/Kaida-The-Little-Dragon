@@ -47,7 +47,7 @@ if (place_meeting(x+hsp, y, obj_block))
 	hsp = 0;
 	if (canJump)
 	{
-		vsp = - jumpHeight
+		vsp = .6 * -jumpHeight
 		canJump = false;
 		alarm[3] = 60;
 	}

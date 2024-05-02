@@ -50,7 +50,7 @@ if (isHit)
 	if (awake_time >= 100)
 	{
 		awake = false
-		sprite_index = spr_kappaAwaken
+		sprite_index = spr_kappaBlueAwaken
 		image_index = 0
 		image_speed = 0
 		awake_time = 0
@@ -60,10 +60,9 @@ if (isHit)
 
 if(image_index = 5)
 {
-	sprite_index = spr_kappaAttack
+	sprite_index = spr_kappaBlueAttack
 	awake = true
 	awake_time = 0
 }
 
 if (hp <= 0) instance_destroy();
-

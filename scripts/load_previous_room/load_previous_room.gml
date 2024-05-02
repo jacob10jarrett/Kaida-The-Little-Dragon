@@ -14,11 +14,11 @@ function load_previous_room() {
             if (room_exists(room_index)) {
                 if (!instance_exists(obj_player)) {
                     var player_instance = instance_create_layer(px, py, "Instances", obj_player);
-                    player_instance.hp = php;
+                    global.hp = 3;
                 } else {
                     obj_player.x = px;
                     obj_player.y = py;
-                    obj_player.hp = php;
+                    global.hp = 3;
                 }
                 room_goto(room_index);
             } else {

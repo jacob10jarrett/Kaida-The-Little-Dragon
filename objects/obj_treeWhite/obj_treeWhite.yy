@@ -1,13 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_bouncyPlatform2",
+  "name": "obj_treeWhite",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Platforms",
-    "path": "folders/Objects/Environment/Platforms.yy",
+    "name": "Items",
+    "path": "folders/Objects/Environment/Items.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_slime",
-    "path": "sprites/spr_slime/spr_slime.yy",
+    "name": "spr_whiteTre",
+    "path": "sprites/spr_whiteTre/spr_whiteTre.yy",
   },
   "spriteMaskId": null,
   "visible": true,

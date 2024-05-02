@@ -135,7 +135,7 @@ if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150)
 }
 
 // Player death 
-if (hp <= 0) {
+if (global.hp <= 0) {
     global.previous_room = room;
     room_goto(rm_gameOver);
 }

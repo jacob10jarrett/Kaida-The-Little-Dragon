@@ -6,18 +6,18 @@ other.state = 5;
 if (other.isHit == false) 
 {
 
-	obj_player.hp -=1;
+	global.hp -=1;
 	other.isHit = true;
 }
 
 if (x < other.x)
 {
-	other.hsp = 6;
+	other.hsp = 3;
 }
 
 if (x > other.x)
 {
-	other.hsp = -6;
+	other.hsp = -3;
 }
 //other.hsp = sign(image_index) * 6;
 

@@ -4,7 +4,7 @@ other.state = 5;
 
 if (other.isHit == false) 
 {
-	obj_player.hp -=1;
+	global.hp -=1;
 	other.isHit = true;
 }
 
