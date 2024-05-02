@@ -1,1 +1,3 @@
-//hp decrease value
+other.hp -=.5;
+
+instance_destroy();

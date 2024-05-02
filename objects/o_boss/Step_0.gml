@@ -1,9 +1,4 @@
 
-/**
-if (hspeed < 0)	image_xscale = image_xscale * -1;
-else image_xscale = abs(image_xscale);
-**/
-
 if (y < 200)	
 {
 	canFire = true;
@@ -38,14 +33,33 @@ if (canFire && justFired == false)
 	alarm[0] = room_speed * 1/3;
 }
 
-if (!canFire)	
+if (!canFire && justBit = false)	
 {
 	show_debug_message("NOT FIRING");
+	
+	if (x < obj_player.x) 
+	{
+		instance_create_layer(x+155,y+20,"Instances", obj_finalBossMelee);
+	}
+	
+	if (x > obj_player.x) 
+	{
+		instance_create_layer(x-155,y+20,"Instances", obj_finalBossMelee);
+	}
+
+	
+	alarm[1] = 104;
+	justBit = true;
 }
 
 if (x < obj_player.x)	image_xscale = 3
 
 if (x > obj_player.x)	image_xscale = -3;	
+
+if (hp <= 0)
+{
+	instance_destroy();
+}
 
 
 
