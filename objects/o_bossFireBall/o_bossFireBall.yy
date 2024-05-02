@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_fireball",
-    "path": "sprites/spr_fireball/spr_fireball.yy",
+    "name": "spr_finalBossFireball",
+    "path": "sprites/spr_finalBossFireball/spr_finalBossFireball.yy",
   },
   "spriteMaskId": null,
   "visible": true,
