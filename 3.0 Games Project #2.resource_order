@@ -273,7 +273,6 @@
     {"name":"snd_land_01","order":6,"path":"sounds/snd_land_01/snd_land_01.yy",},
     {"name":"o_dropper","order":2,"path":"objects/o_dropper/o_dropper.yy",},
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
-    {"name":"obj_kappaMelee","order":6,"path":"objects/obj_kappaMelee/obj_kappaMelee.yy",},
     {"name":"seq_game_over","order":1,"path":"sequences/seq_game_over/seq_game_over.yy",},
     {"name":"spr_cooldownBar","order":10,"path":"sprites/spr_cooldownBar/spr_cooldownBar.yy",},
     {"name":"load_previous_room","order":6,"path":"scripts/load_previous_room/load_previous_room.yy",},

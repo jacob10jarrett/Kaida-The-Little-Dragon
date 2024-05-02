@@ -322,7 +322,6 @@
     {"id":{"name":"obj_goto_caves","path":"objects/obj_goto_caves/obj_goto_caves.yy",},},
     {"id":{"name":"o_dropper","path":"objects/o_dropper/o_dropper.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
-    {"id":{"name":"obj_kappaMelee","path":"objects/obj_kappaMelee/obj_kappaMelee.yy",},},
     {"id":{"name":"seq_game_over","path":"sequences/seq_game_over/seq_game_over.yy",},},
     {"id":{"name":"spr_cooldownBar","path":"sprites/spr_cooldownBar/spr_cooldownBar.yy",},},
     {"id":{"name":"load_previous_room","path":"scripts/load_previous_room/load_previous_room.yy",},},

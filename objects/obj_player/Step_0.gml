@@ -11,6 +11,7 @@ if (can_control) {
 	key_firebreath = keyboard_check_pressed(vk_tab);
 }
 
+
 var playerMovement = key_right - key_left;
 var onGround = place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_crate) || place_meeting(x, y+1, obj_MovingAirPlatform) || instance_place(x, y+1, obj_MovingPlatform3);
 isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate) && !place_meeting(x, y+1, obj_MovingAirPlatform) && !place_meeting(x, y+12, obj_PressurePlate2));
