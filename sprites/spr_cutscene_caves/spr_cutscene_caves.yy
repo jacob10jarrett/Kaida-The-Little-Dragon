@@ -86,8 +86,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Cutscene",
+    "path": "folders/Sprites/Cutscene.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

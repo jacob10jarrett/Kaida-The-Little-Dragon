@@ -60,6 +60,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Backgrounds","folderPath":"folders/Sprites/Backgrounds.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Puzzle","folderPath":"folders/Sprites/Environment/Puzzle.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Cutscene","folderPath":"folders/Sprites/Cutscene.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Backgrounds","folderPath":"folders/Objects/Backgrounds.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
