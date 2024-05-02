@@ -1,2 +1,2 @@
-other.hp = 6;
+other.hp += 1;
 instance_destroy();

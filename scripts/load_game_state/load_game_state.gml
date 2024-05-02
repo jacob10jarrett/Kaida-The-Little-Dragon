@@ -21,11 +21,10 @@ function load_game_state() {
 
         if (!instance_exists(obj_player)) {
             var player_instance = instance_create_layer(px, py, "Instances", obj_player);
-            player_instance.hp = php;
         } else {
             obj_player.x = px;
             obj_player.y = py;
-            obj_player.hp = php;
+            obj_player.hp -= 1;
         }
 
     } else {
