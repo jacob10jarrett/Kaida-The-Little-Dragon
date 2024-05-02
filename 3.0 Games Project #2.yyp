@@ -109,6 +109,7 @@
     {"id":{"name":"obj_PressurePlate","path":"objects/obj_PressurePlate/obj_PressurePlate.yy",},},
     {"id":{"name":"obj_firebreath_obstacle","path":"objects/obj_firebreath_obstacle/obj_firebreath_obstacle.yy",},},
     {"id":{"name":"snd_whoosh","path":"sounds/snd_whoosh/snd_whoosh.yy",},},
+    {"id":{"name":"spr_mountains","path":"sprites/spr_mountains/spr_mountains.yy",},},
     {"id":{"name":"save_game_state","path":"scripts/save_game_state/save_game_state.yy",},},
     {"id":{"name":"obj_background1_controller_mountain","path":"objects/obj_background1_controller_mountain/obj_background1_controller_mountain.yy",},},
     {"id":{"name":"spr_hpBar","path":"sprites/spr_hpBar/spr_hpBar.yy",},},
@@ -213,6 +214,7 @@
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"spr_kasaobakeBlue","path":"sprites/spr_kasaobakeBlue/spr_kasaobakeBlue.yy",},},
     {"id":{"name":"obj_background3_controller_village","path":"objects/obj_background3_controller_village/obj_background3_controller_village.yy",},},
+    {"id":{"name":"ts_mountains","path":"tilesets/ts_mountains/ts_mountains.yy",},},
     {"id":{"name":"obj_mushroom","path":"objects/obj_mushroom/obj_mushroom.yy",},},
     {"id":{"name":"spr_spike","path":"sprites/spr_spike/spr_spike.yy",},},
     {"id":{"name":"snd_horror","path":"sounds/snd_horror/snd_horror.yy",},},
@@ -367,5 +369,6 @@
   "templateType": "game",
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"texturegroup1","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],
 }
