@@ -141,6 +141,7 @@
     {"id":{"name":"spr_backgroundlayer2_prologue","path":"sprites/spr_backgroundlayer2_prologue/spr_backgroundlayer2_prologue.yy",},},
     {"id":{"name":"spr_enemyTwo","path":"sprites/spr_enemyTwo/spr_enemyTwo.yy",},},
     {"id":{"name":"obj_majorCheckpoint","path":"objects/obj_majorCheckpoint/obj_majorCheckpoint.yy",},},
+    {"id":{"name":"obj_heartPowerup","path":"objects/obj_heartPowerup/obj_heartPowerup.yy",},},
     {"id":{"name":"obj_MovingAirPlatform4","path":"objects/obj_MovingAirPlatform4/obj_MovingAirPlatform4.yy",},},
     {"id":{"name":"obj_background3_controller_caves","path":"objects/obj_background3_controller_caves/obj_background3_controller_caves.yy",},},
     {"id":{"name":"obj_treeCherry1","path":"objects/obj_treeCherry1/obj_treeCherry1.yy",},},
