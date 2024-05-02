@@ -29,3 +29,4 @@ if (layer_exists("EffectLeaf"))
 	// Get the number of leaves
 	leaf_count = fx_get_parameter(effect_leaf, "param_num_particles");
 }
+

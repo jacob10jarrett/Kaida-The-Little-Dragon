@@ -9,7 +9,10 @@
     "name": "EnemySystem",
     "path": "folders/Objects/EnemySystem.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_catGrey",
+    "path": "objects/obj_catGrey/obj_catGrey.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
