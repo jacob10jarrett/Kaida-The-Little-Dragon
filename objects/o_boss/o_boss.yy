@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_flyer",
-    "path": "sprites/spr_flyer/spr_flyer.yy",
+    "name": "spr_finalBossFlying",
+    "path": "sprites/spr_finalBossFlying/spr_finalBossFlying.yy",
   },
   "spriteMaskId": null,
   "visible": true,
