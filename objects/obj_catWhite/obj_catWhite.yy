@@ -25,7 +25,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_catWhite",
+    "path": "sprites/spr_catWhite/spr_catWhite.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

@@ -25,7 +25,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_catBrown",
+    "path": "sprites/spr_catBrown/spr_catBrown.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
