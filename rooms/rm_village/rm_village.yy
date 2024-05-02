@@ -419,6 +419,7 @@
     {"name":"inst_5A04562C","path":"rooms/rm_village/rm_village.yy",},
     {"name":"inst_5D0E7260","path":"rooms/rm_village/rm_village.yy",},
     {"name":"inst_35934C2","path":"rooms/rm_village/rm_village.yy",},
+    {"name":"inst_5C233D6A","path":"rooms/rm_village/rm_village.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -461,6 +462,9 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_46D63A41","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"properties":[],"rotation":0.0,"scaleX":13.999999,"scaleY":2.0,"x":41888.0,"y":39200.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5ED0CEC4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"properties":[],"rotation":0.0,"scaleX":13.999999,"scaleY":-1.0,"x":42016.0,"y":39200.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3FDC7A8B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_checkpoint","path":"objects/obj_checkpoint/obj_checkpoint.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":43296.0,"y":39936.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5C233D6A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_sign","path":"objects/obj_sign/obj_sign.yy",},"properties":[
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_sign","path":"objects/obj_sign/obj_sign.yy",},"propertyId":{"name":"signText","path":"objects/obj_sign/obj_sign.yy",},"value":"caves",},
+          ],"rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"x":52768.0,"y":40032.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Trees_BEHIND","depth":-100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_46D0D7B2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_treeCherry2","path":"objects/obj_treeCherry2/obj_treeCherry2.yy",},"properties":[],"rotation":0.0,"scaleX":2.142857,"scaleY":1.48,"x":48704.0,"y":39520.0,},
