@@ -4,7 +4,7 @@
   "name": "spr_melee",
   "bbox_bottom": 63,
   "bbox_left": 0,
-  "bbox_right": 71,
+  "bbox_right": 92,
   "bbox_top": 13,
   "bboxMode": 2,
   "collisionKind": 1,
