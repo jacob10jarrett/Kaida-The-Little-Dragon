@@ -1,4 +1,29 @@
-
+if (instance_exists(obj_player))
+{
+	//proc aggro	
+	if (distance_to_object(obj_player) < aggroRange)
+	{		
+		aggro = true;
+	}
+	
+	//break aggro
+	if (distance_to_object(obj_player) > aggroRange + 200)
+	{		
+		aggro = false;
+	}
+	
+	//flip sprite
+	if (obj_player.x > x)
+	{
+		image_xscale = 1;
+		facing_right = true
+	}
+	if (obj_player.x < x)
+	{
+		image_xscale = -1
+		facing_right = false
+	}
+}
 vsp += grvt;
 
 // Horizontal collision

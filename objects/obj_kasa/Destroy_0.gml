@@ -1,2 +1,2 @@
-instance_create_layer(x,y,"player", obj_mushroom);
+instance_create_layer(x,y,"VisibleObjects", obj_mushroom);
 

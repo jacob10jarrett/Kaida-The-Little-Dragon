@@ -112,7 +112,7 @@ if (mouse_check_button_pressed(mb_right) && canFireball)
 {
 	canFireball = false;
 	alarm[1] = 175;
-	instance_create_layer(x,y,"player", obj_fireball);
+	instance_create_layer(x,y,"VisibleObjects", obj_fireball);
 }
 
 // Crate pushing
@@ -187,14 +187,14 @@ if (isFallingOnPlate2) {
 	// Melee proc	State -> 2
 if (mouse_check_button_pressed(mb_left) && state != 5 && canMelee)
 {
-    instance_create_layer(x, y, "Player", obj_melee);
+    instance_create_layer(x, y, "VisibleObjects", obj_melee);
     if (sign(image_xscale) == 1)
     {
-        instance_create_layer(x + 125, y, "Player", obj_scratch);
+        instance_create_layer(x + 125, y, "VisibleObjects", obj_scratch);
     }
     else
     {
-        instance_create_layer(x - 125, y, "Player", obj_scratch);
+        instance_create_layer(x - 125, y, "VisibleObjects", obj_scratch);
     }
 
     var movement_pressed = keyboard_check(vk_left) || keyboard_check(ord("A")) || keyboard_check(vk_right) || keyboard_check(ord("D"));
@@ -231,13 +231,13 @@ if (mouse_check_button_pressed(mb_left) && state != 5 && canMelee)
 		
 		if (sign(image_xscale) > 0)
 		{
-			instance_create_layer(x+49,y-15,"player", obj_fireBreathEffect);	//effect
-			instance_create_layer(x+115,y,"player", obj_fireBreath);			//hitbox
+			instance_create_layer(x+49,y-15,"VisibleObjects", obj_fireBreathEffect);	//effect
+			instance_create_layer(x+115,y,"VisibleObjects", obj_fireBreath);			//hitbox
 		}
 		else 
 		{
-			instance_create_layer(x-49,y-15,"player", obj_fireBreathEffect);	//effect
-			instance_create_layer(x-115,y,"player", obj_fireBreath);			//hitbox
+			instance_create_layer(x-49,y-15,"VisibleObjects", obj_fireBreathEffect);	//effect
+			instance_create_layer(x-115,y,"VisibleObjects", obj_fireBreath);			//hitbox
 		}
 		
 		state = 2;
