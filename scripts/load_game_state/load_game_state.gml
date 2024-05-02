@@ -24,7 +24,7 @@ function load_game_state() {
         } else {
             obj_player.x = px;
             obj_player.y = py;
-            obj_player.hp -= 1;
+            global.hp -= 1;
         }
 
     } else {

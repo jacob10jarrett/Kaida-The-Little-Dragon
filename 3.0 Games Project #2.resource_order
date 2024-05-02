@@ -264,6 +264,7 @@
     {"name":"obj_goto_village","order":1,"path":"objects/obj_goto_village/obj_goto_village.yy",},
     {"name":"spr_backgroundlayer_mountain","order":19,"path":"sprites/spr_backgroundlayer_mountain/spr_backgroundlayer_mountain.yy",},
     {"name":"obj_catFireBlue","order":18,"path":"objects/obj_catFireBlue/obj_catFireBlue.yy",},
+    {"name":"obj_health","order":7,"path":"objects/obj_health/obj_health.yy",},
     {"name":"spr_fireBlue","order":11,"path":"sprites/spr_fireBlue/spr_fireBlue.yy",},
     {"name":"spr_melee","order":8,"path":"sprites/spr_melee/spr_melee.yy",},
     {"name":"obj_character_parent","order":2,"path":"objects/obj_character_parent/obj_character_parent.yy",},

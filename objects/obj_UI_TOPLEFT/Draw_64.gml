@@ -3,9 +3,9 @@
 if (instance_exists(obj_player))
 {
 	
-	draw_sprite(spr_hpBar, 0, 20, 60);					
+	//draw_sprite(spr_hpBar, 0, 20, 60);					
 	
-	for (var i=0; i<obj_player.hp; i++)	/* draw hearts */
+	for (var i=0; i<global.hp; i++)	/* draw hearts */
 	{
 		draw_sprite(spr_heartUI, 0, (17 + 35 * i), 53);
 	}
