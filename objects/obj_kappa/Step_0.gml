@@ -33,12 +33,12 @@ if (isHit)
 }
 	if (obj_player.x > x && !awake)
 		{
-			hsp = 10;
+			hsp = 5;
 			 image_xscale = -abs(image_xscale)
 		}
 		if (obj_player.x < x)
 		{
-			hsp = -10;
+			hsp = -5;
 			 image_xscale = abs(image_xscale)
 		}
 	if awake = true
