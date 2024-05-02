@@ -418,6 +418,7 @@
     {"name":"inst_1F94A773","path":"rooms/rm_village/rm_village.yy",},
     {"name":"inst_5A04562C","path":"rooms/rm_village/rm_village.yy",},
     {"name":"inst_5D0E7260","path":"rooms/rm_village/rm_village.yy",},
+    {"name":"inst_35934C2","path":"rooms/rm_village/rm_village.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -927,6 +928,7 @@
         {"name":"param_debug_grid","type":0,"value":"0",},
       ],"userdefinedDepth":true,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Backgrounds","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_35934C2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_background3_controller_village","path":"objects/obj_background3_controller_village/obj_background3_controller_village.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":53408.0,"y":39424.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5A04562C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_background1_controller_village","path":"objects/obj_background1_controller_village/obj_background1_controller_village.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":53344.0,"y":39360.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5D0E7260","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_background2_controller_village","path":"objects/obj_background2_controller_village/obj_background2_controller_village.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":53760.0,"y":39968.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
