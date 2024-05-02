@@ -17,3 +17,4 @@ if (other.isHit == false)
 	other.hp -=34;
 	other.isHit = true;
 }
+instance_destroy()

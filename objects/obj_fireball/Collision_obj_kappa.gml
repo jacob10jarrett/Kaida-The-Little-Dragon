@@ -27,6 +27,6 @@
 		other.isHit = true;
 		}
 	}
-
+instance_destroy()
 
 
