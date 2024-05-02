@@ -1,23 +1,12 @@
-//image_index = 0;
-image_speed = 0;
-
-vsp =  0;
-hsp = 0;
-grvt = 0.7;
-aggro = false;
-attacking = false;
-moving = false;
-swinging = false;
-isHit = false;
-
-canAttack = true;
+image_xscale = 1.5
+image_yscale = 1.5
+image_speed = 0
+vsp = 0
+hsp = 0
+grvt = 1
+isHit = false
 canJump = true
-awake = false;
-hiding = false
+awake = false
 
-canMove = false;
-
-state = 0;
-
-
-standing = false;
+awake_time = 0; 
+aggro = false
