@@ -214,6 +214,7 @@
     {"name":"obj_caves_cutscene_controller","order":51,"path":"objects/obj_caves_cutscene_controller/obj_caves_cutscene_controller.yy",},
     {"name":"spr_player","order":9,"path":"sprites/spr_player/spr_player.yy",},
     {"name":"spr_dpuzzle5","order":4,"path":"sprites/spr_dpuzzle5/spr_dpuzzle5.yy",},
+    {"name":"obj_FIREBREATHINVISUNLOCK","order":22,"path":"objects/obj_FIREBREATHINVISUNLOCK/obj_FIREBREATHINVISUNLOCK.yy",},
     {"name":"obj_kappaBlue","order":12,"path":"objects/obj_kappaBlue/obj_kappaBlue.yy",},
     {"name":"spr_ghost_particle","order":12,"path":"sprites/spr_ghost_particle/spr_ghost_particle.yy",},
     {"name":"obj_ghost_particle","order":4,"path":"objects/obj_ghost_particle/obj_ghost_particle.yy",},

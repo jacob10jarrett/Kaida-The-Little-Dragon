@@ -250,6 +250,7 @@
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_dpuzzle5","path":"sprites/spr_dpuzzle5/spr_dpuzzle5.yy",},},
     {"id":{"name":"ts_placeholder","path":"tilesets/ts_placeholder/ts_placeholder.yy",},},
+    {"id":{"name":"obj_FIREBREATHINVISUNLOCK","path":"objects/obj_FIREBREATHINVISUNLOCK/obj_FIREBREATHINVISUNLOCK.yy",},},
     {"id":{"name":"obj_kappaBlue","path":"objects/obj_kappaBlue/obj_kappaBlue.yy",},},
     {"id":{"name":"spr_ghost_particle","path":"sprites/spr_ghost_particle/spr_ghost_particle.yy",},},
     {"id":{"name":"obj_ghost_particle","path":"objects/obj_ghost_particle/obj_ghost_particle.yy",},},
