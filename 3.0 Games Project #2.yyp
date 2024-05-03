@@ -282,6 +282,7 @@
     {"id":{"name":"ts_draw","path":"tilesets/ts_draw/ts_draw.yy",},},
     {"id":{"name":"obj_per_manager","path":"objects/obj_per_manager/obj_per_manager.yy",},},
     {"id":{"name":"snd_rumble","path":"sounds/snd_rumble/snd_rumble.yy",},},
+    {"id":{"name":"obj_toKitsune","path":"objects/obj_toKitsune/obj_toKitsune.yy",},},
     {"id":{"name":"obj_fade_in_caves","path":"objects/obj_fade_in_caves/obj_fade_in_caves.yy",},},
     {"id":{"name":"snd_song8","path":"sounds/snd_song8/snd_song8.yy",},},
     {"id":{"name":"obj_caves_cutscene1","path":"objects/obj_caves_cutscene1/obj_caves_cutscene1.yy",},},

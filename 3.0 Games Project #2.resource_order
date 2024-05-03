@@ -244,6 +244,7 @@
     {"name":"ts_draw","order":1,"path":"tilesets/ts_draw/ts_draw.yy",},
     {"name":"obj_per_manager","order":36,"path":"objects/obj_per_manager/obj_per_manager.yy",},
     {"name":"snd_rumble","order":10,"path":"sounds/snd_rumble/snd_rumble.yy",},
+    {"name":"obj_toKitsune","order":73,"path":"objects/obj_toKitsune/obj_toKitsune.yy",},
     {"name":"snd_song8","order":16,"path":"sounds/snd_song8/snd_song8.yy",},
     {"name":"obj_caves_cutscene1","order":6,"path":"objects/obj_caves_cutscene1/obj_caves_cutscene1.yy",},
     {"name":"obj_MovingAirPlatform5","order":6,"path":"objects/obj_MovingAirPlatform5/obj_MovingAirPlatform5.yy",},
