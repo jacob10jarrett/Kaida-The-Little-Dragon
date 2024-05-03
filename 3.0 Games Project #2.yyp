@@ -183,6 +183,7 @@
     {"id":{"name":"spr_treeCherry1","path":"sprites/spr_treeCherry1/spr_treeCherry1.yy",},},
     {"id":{"name":"obj_MovingAirPlatform3","path":"objects/obj_MovingAirPlatform3/obj_MovingAirPlatform3.yy",},},
     {"id":{"name":"Collisions","path":"scripts/Collisions/Collisions.yy",},},
+    {"id":{"name":"spr_snow","path":"sprites/spr_snow/spr_snow.yy",},},
     {"id":{"name":"spr_torii_pixelated","path":"sprites/spr_torii_pixelated/spr_torii_pixelated.yy",},},
     {"id":{"name":"spr_cutscene_caves2","path":"sprites/spr_cutscene_caves2/spr_cutscene_caves2.yy",},},
     {"id":{"name":"seq_main_menu","path":"sequences/seq_main_menu/seq_main_menu.yy",},},

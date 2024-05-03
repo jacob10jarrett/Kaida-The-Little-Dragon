@@ -1,3 +1,3 @@
 
-hp -= 50;
+hp -= 5;
 instance_destroy(other);

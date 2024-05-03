@@ -152,6 +152,7 @@
     {"name":"spr_ghost","order":7,"path":"sprites/spr_ghost/spr_ghost.yy",},
     {"name":"spr_treeCherry1","order":2,"path":"sprites/spr_treeCherry1/spr_treeCherry1.yy",},
     {"name":"obj_MovingAirPlatform3","order":2,"path":"objects/obj_MovingAirPlatform3/obj_MovingAirPlatform3.yy",},
+    {"name":"spr_snow","order":44,"path":"sprites/spr_snow/spr_snow.yy",},
     {"name":"spr_torii_pixelated","order":6,"path":"sprites/spr_torii_pixelated/spr_torii_pixelated.yy",},
     {"name":"spr_cutscene_caves2","order":1,"path":"sprites/spr_cutscene_caves2/spr_cutscene_caves2.yy",},
     {"name":"spr_treeGreen","order":4,"path":"sprites/spr_treeGreen/spr_treeGreen.yy",},
