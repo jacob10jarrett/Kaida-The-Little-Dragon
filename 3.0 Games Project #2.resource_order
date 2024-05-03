@@ -141,6 +141,7 @@
     {"name":"rm_gameOver","order":6,"path":"rooms/rm_gameOver/rm_gameOver.yy",},
     {"name":"obj_block_diagonal","order":1,"path":"objects/obj_block_diagonal/obj_block_diagonal.yy",},
     {"name":"spr_sign4","order":3,"path":"sprites/spr_sign4/spr_sign4.yy",},
+    {"name":"obj_E","order":23,"path":"objects/obj_E/obj_E.yy",},
     {"name":"obj_marker","order":4,"path":"objects/obj_marker/obj_marker.yy",},
     {"name":"snd_song4","order":4,"path":"sounds/snd_song4/snd_song4.yy",},
     {"name":"rm_kitsune","order":9,"path":"rooms/rm_kitsune/rm_kitsune.yy",},

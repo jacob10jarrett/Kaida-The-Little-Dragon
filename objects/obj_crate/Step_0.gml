@@ -1,5 +1,8 @@
 vsp += grvt;
 
+//instance_create_layer(x,y-30,"Player", obj_E);
+
+
 if (!global.isPulling) {
     hsp *= 0.9; 
 }
