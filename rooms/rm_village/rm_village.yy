@@ -439,7 +439,6 @@
     {"name":"inst_3EE50362","path":"rooms/rm_village/rm_village.yy",},
     {"name":"inst_493D9B58","path":"rooms/rm_village/rm_village.yy",},
     {"name":"inst_1091BEF3","path":"rooms/rm_village/rm_village.yy",},
-    {"name":"inst_6BD52801","path":"rooms/rm_village/rm_village.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -911,7 +910,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3EE50362","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_heartPowerup","path":"objects/obj_heartPowerup/obj_heartPowerup.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":52192.0,"y":38624.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_493D9B58","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_heartPowerup","path":"objects/obj_heartPowerup/obj_heartPowerup.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":47264.0,"y":39200.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1091BEF3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_heartPowerup","path":"objects/obj_heartPowerup/obj_heartPowerup.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":41216.0,"y":38816.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6BD52801","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":22.0,"x":56512.0,"y":39360.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMREffectLayer","resourceVersion":"1.0","name":"Effect_1","depth":400,"effectEnabled":true,"effectType":"_effect_windblown_particles","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"param_sprite","type":2,"value":"spr_cherryblossomleaf",},

@@ -352,6 +352,7 @@
     {"id":{"name":"obj_goto_village","path":"objects/obj_goto_village/obj_goto_village.yy",},},
     {"id":{"name":"spr_backgroundlayer_mountain","path":"sprites/spr_backgroundlayer_mountain/spr_backgroundlayer_mountain.yy",},},
     {"id":{"name":"obj_catFireBlue","path":"objects/obj_catFireBlue/obj_catFireBlue.yy",},},
+    {"id":{"name":"obj_blockTwo","path":"objects/obj_blockTwo/obj_blockTwo.yy",},},
     {"id":{"name":"obj_health","path":"objects/obj_health/obj_health.yy",},},
     {"id":{"name":"spr_fireBlue","path":"sprites/spr_fireBlue/spr_fireBlue.yy",},},
     {"id":{"name":"snd_song1","path":"sounds/snd_song1/snd_song1.yy",},},

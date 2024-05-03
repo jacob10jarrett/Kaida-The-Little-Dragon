@@ -1,5 +1,4 @@
-room_goto(rm_finalboss);
-
+room_goto(rm_kitsune)
 
 
 
