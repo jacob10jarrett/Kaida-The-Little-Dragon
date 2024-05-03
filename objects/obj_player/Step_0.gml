@@ -78,12 +78,12 @@ if (onMovingPlatform || onPressurePlate) {
 if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || 
 place_meeting(x+hsp, y, obj_crate) || place_meeting(x+hsp, y, obj_MovingPlatform) || 
 place_meeting(x+hsp, y, obj_MovingAirPlatform) || place_meeting(x+hsp, y, obj_PressurePlate2)
-|| place_meeting(x+hsp, y, obj_firebreath_obstacle))
+|| place_meeting(x+hsp, y, obj_firebreath_obstacle) || place_meeting(x+hsp, y, obj_puzzlePlatform))
 {
     while (!place_meeting(x+sign(hsp),y, obj_block) && !place_meeting(x+sign(hsp),y, obj_wall) && 
 	!place_meeting(x+sign(hsp),y, obj_crate) && !place_meeting(x+sign(hsp),y, obj_MovingPlatform) && 
 	!place_meeting(x+sign(hsp),y, obj_MovingAirPlatform) && !place_meeting(x+sign(hsp),y, obj_PressurePlate2)
-	&& !place_meeting(x+hsp, y, obj_firebreath_obstacle))
+	&& !place_meeting(x+hsp, y, obj_firebreath_obstacle) && !place_meeting(x+hsp, y, obj_puzzlePlatform))
     {
         x += sign(hsp);
     }
