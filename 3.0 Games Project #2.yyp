@@ -172,6 +172,7 @@
     {"id":{"name":"snd_song4","path":"sounds/snd_song4/snd_song4.yy",},},
     {"id":{"name":"rm_kitsune","path":"rooms/rm_kitsune/rm_kitsune.yy",},},
     {"id":{"name":"music_mountain1","path":"objects/music_mountain1/music_mountain1.yy",},},
+    {"id":{"name":"obj_toFinalBoss","path":"objects/obj_toFinalBoss/obj_toFinalBoss.yy",},},
     {"id":{"name":"path_1","path":"paths/path_1/path_1.yy",},},
     {"id":{"name":"obj_catGrey","path":"objects/obj_catGrey/obj_catGrey.yy",},},
     {"id":{"name":"obj_enemyThree2","path":"objects/obj_enemyThree2/obj_enemyThree2.yy",},},
