@@ -27,6 +27,7 @@
     {"name":"inst_43CE348F","path":"rooms/rm_kitsune/rm_kitsune.yy",},
     {"name":"inst_5354A39B","path":"rooms/rm_kitsune/rm_kitsune.yy",},
     {"name":"inst_64BB7AE4","path":"rooms/rm_kitsune/rm_kitsune.yy",},
+    {"name":"inst_5BEF9AD9","path":"rooms/rm_kitsune/rm_kitsune.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -71,7 +72,10 @@
 2,53,62,-34,-2147483648,2,62,69,-22,51,2,52,53,-34,-2147483648,2,49,50,-23,51,1,73,-34,-2147483648,1,69,-24,51,2,52,53,-32,-2147483648,2,49,50,-25,51,2,52,53,-30,-2147483648,2,49,50,-27,51,3,52,53,63,-28,-2147483648,1,69,-29,51,2,52,
 53,-26,-2147483648,3,63,49,50,-30,51,1,73,-26,-2147483648,2,49,50,-31,51,3,52,53,62,-23,-2147483648,2,148,69,-33,51,2,52,53,-22,-2147483648,3,148,49,50,-34,51,3,73,169,169,-19,-2147483648,3,148,169,69,-35,51,3,73,169,169,-58,-2147483648,-2,169,
 -68,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"ts_cave","path":"tilesets/ts_cave/ts_cave.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4280355331,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4280355331,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":false,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances_2","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5BEF9AD9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_background1_controller_mountain","path":"objects/obj_background1_controller_mountain/obj_background1_controller_mountain.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":512.0,},
+      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
   ],
   "parent": {
     "name": "Rooms",
