@@ -1,4 +1,4 @@
-room_goto(rm_mountain);
+room_goto(rm_village2);
 
 
 

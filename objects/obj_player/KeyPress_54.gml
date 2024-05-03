@@ -1,2 +1,2 @@
-room_goto(rm_end)
+room_goto(rm_finalboss);
 
