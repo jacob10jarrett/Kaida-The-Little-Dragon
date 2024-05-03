@@ -264,6 +264,7 @@
     {"name":"inst_453C88D6","path":"rooms/rm_prologue/rm_prologue.yy",},
     {"name":"inst_11D0F7DF","path":"rooms/rm_prologue/rm_prologue.yy",},
     {"name":"inst_16DF3C0E","path":"rooms/rm_prologue/rm_prologue.yy",},
+    {"name":"inst_69BF75C6","path":"rooms/rm_prologue/rm_prologue.yy",},
   ],
   "isDnd": false,
   "layers": [
