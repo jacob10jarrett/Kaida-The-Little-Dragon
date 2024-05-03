@@ -1,15 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_FIREBREATHINVISUNLOCK",
+  "name": "obj_goto_boss",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Interactive",
-    "path": "folders/Objects/Environment/Interactive.yy",
+    "name": "RoomTransitions",
+    "path": "folders/Objects/Environment/RoomTransitions.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_deathpit",
-    "path": "sprites/spr_deathpit/spr_deathpit.yy",
+    "name": "spr_death",
+    "path": "sprites/spr_death/spr_death.yy",
   },
   "spriteMaskId": null,
   "visible": false,
