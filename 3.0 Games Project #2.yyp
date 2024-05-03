@@ -299,6 +299,7 @@
     {"id":{"name":"obj_spikes","path":"objects/obj_spikes/obj_spikes.yy",},},
     {"id":{"name":"spr_player_jump","path":"sprites/spr_player_jump/spr_player_jump.yy",},},
     {"id":{"name":"spr_dpuzzle1","path":"sprites/spr_dpuzzle1/spr_dpuzzle1.yy",},},
+    {"id":{"name":"obj_finalFight","path":"objects/obj_finalFight/obj_finalFight.yy",},},
     {"id":{"name":"spr_doors_tileset","path":"sprites/spr_doors_tileset/spr_doors_tileset.yy",},},
     {"id":{"name":"BossPath","path":"paths/BossPath/BossPath.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
