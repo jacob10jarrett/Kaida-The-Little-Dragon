@@ -420,6 +420,7 @@
     {"name":"inst_5D0E7260","path":"rooms/rm_village/rm_village.yy",},
     {"name":"inst_35934C2","path":"rooms/rm_village/rm_village.yy",},
     {"name":"inst_5C233D6A","path":"rooms/rm_village/rm_village.yy",},
+    {"name":"inst_635259B3","path":"rooms/rm_village/rm_village.yy",},
   ],
   "isDnd": false,
   "layers": [
