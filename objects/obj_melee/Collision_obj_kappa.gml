@@ -15,6 +15,7 @@
 
 	if (other.isHit == false) 
 	{
+		audio_play_sound(snd_kappa,1,false)
 		if(other.sprite_index = spr_kappaAwaken && other.image_index = 0)
 		{
 		other.hp -= 0;
