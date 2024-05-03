@@ -209,6 +209,7 @@
     {"name":"spr_game_over","order":5,"path":"sprites/spr_game_over/spr_game_over.yy",},
     {"name":"obj_wall","order":5,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"spr_kasaobakeBlue","order":16,"path":"sprites/spr_kasaobakeBlue/spr_kasaobakeBlue.yy",},
+    {"name":"snd_hitmarker","order":22,"path":"sounds/snd_hitmarker/snd_hitmarker.yy",},
     {"name":"obj_background3_controller_village","order":68,"path":"objects/obj_background3_controller_village/obj_background3_controller_village.yy",},
     {"name":"ts_mountains","order":9,"path":"tilesets/ts_mountains/ts_mountains.yy",},
     {"name":"obj_mushroom","order":2,"path":"objects/obj_mushroom/obj_mushroom.yy",},

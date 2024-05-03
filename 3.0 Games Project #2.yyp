@@ -243,6 +243,7 @@
     {"id":{"name":"spr_game_over","path":"sprites/spr_game_over/spr_game_over.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"spr_kasaobakeBlue","path":"sprites/spr_kasaobakeBlue/spr_kasaobakeBlue.yy",},},
+    {"id":{"name":"snd_hitmarker","path":"sounds/snd_hitmarker/snd_hitmarker.yy",},},
     {"id":{"name":"obj_background3_controller_village","path":"objects/obj_background3_controller_village/obj_background3_controller_village.yy",},},
     {"id":{"name":"ts_mountains","path":"tilesets/ts_mountains/ts_mountains.yy",},},
     {"id":{"name":"obj_mushroom","path":"objects/obj_mushroom/obj_mushroom.yy",},},
