@@ -231,6 +231,7 @@
     {"id":{"name":"spr_button_lowres","path":"sprites/spr_button_lowres/spr_button_lowres.yy",},},
     {"id":{"name":"obj_background2_controller_caves","path":"objects/obj_background2_controller_caves/obj_background2_controller_caves.yy",},},
     {"id":{"name":"obj_MovingPlatform","path":"objects/obj_MovingPlatform/obj_MovingPlatform.yy",},},
+    {"id":{"name":"rm_villageTwo","path":"rooms/rm_villageTwo/rm_villageTwo.yy",},},
     {"id":{"name":"spr_game_over","path":"sprites/spr_game_over/spr_game_over.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"spr_kasaobakeBlue","path":"sprites/spr_kasaobakeBlue/spr_kasaobakeBlue.yy",},},
@@ -298,6 +299,7 @@
     {"id":{"name":"spr_grapple_point","path":"sprites/spr_grapple_point/spr_grapple_point.yy",},},
     {"id":{"name":"spr_heartUI","path":"sprites/spr_heartUI/spr_heartUI.yy",},},
     {"id":{"name":"spr_dpuzzle3","path":"sprites/spr_dpuzzle3/spr_dpuzzle3.yy",},},
+    {"id":{"name":"obj_goto_village2","path":"objects/obj_goto_village2/obj_goto_village2.yy",},},
     {"id":{"name":"spr_button_green","path":"sprites/spr_button_green/spr_button_green.yy",},},
     {"id":{"name":"spr_fire","path":"sprites/spr_fire/spr_fire.yy",},},
     {"id":{"name":"spr_mushroom","path":"sprites/spr_mushroom/spr_mushroom.yy",},},
@@ -396,6 +398,7 @@
     {"roomId":{"name":"rm_finalboss","path":"rooms/rm_finalboss/rm_finalboss.yy",},},
     {"roomId":{"name":"rm_mountain","path":"rooms/rm_mountain/rm_mountain.yy",},},
     {"roomId":{"name":"rm_kitsune","path":"rooms/rm_kitsune/rm_kitsune.yy",},},
+    {"roomId":{"name":"rm_villageTwo","path":"rooms/rm_villageTwo/rm_villageTwo.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
