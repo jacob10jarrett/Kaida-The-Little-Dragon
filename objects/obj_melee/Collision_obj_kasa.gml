@@ -14,6 +14,7 @@ if (x > other.x)
 
 if (other.isHit == false) 
 {
+	audio_play_sound(snd_kasa,1,false)
 	other.hp -=51;
 	other.isHit = true;
 }

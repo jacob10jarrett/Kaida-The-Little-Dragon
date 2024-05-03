@@ -1,3 +1,4 @@
+audio_play_sound(snd_hit,1,false)
 /// @description Insert description here
 image_speed = 1
 other.isStaggered = true;

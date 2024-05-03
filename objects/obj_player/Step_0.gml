@@ -313,7 +313,8 @@ if (state == 0) // normal
 	    coyoteTimer -= (1/room_speed); 
 	}
 
-	if (onGround && vsp >= 0) {
+	if (onGround && vsp >= 0) 
+	{
 	    hasJumped = false; 
 	}
    

@@ -14,6 +14,7 @@ if (x > other.x)
 
 if (other.isHit == false) 
 {
+	audio_play_sound(snd_cat,1,false)
 	other.hp -=34;
 	other.isHit = true;
 }

@@ -1,3 +1,3 @@
-other.hp -=1
+global.hp -=1
 
 instance_destroy();

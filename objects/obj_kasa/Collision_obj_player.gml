@@ -1,3 +1,4 @@
+audio_play_sound(snd_hit,1,false)
 /// @description Insert description here
 other.isStaggered = true;
 other.state = 5;

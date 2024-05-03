@@ -57,3 +57,5 @@ flash_timer = 0;
 isFlashing = false; 
 original_color = c_white; 
 flash_color = c_red; 
+
+hasWings = false

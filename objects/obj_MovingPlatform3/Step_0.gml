@@ -1,7 +1,7 @@
 y += vertical_speed;
 
 if (instance_exists(obj_PressurePlate2)) {
-    obj_PressurePlate2.y = y - obj_PressurePlate2.sprite_height + (obj_PressurePlate2.activated ? 8 : 0);
+    obj_PressurePlate2.y = y - 32;
 }
 
 //if (vertical_speed < 0) {
