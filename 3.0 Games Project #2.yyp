@@ -238,6 +238,7 @@
     {"id":{"name":"obj_mushroom","path":"objects/obj_mushroom/obj_mushroom.yy",},},
     {"id":{"name":"spr_spike","path":"sprites/spr_spike/spr_spike.yy",},},
     {"id":{"name":"snd_horror","path":"sounds/snd_horror/snd_horror.yy",},},
+    {"id":{"name":"INVISIBLEFIREBREATHUNLOCK","path":"objects/INVISIBLEFIREBREATHUNLOCK/INVISIBLEFIREBREATHUNLOCK.yy",},},
     {"id":{"name":"obj_fire_hitbox","path":"objects/obj_fire_hitbox/obj_fire_hitbox.yy",},},
     {"id":{"name":"spr_end_gate","path":"sprites/spr_end_gate/spr_end_gate.yy",},},
     {"id":{"name":"obj_effect_parent","path":"objects/obj_effect_parent/obj_effect_parent.yy",},},
