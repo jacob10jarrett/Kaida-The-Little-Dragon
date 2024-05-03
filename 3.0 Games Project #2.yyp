@@ -183,6 +183,7 @@
     {"id":{"name":"scr_room","path":"scripts/scr_room/scr_room.yy",},},
     {"id":{"name":"path_3","path":"paths/path_3/path_3.yy",},},
     {"id":{"name":"spr_trapdoor","path":"sprites/spr_trapdoor/spr_trapdoor.yy",},},
+    {"id":{"name":"obj_invisibleWall","path":"objects/obj_invisibleWall/obj_invisibleWall.yy",},},
     {"id":{"name":"snd_song6","path":"sounds/snd_song6/snd_song6.yy",},},
     {"id":{"name":"spr_background_village3","path":"sprites/spr_background_village3/spr_background_village3.yy",},},
     {"id":{"name":"spr_kappaBlueAttack","path":"sprites/spr_kappaBlueAttack/spr_kappaBlueAttack.yy",},},
