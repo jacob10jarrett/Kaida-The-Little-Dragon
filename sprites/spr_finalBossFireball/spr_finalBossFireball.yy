@@ -4,7 +4,7 @@
   "name": "spr_finalBossFireball",
   "bbox_bottom": 43,
   "bbox_left": 5,
-  "bbox_right": 53,
+  "bbox_right": 54,
   "bbox_top": 21,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -14,8 +14,8 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"64c0f401-b533-4991-ba8b-e4fbabbf872d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"be3ed18d-187a-4e9c-9aff-96dbd27002d4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"72a1aaaf-c29d-468d-a4ce-e3e754c8ef87",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9e4f19d0-1bf8-4e97-92c1-f0be96e02440",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b9b9b45b-b433-4c83-961b-83e4e9d62a36",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -57,8 +57,8 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"64c0f401-b533-4991-ba8b-e4fbabbf872d","path":"sprites/spr_finalBossFireball/spr_finalBossFireball.yy",},},},"Disabled":false,"id":"14417c4e-4612-482c-bceb-572c3b7b6b7b","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"be3ed18d-187a-4e9c-9aff-96dbd27002d4","path":"sprites/spr_finalBossFireball/spr_finalBossFireball.yy",},},},"Disabled":false,"id":"bdb8f526-5651-4acf-bd2f-003e78c8007f","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"72a1aaaf-c29d-468d-a4ce-e3e754c8ef87","path":"sprites/spr_finalBossFireball/spr_finalBossFireball.yy",},},},"Disabled":false,"id":"f975cdea-0094-4db2-9881-0e2cf22cba7e","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9e4f19d0-1bf8-4e97-92c1-f0be96e02440","path":"sprites/spr_finalBossFireball/spr_finalBossFireball.yy",},},},"Disabled":false,"id":"881b5d8a-a697-48e4-a16c-c8f843df12e3","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b9b9b45b-b433-4c83-961b-83e4e9d62a36","path":"sprites/spr_finalBossFireball/spr_finalBossFireball.yy",},},},"Disabled":false,"id":"7ed0e372-43d9-4b45-8185-b90e134c362c","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
