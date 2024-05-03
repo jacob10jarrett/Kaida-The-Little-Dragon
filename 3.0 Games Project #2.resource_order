@@ -205,7 +205,6 @@
     {"name":"obj_mushroom","order":2,"path":"objects/obj_mushroom/obj_mushroom.yy",},
     {"name":"spr_spike","order":8,"path":"sprites/spr_spike/spr_spike.yy",},
     {"name":"snd_horror","order":12,"path":"sounds/snd_horror/snd_horror.yy",},
-    {"name":"INVISIBLEFIREBREATHUNLOCK","order":12,"path":"objects/INVISIBLEFIREBREATHUNLOCK/INVISIBLEFIREBREATHUNLOCK.yy",},
     {"name":"obj_fire_hitbox","order":3,"path":"objects/obj_fire_hitbox/obj_fire_hitbox.yy",},
     {"name":"obj_effect_parent","order":2,"path":"objects/obj_effect_parent/obj_effect_parent.yy",},
     {"name":"obj_kitsune","order":7,"path":"objects/obj_kitsune/obj_kitsune.yy",},
