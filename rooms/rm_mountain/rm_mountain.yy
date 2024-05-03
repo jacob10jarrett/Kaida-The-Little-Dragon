@@ -622,6 +622,7 @@
     {"name":"inst_33348F16","path":"rooms/rm_mountain/rm_mountain.yy",},
     {"name":"inst_64D060F1","path":"rooms/rm_mountain/rm_mountain.yy",},
     {"name":"inst_315674D4","path":"rooms/rm_mountain/rm_mountain.yy",},
+    {"name":"inst_30F4B882","path":"rooms/rm_mountain/rm_mountain.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -1271,6 +1272,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_20DFAED7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_saveSpot","path":"objects/obj_saveSpot/obj_saveSpot.yy",},"properties":[],"rotation":0.0,"scaleX":3.0,"scaleY":8.0,"x":31296.0,"y":7264.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6998C218","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_saveSpot","path":"objects/obj_saveSpot/obj_saveSpot.yy",},"properties":[],"rotation":0.0,"scaleX":3.0,"scaleY":8.0,"x":33600.0,"y":4896.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1BC2052B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_saveSpot","path":"objects/obj_saveSpot/obj_saveSpot.yy",},"properties":[],"rotation":0.0,"scaleX":3.0,"scaleY":13.0,"x":40224.0,"y":3264.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_30F4B882","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_FIREBREATHINVISUNLOCK","path":"objects/obj_FIREBREATHINVISUNLOCK/obj_FIREBREATHINVISUNLOCK.yy",},"properties":[],"rotation":0.0,"scaleX":23.0,"scaleY":8.0,"x":960.0,"y":14304.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4290554183,"depth":1200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":false,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
     {"resourceType":"GMREffectLayer","resourceVersion":"1.0","name":"Wind","depth":1300,"effectEnabled":true,"effectType":"_effect_windblown_particles","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[

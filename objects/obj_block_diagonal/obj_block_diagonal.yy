@@ -30,5 +30,5 @@
     "path": "sprites/spr_block_diagonal/spr_block_diagonal.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }
