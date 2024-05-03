@@ -14,8 +14,8 @@ if (can_control) {
 
 
 var playerMovement = key_right - key_left;
-var onGround = place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_crate) || place_meeting(x, y+1, obj_MovingAirPlatform) || instance_place(x, y+1, obj_MovingPlatform3);
-isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate) && !place_meeting(x, y+1, obj_MovingAirPlatform) && !place_meeting(x, y+12, obj_PressurePlate2));
+var onGround = place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_crate) || place_meeting(x, y+1, obj_MovingAirPlatform) || instance_place(x, y+1, obj_MovingPlatform3) || instance_place(x, y+16, obj_PressurePlate2);
+isAirborne = !place_meeting(x, y+1, obj_block) && !(state == 4 && place_meeting(x, y+1, obj_crate) && !place_meeting(x, y+1, obj_MovingAirPlatform) && !place_meeting(x, y+1, obj_PressurePlate2));
 
 // Bouncy Platform
 var onBouncy = place_meeting(x, y+1, obj_bouncyPlatform);

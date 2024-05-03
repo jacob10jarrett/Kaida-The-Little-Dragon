@@ -4,7 +4,7 @@ if (activated) {
     y = obj_MovingPlatform3.y - sprite_height; 
 }
 
-var playerAbove = instance_place(x, y - 12, obj_player);
+var playerAbove = instance_place(x, y - 16, obj_player);
 if (playerAbove && !activated && canBeActivated) {
     with (obj_MovingPlatform2) {
         vertical_speed = 4; 
@@ -16,7 +16,7 @@ if (playerAbove && !activated && canBeActivated) {
 	audio_play_sound(snd_rumble, 0, 0.1, 1, false);
     alarm[2] = 1080;
 }
-else if (!playerAbove && activated) {
-    activated = false;
+else if (playerAbove && activated) {
+    activated = true;
 }
 

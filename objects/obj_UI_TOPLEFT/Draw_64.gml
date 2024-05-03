@@ -4,10 +4,10 @@ if (instance_exists(obj_player))
 {
 	
 	//draw_sprite(spr_hpBar, 0, 20, 60);					
-	
+	var scale_factor = 1.5;
 	for (var i=0; i<global.hp; i++)	/* draw hearts */
 	{
-		draw_sprite(spr_heartUI, 0, (17 + 35 * i), 53);
+		draw_sprite_ext(spr_heartUI, 0, 17 + 35 * i * scale_factor, 33, scale_factor, scale_factor, 0, c_white, 1);
 	}
 	
 	{	/* fireballCD */

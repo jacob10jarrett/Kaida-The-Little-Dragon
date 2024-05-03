@@ -70,6 +70,7 @@
     "IDEVersion": "2023.11.1.129",
   },
   "resources": [
+    {"id":{"name":"Object143","path":"objects/Object143/Object143.yy",},},
     {"id":{"name":"obj_background3_controller_prologue","path":"objects/obj_background3_controller_prologue/obj_background3_controller_prologue.yy",},},
     {"id":{"name":"rm_finalboss","path":"rooms/rm_finalboss/rm_finalboss.yy",},},
     {"id":{"name":"obj_end_gate","path":"objects/obj_end_gate/obj_end_gate.yy",},},
@@ -354,6 +355,7 @@
     {"id":{"name":"obj_catFireBlue","path":"objects/obj_catFireBlue/obj_catFireBlue.yy",},},
     {"id":{"name":"obj_blockTwo","path":"objects/obj_blockTwo/obj_blockTwo.yy",},},
     {"id":{"name":"obj_health","path":"objects/obj_health/obj_health.yy",},},
+    {"id":{"name":"spr_book","path":"sprites/spr_book/spr_book.yy",},},
     {"id":{"name":"spr_fireBlue","path":"sprites/spr_fireBlue/spr_fireBlue.yy",},},
     {"id":{"name":"snd_song1","path":"sounds/snd_song1/snd_song1.yy",},},
     {"id":{"name":"spr_block_diagonal","path":"sprites/spr_block_diagonal/spr_block_diagonal.yy",},},

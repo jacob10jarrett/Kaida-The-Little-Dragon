@@ -52,6 +52,7 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"Object143","order":77,"path":"objects/Object143/Object143.yy",},
     {"name":"obj_background3_controller_prologue","order":65,"path":"objects/obj_background3_controller_prologue/obj_background3_controller_prologue.yy",},
     {"name":"rm_finalboss","order":7,"path":"rooms/rm_finalboss/rm_finalboss.yy",},
     {"name":"spr_sign3","order":2,"path":"sprites/spr_sign3/spr_sign3.yy",},
@@ -307,6 +308,7 @@
     {"name":"obj_catFireBlue","order":18,"path":"objects/obj_catFireBlue/obj_catFireBlue.yy",},
     {"name":"obj_blockTwo","order":12,"path":"objects/obj_blockTwo/obj_blockTwo.yy",},
     {"name":"obj_health","order":7,"path":"objects/obj_health/obj_health.yy",},
+    {"name":"spr_book","order":46,"path":"sprites/spr_book/spr_book.yy",},
     {"name":"spr_fireBlue","order":11,"path":"sprites/spr_fireBlue/spr_fireBlue.yy",},
     {"name":"spr_melee","order":8,"path":"sprites/spr_melee/spr_melee.yy",},
     {"name":"obj_character_parent","order":2,"path":"objects/obj_character_parent/obj_character_parent.yy",},
