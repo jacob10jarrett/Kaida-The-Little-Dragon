@@ -33,5 +33,5 @@
     "path": "sprites/spr_death/spr_death.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }
