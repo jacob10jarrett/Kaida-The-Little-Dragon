@@ -32,6 +32,7 @@
     {"name":"Sequences","order":11,"path":"folders/Sequences.yy",},
     {"name":"Shaders","order":6,"path":"folders/Shaders.yy",},
     {"name":"Sounds","order":3,"path":"folders/Sounds.yy",},
+    {"name":"group1","order":21,"path":"folders/Sounds/group1.yy",},
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
     {"name":"Backgrounds","order":42,"path":"folders/Sprites/Backgrounds.yy",},
     {"name":"Cutscene","order":43,"path":"folders/Sprites/Cutscene.yy",},
@@ -49,7 +50,6 @@
     {"name":"UI","order":1,"path":"folders/Sprites/UI.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"group1","order":21,"path":"folders/Sounds/group1.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_background3_controller_prologue","order":65,"path":"objects/obj_background3_controller_prologue/obj_background3_controller_prologue.yy",},
