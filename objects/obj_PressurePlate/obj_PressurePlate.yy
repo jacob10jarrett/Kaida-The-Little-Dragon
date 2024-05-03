@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_pressure_plate",
-    "path": "sprites/spr_pressure_plate/spr_pressure_plate.yy",
+    "name": "spr_pressure_plate2",
+    "path": "sprites/spr_pressure_plate2/spr_pressure_plate2.yy",
   },
   "spriteMaskId": null,
   "visible": true,

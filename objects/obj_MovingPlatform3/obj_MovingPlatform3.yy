@@ -31,8 +31,8 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "spr_firebreath_obstacle",
-    "path": "sprites/spr_firebreath_obstacle/spr_firebreath_obstacle.yy",
+    "name": "spr_movingPlatform",
+    "path": "sprites/spr_movingPlatform/spr_movingPlatform.yy",
   },
   "spriteMaskId": null,
   "visible": true,
