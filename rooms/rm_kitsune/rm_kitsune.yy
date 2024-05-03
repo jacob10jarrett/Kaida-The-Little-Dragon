@@ -24,7 +24,7 @@
     {"name":"inst_51BC8314","path":"rooms/rm_kitsune/rm_kitsune.yy",},
     {"name":"inst_409841A4","path":"rooms/rm_kitsune/rm_kitsune.yy",},
     {"name":"inst_541AE474","path":"rooms/rm_kitsune/rm_kitsune.yy",},
-    {"name":"inst_456C7CAE","path":"rooms/rm_kitsune/rm_kitsune.yy",},
+    {"name":"inst_43CE348F","path":"rooms/rm_kitsune/rm_kitsune.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -60,7 +60,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_49FC1975","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_bouncyPlatform","path":"objects/obj_bouncyPlatform/obj_bouncyPlatform.yy",},"properties":[],"rotation":0.0,"scaleX":3.5,"scaleY":1.0,"x":1538.0,"y":981.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_34928C3D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_bouncyPlatform2","path":"objects/obj_bouncyPlatform2/obj_bouncyPlatform2.yy",},"properties":[],"rotation":0.0,"scaleX":3.296875,"scaleY":1.0,"x":1158.0,"y":977.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_51BC8314","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_bouncyPlatform2","path":"objects/obj_bouncyPlatform2/obj_bouncyPlatform2.yy",},"properties":[],"rotation":0.0,"scaleX":3.5,"scaleY":1.0,"x":603.0,"y":978.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_456C7CAE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_sign","path":"objects/obj_sign/obj_sign.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1789.0,"y":172.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_43CE348F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_sign2","path":"objects/obj_sign2/obj_sign2.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1789.0,"y":173.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_3","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":34,"SerialiseWidth":60,"TileCompressedData":[
 -937,-2147483648,2,64,65,-54,-2147483648,9,82,83,-2147483648,-2147483648,84,85,-2147483648,64,65,-42,-2147483648,-4,51,-11,31,3,53,84,85,-37,-2147483648,5,60,61,142,31,50,-15,51,3,52,31,53,-37,-2147483648,4,80,81,49,50,-18,51,1,73,-37,-2147483648,3,49,31,50,-20,51,

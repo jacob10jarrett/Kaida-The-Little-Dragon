@@ -315,6 +315,7 @@
     {"name":"spr_enemyOne","order":4,"path":"sprites/spr_enemyOne/spr_enemyOne.yy",},
     {"name":"obj_button_parent","order":2,"path":"objects/obj_button_parent/obj_button_parent.yy",},
     {"name":"obj_ghost","order":3,"path":"objects/obj_ghost/obj_ghost.yy",},
+    {"name":"obj_sign2","order":21,"path":"objects/obj_sign2/obj_sign2.yy",},
     {"name":"spr_cherryblossomleaf","order":1,"path":"sprites/spr_cherryblossomleaf/spr_cherryblossomleaf.yy",},
     {"name":"spr_backgroundlayer2_mountain","order":8,"path":"sprites/spr_backgroundlayer2_mountain/spr_backgroundlayer2_mountain.yy",},
     {"name":"load_game_state","order":5,"path":"scripts/load_game_state/load_game_state.yy",},

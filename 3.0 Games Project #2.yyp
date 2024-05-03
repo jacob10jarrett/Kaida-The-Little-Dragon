@@ -370,6 +370,7 @@
     {"id":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},},
     {"id":{"name":"obj_ghost","path":"objects/obj_ghost/obj_ghost.yy",},},
     {"id":{"name":"obj_persistent_manager","path":"objects/obj_persistent_manager/obj_persistent_manager.yy",},},
+    {"id":{"name":"obj_sign2","path":"objects/obj_sign2/obj_sign2.yy",},},
     {"id":{"name":"spr_cherryblossomleaf","path":"sprites/spr_cherryblossomleaf/spr_cherryblossomleaf.yy",},},
     {"id":{"name":"spr_backgroundlayer2_mountain","path":"sprites/spr_backgroundlayer2_mountain/spr_backgroundlayer2_mountain.yy",},},
     {"id":{"name":"load_game_state","path":"scripts/load_game_state/load_game_state.yy",},},
