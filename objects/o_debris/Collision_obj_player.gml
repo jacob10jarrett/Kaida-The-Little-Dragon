@@ -1,3 +1,3 @@
-other.hp -=.5;
+other.hp -=1
 
 instance_destroy();
