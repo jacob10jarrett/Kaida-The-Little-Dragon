@@ -86,7 +86,6 @@
     {"name":"obj_fireBreath","order":4,"path":"objects/obj_fireBreath/obj_fireBreath.yy",},
     {"name":"spr_breathFlame","order":13,"path":"sprites/spr_breathFlame/spr_breathFlame.yy",},
     {"name":"spr_background_village2","order":3,"path":"sprites/spr_background_village2/spr_background_village2.yy",},
-    {"name":"obj_caves_cutscene2","order":7,"path":"objects/obj_caves_cutscene2/obj_caves_cutscene2.yy",},
     {"name":"obj_dpuzzle2","order":11,"path":"objects/obj_dpuzzle2/obj_dpuzzle2.yy",},
     {"name":"obj_kitsuneFlame","order":8,"path":"objects/obj_kitsuneFlame/obj_kitsuneFlame.yy",},
     {"name":"spr_scratch","order":12,"path":"sprites/spr_scratch/spr_scratch.yy",},

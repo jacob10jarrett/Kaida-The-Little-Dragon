@@ -28,8 +28,8 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "spr_firebreath_obstacle",
-    "path": "sprites/spr_firebreath_obstacle/spr_firebreath_obstacle.yy",
+    "name": "spr_planks",
+    "path": "sprites/spr_planks/spr_planks.yy",
   },
   "spriteMaskId": null,
   "visible": true,

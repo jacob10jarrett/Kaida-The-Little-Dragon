@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Interactive",
-    "path": "folders/Objects/Environment/Interactive.yy",
+    "name": "Backgrounds",
+    "path": "folders/Objects/Backgrounds.yy",
   },
   "parentObjectId": null,
   "persistent": false,
