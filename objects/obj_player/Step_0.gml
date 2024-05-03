@@ -1,4 +1,10 @@
 // User input
+if (hasWings)
+	{
+		canDash = true
+		isJumping = false
+	}
+	
 if (can_control) {
 	key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 	key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
@@ -313,7 +319,8 @@ if (state == 0) // normal
 	    coyoteTimer -= (1/room_speed); 
 	}
 
-	if (onGround && vsp >= 0) {
+	if (onGround && vsp >= 0) 
+	{
 	    hasJumped = false; 
 	}
    
