@@ -12,8 +12,8 @@ if (!pos_puzzle1 || !pos_puzzle2 || !pos_puzzle3 || !pos_puzzle4 || !pos_puzzle5
 }
 
 if (all_correct) {
-	screenshake(30, 5, 0.2);
-    audio_play_sound(snd_rumble, 100, false);  
+	//screenshake(30, 5, 0.2);
+    //audio_play_sound(snd_rumble, 100, false);  
     alarm[0] = room_speed * 2;  
 
     with (obj_puzzlePlatform) {
