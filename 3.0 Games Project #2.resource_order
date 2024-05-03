@@ -263,6 +263,7 @@
     {"name":"obj_bouncyPlatform2","order":9,"path":"objects/obj_bouncyPlatform2/obj_bouncyPlatform2.yy",},
     {"name":"obj_spikes","order":7,"path":"objects/obj_spikes/obj_spikes.yy",},
     {"name":"spr_player_jump","order":3,"path":"sprites/spr_player_jump/spr_player_jump.yy",},
+    {"name":"obj_finalFight","order":7,"path":"objects/obj_finalFight/obj_finalFight.yy",},
     {"name":"spr_doors_tileset","order":8,"path":"sprites/spr_doors_tileset/spr_doors_tileset.yy",},
     {"name":"BossPath","order":4,"path":"paths/BossPath/BossPath.yy",},
     {"name":"rm_menu","order":1,"path":"rooms/rm_menu/rm_menu.yy",},
