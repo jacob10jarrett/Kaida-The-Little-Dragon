@@ -17,7 +17,7 @@ canDash = true;
 canMelee = true
 canFireball = true;
 canFirebreath = true;  //CHANGE!!!
-firebreathUnlocked = true;  //permanent
+firebreathUnlocked = false;
 
 hasDashed = false;
 dashDist = 250;

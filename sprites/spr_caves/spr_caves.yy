@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_caves",
   "bbox_bottom": 319,
-  "bbox_left": 14,
+  "bbox_left": 0,
   "bbox_right": 639,
   "bbox_top": 0,
   "bboxMode": 0,

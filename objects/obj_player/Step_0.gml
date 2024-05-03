@@ -75,9 +75,15 @@ if (onMovingPlatform || onPressurePlate) {
 }
 
 // Horizontal collision
-if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || place_meeting(x+hsp, y, obj_crate) || place_meeting(x+hsp, y, obj_MovingPlatform) || place_meeting(x+hsp, y, obj_MovingAirPlatform) || place_meeting(x+hsp, y, obj_PressurePlate2))
+if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || 
+place_meeting(x+hsp, y, obj_crate) || place_meeting(x+hsp, y, obj_MovingPlatform) || 
+place_meeting(x+hsp, y, obj_MovingAirPlatform) || place_meeting(x+hsp, y, obj_PressurePlate2)
+|| place_meeting(x+hsp, y, obj_firebreath_obstacle))
 {
-    while (!place_meeting(x+sign(hsp),y, obj_block) && !place_meeting(x+sign(hsp),y, obj_wall) && !place_meeting(x+sign(hsp),y, obj_crate) && !place_meeting(x+sign(hsp),y, obj_MovingPlatform) && !place_meeting(x+sign(hsp),y, obj_MovingAirPlatform) && !place_meeting(x+sign(hsp),y, obj_PressurePlate2))
+    while (!place_meeting(x+sign(hsp),y, obj_block) && !place_meeting(x+sign(hsp),y, obj_wall) && 
+	!place_meeting(x+sign(hsp),y, obj_crate) && !place_meeting(x+sign(hsp),y, obj_MovingPlatform) && 
+	!place_meeting(x+sign(hsp),y, obj_MovingAirPlatform) && !place_meeting(x+sign(hsp),y, obj_PressurePlate2)
+	&& !place_meeting(x+hsp, y, obj_firebreath_obstacle))
     {
         x += sign(hsp);
     }
