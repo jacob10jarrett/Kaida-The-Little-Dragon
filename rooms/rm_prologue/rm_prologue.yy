@@ -260,12 +260,10 @@
     {"name":"inst_7AE2CA89","path":"rooms/rm_prologue/rm_prologue.yy",},
     {"name":"inst_41B03BE4","path":"rooms/rm_prologue/rm_prologue.yy",},
     {"name":"inst_36FB2D39","path":"rooms/rm_prologue/rm_prologue.yy",},
-    {"name":"inst_DCAB73D","path":"rooms/rm_prologue/rm_prologue.yy",},
     {"name":"inst_7820B726","path":"rooms/rm_prologue/rm_prologue.yy",},
     {"name":"inst_453C88D6","path":"rooms/rm_prologue/rm_prologue.yy",},
     {"name":"inst_11D0F7DF","path":"rooms/rm_prologue/rm_prologue.yy",},
     {"name":"inst_16DF3C0E","path":"rooms/rm_prologue/rm_prologue.yy",},
-    {"name":"inst_23162E96","path":"rooms/rm_prologue/rm_prologue.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -301,8 +299,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_30C13EDE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_treeCherry2","path":"objects/obj_treeCherry2/obj_treeCherry2.yy",},"properties":[],"rotation":0.0,"scaleX":2.142857,"scaleY":2.28,"x":10272.0,"y":992.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5709A2BF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_treeCherry2","path":"objects/obj_treeCherry2/obj_treeCherry2.yy",},"properties":[],"rotation":0.0,"scaleX":1.8571428,"scaleY":1.64,"x":11200.0,"y":1120.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_41C737FF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_treeCherry2","path":"objects/obj_treeCherry2/obj_treeCherry2.yy",},"properties":[],"rotation":0.0,"scaleX":1.8571428,"scaleY":1.8000001,"x":9856.0,"y":1088.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_DCAB73D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_heartPowerup","path":"objects/obj_heartPowerup/obj_heartPowerup.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1568.0,"y":1888.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_23162E96","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_unlockFirebreath","path":"objects/obj_unlockFirebreath/obj_unlockFirebreath.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1088.0,"y":1920.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"VisibleObjects","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_63382107","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1056.0,"y":1696.0,},
