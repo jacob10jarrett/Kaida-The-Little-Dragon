@@ -52,7 +52,6 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
-    {"name":"Object143","order":77,"path":"objects/Object143/Object143.yy",},
     {"name":"obj_background3_controller_prologue","order":65,"path":"objects/obj_background3_controller_prologue/obj_background3_controller_prologue.yy",},
     {"name":"rm_finalboss","order":7,"path":"rooms/rm_finalboss/rm_finalboss.yy",},
     {"name":"spr_sign3","order":2,"path":"sprites/spr_sign3/spr_sign3.yy",},
@@ -273,6 +272,7 @@
     {"name":"snd_pressureplate","order":9,"path":"sounds/snd_pressureplate/snd_pressureplate.yy",},
     {"name":"ts_doors","order":7,"path":"tilesets/ts_doors/ts_doors.yy",},
     {"name":"spr_grapple_point","order":3,"path":"sprites/spr_grapple_point/spr_grapple_point.yy",},
+    {"name":"spr_ending","order":3,"path":"sprites/spr_ending/spr_ending.yy",},
     {"name":"spr_heartUI","order":8,"path":"sprites/spr_heartUI/spr_heartUI.yy",},
     {"name":"spr_dpuzzle3","order":2,"path":"sprites/spr_dpuzzle3/spr_dpuzzle3.yy",},
     {"name":"obj_goto_village2","order":3,"path":"objects/obj_goto_village2/obj_goto_village2.yy",},

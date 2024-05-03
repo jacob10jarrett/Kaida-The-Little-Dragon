@@ -70,7 +70,6 @@
     "IDEVersion": "2023.11.1.129",
   },
   "resources": [
-    {"id":{"name":"Object143","path":"objects/Object143/Object143.yy",},},
     {"id":{"name":"obj_background3_controller_prologue","path":"objects/obj_background3_controller_prologue/obj_background3_controller_prologue.yy",},},
     {"id":{"name":"rm_finalboss","path":"rooms/rm_finalboss/rm_finalboss.yy",},},
     {"id":{"name":"obj_end_gate","path":"objects/obj_end_gate/obj_end_gate.yy",},},
@@ -314,6 +313,7 @@
     {"id":{"name":"spr_dashTrail","path":"sprites/spr_dashTrail/spr_dashTrail.yy",},},
     {"id":{"name":"ts_doors","path":"tilesets/ts_doors/ts_doors.yy",},},
     {"id":{"name":"spr_grapple_point","path":"sprites/spr_grapple_point/spr_grapple_point.yy",},},
+    {"id":{"name":"spr_ending","path":"sprites/spr_ending/spr_ending.yy",},},
     {"id":{"name":"spr_heartUI","path":"sprites/spr_heartUI/spr_heartUI.yy",},},
     {"id":{"name":"spr_dpuzzle3","path":"sprites/spr_dpuzzle3/spr_dpuzzle3.yy",},},
     {"id":{"name":"obj_goto_village2","path":"objects/obj_goto_village2/obj_goto_village2.yy",},},
