@@ -186,6 +186,7 @@
     {"name":"spr_catBrown","order":12,"path":"sprites/spr_catBrown/spr_catBrown.yy",},
     {"name":"rm_village","order":3,"path":"rooms/rm_village/rm_village.yy",},
     {"name":"spr_kappaAttack","order":3,"path":"sprites/spr_kappaAttack/spr_kappaAttack.yy",},
+    {"name":"snd_dragonDeath","order":6,"path":"sounds/snd_dragonDeath/snd_dragonDeath.yy",},
     {"name":"spr_dpuzzle2","order":1,"path":"sprites/spr_dpuzzle2/spr_dpuzzle2.yy",},
     {"name":"obj_player_defeated","order":1,"path":"objects/obj_player_defeated/obj_player_defeated.yy",},
     {"name":"obj_dpuzzle5","order":14,"path":"objects/obj_dpuzzle5/obj_dpuzzle5.yy",},

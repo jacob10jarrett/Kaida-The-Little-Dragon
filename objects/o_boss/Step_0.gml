@@ -57,8 +57,18 @@ if (x < obj_player.x)	image_xscale = 3
 if (x > obj_player.x)	image_xscale = -3;	
 
 if (hp <= 0)
+
 {
-	instance_destroy();
+
+	imageGone = true
+}
+
+if(imageGone)
+{
+	image_alpha  -= 0.01
+	if image_alpha <= 0
+	instance_destroy()
+	
 }
 
 

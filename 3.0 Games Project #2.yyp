@@ -218,6 +218,7 @@
     {"id":{"name":"spr_catBrown","path":"sprites/spr_catBrown/spr_catBrown.yy",},},
     {"id":{"name":"rm_village","path":"rooms/rm_village/rm_village.yy",},},
     {"id":{"name":"spr_kappaAttack","path":"sprites/spr_kappaAttack/spr_kappaAttack.yy",},},
+    {"id":{"name":"snd_dragonDeath","path":"sounds/snd_dragonDeath/snd_dragonDeath.yy",},},
     {"id":{"name":"spr_dpuzzle2","path":"sprites/spr_dpuzzle2/spr_dpuzzle2.yy",},},
     {"id":{"name":"obj_player_defeated","path":"objects/obj_player_defeated/obj_player_defeated.yy",},},
     {"id":{"name":"obj_MovingAirPlatform","path":"objects/obj_MovingAirPlatform/obj_MovingAirPlatform.yy",},},

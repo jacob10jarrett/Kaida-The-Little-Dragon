@@ -18,6 +18,7 @@ if (x > other.x)
 {
 	other.hsp = -6;
 }
+instance_destroy()
 
 //other.hsp = sign(image_index) * 6;
 
