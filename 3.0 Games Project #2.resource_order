@@ -164,6 +164,7 @@
     {"name":"scr_room","order":7,"path":"scripts/scr_room/scr_room.yy",},
     {"name":"path_3","order":2,"path":"paths/path_3/path_3.yy",},
     {"name":"spr_trapdoor","order":11,"path":"sprites/spr_trapdoor/spr_trapdoor.yy",},
+    {"name":"spr_village2","order":7,"path":"sprites/spr_village2/spr_village2.yy",},
     {"name":"obj_invisibleWall","order":11,"path":"objects/obj_invisibleWall/obj_invisibleWall.yy",},
     {"name":"snd_song6","order":14,"path":"sounds/snd_song6/snd_song6.yy",},
     {"name":"spr_background_village3","order":4,"path":"sprites/spr_background_village3/spr_background_village3.yy",},
