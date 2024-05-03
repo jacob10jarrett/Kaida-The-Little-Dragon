@@ -22,3 +22,7 @@ if (x > other.x)
 //other.hsp = sign(image_index) * 6;
 
 
+
+
+
+
