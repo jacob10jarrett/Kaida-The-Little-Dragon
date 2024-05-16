@@ -1,2 +1,2 @@
 canBeActivated = true;
-audio_stop_sound(snd_rumble); 
+audio_stop_sound(snd_rumble);
