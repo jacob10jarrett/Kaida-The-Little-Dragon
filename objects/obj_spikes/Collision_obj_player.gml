@@ -1,2 +1,2 @@
-load_game_state()
-other.hp -=1;
+//load_game_state()
+//other.hp -=1;
