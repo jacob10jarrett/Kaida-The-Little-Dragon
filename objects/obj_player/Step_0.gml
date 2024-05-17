@@ -1,13 +1,13 @@
 if (can_control) {
-	key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
-	key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
-	key_up = keyboard_check(vk_up);
-	key_down = keyboard_check(vk_down);
-	key_dash = keyboard_check_pressed(vk_shift);
-	key_jump = keyboard_check(vk_space); 
-	key_jump_pressed = keyboard_check_pressed(vk_space);
-	key_pull = keyboard_check(ord("E"));
-	key_firebreath = keyboard_check_pressed(vk_tab);
+    key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
+    key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
+    key_up = keyboard_check(vk_up);
+    key_down = keyboard_check(vk_down);
+    key_dash = keyboard_check_pressed(vk_shift);
+    key_jump = keyboard_check(vk_space);
+    key_jump_pressed = keyboard_check_pressed(vk_space);
+    key_pull = keyboard_check(ord("E"));
+    key_firebreath = keyboard_check_pressed(vk_tab);
 }
 
 var playerMovement = key_right - key_left;
@@ -17,20 +17,20 @@ isAirborne = !onGround;
 // Bouncy Platform
 var onBouncy = place_meeting(x, y+1, obj_bouncyPlatform);
 if (onBouncy && vsp >= 0) {
-	vsp = -jumpHeight * 3;
-	audio_play_sound(snd_whoosh, 1, false);
+    vsp = -jumpHeight * 3;
+    audio_play_sound(snd_whoosh, 1, false);
 }
 
 onBouncy = place_meeting(x, y+1, obj_bouncyPlatform2);
 if (onBouncy && vsp >= 0) {
-	vsp = -jumpHeight * 4.5;
-	audio_play_sound(snd_whoosh, 1, false);
+    vsp = -jumpHeight * 4.5;
+    audio_play_sound(snd_whoosh, 1, false);
 }
 
 onBouncy = place_meeting(x, y+1, obj_bouncyPlatform3);
 if (onBouncy && vsp >= 0) {
-	vsp = -jumpHeight * 6;
-	audio_play_sound(snd_whoosh, 1, false);
+    vsp = -jumpHeight * 6;
+    audio_play_sound(snd_whoosh, 1, false);
 }
 
 // Moving air platform logic
@@ -38,17 +38,17 @@ var platform = instance_place(x, y + 1, obj_MovingAirPlatform);
 var isOnPlatform = place_meeting(x, y + 1, obj_MovingAirPlatform);
 
 if (isOnPlatform) {
-	hsp = playerMovement * walkspeed;
+    hsp = playerMovement * walkspeed;
     if (platform.moving_right) {
-        hsp += platform.hspd; 
+        hsp += platform.hspd;
     } else if (platform.moving_left) {
-        hsp -= platform.hspd; 
+        hsp -= platform.hspd;
     }
 
     if (key_right) {
-        image_xscale = 0.75;  
+        image_xscale = 0.75;
     } else if (key_left) {
-        image_xscale = -0.75; 
+        image_xscale = -0.75;
     } else {
         image_xscale = image_xscale;
     }
@@ -64,18 +64,18 @@ var onPressurePlate = (pressurePlate != noone);
 if (onMovingPlatform || onPressurePlate) {
     var platform_instance = instance_place(x, y + 1, obj_MovingPlatform3) ? movingPlatform : pressurePlate;
     if (platform_instance != noone) {
-        y = platform_instance.y - 38; 
+        y = platform_instance.y - 38;
     }
 }
 
 // Horizontal collision
-if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) || 
-place_meeting(x+hsp, y, obj_crate) || place_meeting(x+hsp, y, obj_MovingPlatform) || 
+if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) ||
+place_meeting(x+hsp, y, obj_crate) || place_meeting(x+hsp, y, obj_MovingPlatform) ||
 place_meeting(x+hsp, y, obj_MovingAirPlatform) || place_meeting(x+hsp, y, obj_PressurePlate2) ||
 place_meeting(x+hsp, y, obj_firebreath_obstacle) || place_meeting(x+hsp, y, obj_puzzlePlatform))
 {
-    while (!place_meeting(x+sign(hsp), y, obj_block) && !place_meeting(x+sign(hsp), y, obj_wall) && 
-    !place_meeting(x+sign(hsp), y, obj_crate) && !place_meeting(x+sign(hsp), y, obj_MovingPlatform) && 
+    while (!place_meeting(x+sign(hsp), y, obj_block) && !place_meeting(x+sign(hsp), y, obj_wall) &&
+    !place_meeting(x+sign(hsp), y, obj_crate) && !place_meeting(x+sign(hsp), y, obj_MovingPlatform) &&
     !place_meeting(x+sign(hsp), y, obj_MovingAirPlatform) && !place_meeting(x+sign(hsp), y, obj_PressurePlate2) &&
     !place_meeting(x+sign(hsp), y, obj_firebreath_obstacle) && !place_meeting(x+sign(hsp), y, obj_puzzlePlatform))
     {
@@ -89,7 +89,7 @@ x += hsp;
 if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || place_meeting(x, y+vsp, obj_crate) || place_meeting(x, y+vsp, obj_MovingAirPlatform) || place_meeting(x, y+vsp, obj_PressurePlate2)) {
     if (!place_meeting(x, y+1, obj_block) && !place_meeting(x, y+1, obj_PressurePlate2)) {
         if (isAirborne) {
-            canDash = true; 
+            canDash = true;
             hasDashed = false;
             isAirborne = false;
         }
@@ -107,16 +107,16 @@ wallRight = place_meeting(x+1, y, obj_wall);
 
 // Fireball charges
 if (charges >= 3) {
-	canFire = true;
+    canFire = true;
 } else {
-	canFire = false;
+    canFire = false;
 }
 
 // Spawn fireball
 if (mouse_check_button_pressed(mb_right) && canFireball) {
-	canFireball = false;
-	alarm[1] = 175;
-	instance_create_layer(x, y, "VisibleObjects", obj_fireball);
+    canFireball = false;
+    alarm[1] = 175;
+    instance_create_layer(x, y, "VisibleObjects", obj_fireball);
 }
 
 // Crate pushing
@@ -127,12 +127,12 @@ if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150) 
     var _isFacingCrate = (image_xscale * cos(degtorad(_directionToCrate)) > 0);
     
     if (key_pull && _isFacingCrate) {
-        state = 4; 
-        global.pullingCrate = _crate; 
+        state = 4;
+        global.pullingCrate = _crate;
     }
 } else if (!key_pull || !_isFacingCrate) {
     if (state == 4) {
-        state = 0; 
+        state = 0;
     }
 }
 
@@ -149,9 +149,9 @@ var isFallingOnPlate2 = (vsp > 0 || vsp < 0) && isMovingDown && pressurePlate;
 if (isFallingOnPlate2) {
     idle = false;
     falling = true;
-    sprite_index = spr_player_fly; 
+    sprite_index = spr_player_fly;
 } else if (onPressurePlate && pressurePlate.pp_vertical_speed == 0) {
-    sprite_index = spr_player_idle; 
+    sprite_index = spr_player_idle;
 } else {
     if (!isOnPlatform && !wallJumping) {
         if (hsp != 0) {
@@ -200,13 +200,13 @@ if (mouse_check_button_pressed(mb_left) && state != 5 && canMelee) {
 
 // Fireball proc	State -> 3
 if (mouse_check_button_pressed(mb_right)) {
-	state = 3;
+    state = 3;
 }
 
 // Dash proc	State -> 1
 if (canDash && key_dash && dashReset) {
-	dashReset = false;
-	alarm[3] = 60;
+    dashReset = false;
+    alarm[3] = 60;
     canDash = false;
     hasDashed = true;
     dashDirection = point_direction(0, 0, key_right - key_left, key_down - key_up);
@@ -216,95 +216,95 @@ if (canDash && key_dash && dashReset) {
 }
 
 if (key_firebreath && canFirebreath && firebreathUnlocked) {
-	canFirebreath = false;
-	alarm[2] = 250;
-	
-	if (sign(image_xscale) > 0) {
-		instance_create_layer(x+49, y-15, "VisibleObjects", obj_fireBreathEffect); // effect
-		instance_create_layer(x+115, y, "VisibleObjects", obj_fireBreath); // hitbox
-	} else {
-		instance_create_layer(x-49, y-15, "VisibleObjects", obj_fireBreathEffect); // effect
-		instance_create_layer(x-115, y, "VisibleObjects", obj_fireBreath); // hitbox
-	}
-	
-	state = 2;
+    canFirebreath = false;
+    alarm[2] = 250;
+    
+    if (sign(image_xscale) > 0) {
+        instance_create_layer(x+49, y-15, "VisibleObjects", obj_fireBreathEffect); // effect
+        instance_create_layer(x+115, y, "VisibleObjects", obj_fireBreath); // hitbox
+    } else {
+        instance_create_layer(x-49, y-15, "VisibleObjects", obj_fireBreathEffect); // effect
+        instance_create_layer(x-115, y, "VisibleObjects", obj_fireBreath); // hitbox
+    }
+    
+    state = 2;
 }
 
 if (state == 0) { // normal
-	show_debug_message("STATE = NORMAL");
+    show_debug_message("STATE = NORMAL");
 
-	// Wall sliding logic
-	if ((wallLeft || wallRight) && !place_meeting(x, y+1, obj_block) && !place_meeting(x, y+1, obj_wall) && vsp > 0) {
-		vsp = min(vsp, wallSlideSpeed);
-	}
+    // Wall sliding logic
+    if ((wallLeft || wallRight) && !place_meeting(x, y+1, obj_block) && !place_meeting(x, y+1, obj_wall) && vsp > 0) {
+        vsp = min(vsp, wallSlideSpeed);
+    }
 
-	// Wall Jump Proc
-	if (key_jump_pressed && (wallLeft || wallRight) && !place_meeting(x, y+1, obj_block) && !place_meeting(x, y+1, obj_wall)) {
-		vsp = -jumpHeight;
-		wallJumping = true;
-		isJumping = true;
-		jumpPressedTime = 1;
-		if (wallLeft) {
-			hsp = walkspeed;
-			lastWallJumpDir = 1;
-			image_xscale = 0.75; // Fixed scale direction when wall jumping
-		} else if (wallRight) {
-			hsp = -walkspeed;
-			lastWallJumpDir = -1;
-			image_xscale = -0.75; // Fixed scale direction when wall jumping
-		}
-	} else if (place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_wall)) {
-		wallJumping = false;
-	}
-	
-	if (!wallJumping) {
-		var moving = key_right - key_left;
-		hsp = moving * walkspeed;
+    // Wall Jump Proc
+    if (key_jump_pressed && (wallLeft || wallRight) && !place_meeting(x, y+1, obj_block) && !place_meeting(x, y+1, obj_wall)) {
+        vsp = -jumpHeight;
+        wallJumping = true;
+        isJumping = true;
+        jumpPressedTime = 1;
+        if (wallLeft) {
+            hsp = walkspeed;
+            lastWallJumpDir = 1;
+            image_xscale = 0.75; // Fixed scale direction when wall jumping
+        } else if (wallRight) {
+            hsp = -walkspeed;
+            lastWallJumpDir = -1;
+            image_xscale = -0.75; // Fixed scale direction when wall jumping
+        }
+    } else if (place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_wall)) {
+        wallJumping = false;
+    }
+    
+    if (!wallJumping) {
+        var moving = key_right - key_left;
+        hsp = moving * walkspeed;
 
-		// Only allow change of image_xscale when not wall jumping
-		if (moving != 0) {
-			image_xscale = 0.75 * sign(moving);
-		}
-	} else {
-		hsp = lerp(hsp, 0, 0.05);
-	}
-	
-	vsp += grvt;
+        // Only allow change of image_xscale when not wall jumping
+        if (moving != 0) {
+            image_xscale = 0.75 * sign(moving);
+        }
+    } else {
+        hsp = lerp(hsp, 0, 0.05);
+    }
+    
+    vsp += grvt;
 
-	// Coyote time
-	if (onGround) {
-		coyoteTimer = coyoteTime;
-		hasJumped = false;
-	} else if (!hasJumped) {
-		coyoteTimer -= (1 / room_speed);
-	}
+    // Coyote time
+    if (onGround) {
+        coyoteTimer = coyoteTime;
+        hasJumped = false;
+    } else if (!hasJumped) {
+        coyoteTimer -= (1 / room_speed);
+    }
 
-	if (onGround && vsp >= 0) {
-		hasJumped = false;
-	}
+    if (onGround && vsp >= 0) {
+        hasJumped = false;
+    }
 
-	// Jump Proc
-	if (key_jump_pressed && ((onGround || coyoteTimer > 0) || isOnPlatform || onPressurePlate)) {
-		vsp = -jumpHeight;
-		isJumping = true;
-		jumpPressedTime = 1;
-		isAirborne = true;
-		canDash = true;
-		coyoteTimer = 0;
-		hasJumped = true;
-		hsp = playerMovement * walkspeed;
-	}
-	if (isJumping && key_jump && jumpPressedTime < maxJumpPressedTime) {
-		vsp -= jumpForce;
-		jumpPressedTime++;
-	} else {
-		isJumping = false;
-	}
+    // Jump Proc
+    if (key_jump_pressed && ((onGround || coyoteTimer > 0) || isOnPlatform || onPressurePlate)) {
+        vsp = -jumpHeight;
+        isJumping = true;
+        jumpPressedTime = 1;
+        isAirborne = true;
+        canDash = true;
+        coyoteTimer = 0;
+        hasJumped = true;
+        hsp = playerMovement * walkspeed;
+    }
+    if (isJumping && key_jump && jumpPressedTime < maxJumpPressedTime) {
+        vsp -= jumpForce;
+        jumpPressedTime++;
+    } else {
+        isJumping = false;
+    }
 }
 
 if (state == 1) { // dash
     show_debug_message("STATE = DASHING");
-	
+    
     sprite_index = spr_player_dash;
     image_xscale = (image_xscale < 0 ? -0.75 : 0.75);
     image_yscale = 0.75;
@@ -330,49 +330,49 @@ if (state == 1) { // dash
 }
 
 if (state == 2) { // melee
-	show_debug_message("STATE = MELEE");
-	image_speed = 0.75;
-	vsp += grvt;
-	
-	if (image_index >= sprite_get_number(spr_player_sideAttack) - 1) {
+    show_debug_message("STATE = MELEE");
+    image_speed = 0.75;
+    vsp += grvt;
+    
+    if (image_index >= sprite_get_number(spr_player_sideAttack) - 1) {
         state = 0;  // Return to normal state after the animation finishes
     }
-	
-	if (vsp != 0 && !place_meeting(x, y+sign(vsp), obj_block)) {
-		sprite_index = spr_player_sideAttackAir;
-	} else {
-		sprite_index = spr_player_sideAttack;
-	}
+    
+    if (vsp != 0 && !place_meeting(x, y+sign(vsp), obj_block)) {
+        sprite_index = spr_player_sideAttackAir;
+    } else {
+        sprite_index = spr_player_sideAttack;
+    }
 
-	if (image_index >= 3 && image_index < 4) {
-		state = 0;
-	}
-	
-	if (!key_right && !key_left) hsp = 0;
-	
-	if (keyboard_check_pressed(ord("X"))) state = 0;
+    if (image_index >= 3 && image_index < 4) {
+        state = 0;
+    }
+    
+    if (!key_right && !key_left) hsp = 0;
+    
+    if (keyboard_check_pressed(ord("X"))) state = 0;
 }
 
 if (state == 3) { // fireball
-	show_debug_message("STATE = FIREBALL");
-	image_speed = 0.75;
-	vsp += grvt;
-	
-	if (vsp != 0 && !place_meeting(x, y+sign(vsp), obj_block)) {
-		sprite_index = spr_player_sideAttackAir;
-	} else {
-		sprite_index = spr_player_sideAttack;
-	}
-	
-	if (!key_right && !key_left) hsp = 0;
-	
-	if (image_index >= 3 && image_index < 4) {
-		state = 0;
-	}
+    show_debug_message("STATE = FIREBALL");
+    image_speed = 0.75;
+    vsp += grvt;
+    
+    if (vsp != 0 && !place_meeting(x, y+sign(vsp), obj_block)) {
+        sprite_index = spr_player_sideAttackAir;
+    } else {
+        sprite_index = spr_player_sideAttack;
+    }
+    
+    if (!key_right && !key_left) hsp = 0;
+    
+    if (image_index >= 3 && image_index < 4) {
+        state = 0;
+    }
 }
 
 if (state == 4 && instance_exists(global.pullingCrate)) { // crate pushing
-	vsp += grvt;
+    vsp += grvt;
     if (!place_meeting(global.pullingCrate.x, global.pullingCrate.y + 1, obj_block)) {
         state = 0;
         global.pullingCrate = noone;
@@ -400,37 +400,37 @@ if (key_pull && state != 4) {
 }
 
 if (state == 5) { // staggered
-	show_debug_message("STATE = STAGGERED");
-	
-	// hsp = sign(image_index) * 6;
-	
-	if (isStaggered) {
-		vsp = -3;
-		isStaggered = false;
-	}
-	
-	vsp += grvt;
-	
-	if (place_meeting(x, y+vsp, obj_block)) {
-		while (!place_meeting(x, y+sign(vsp), obj_block)) {
-			y += sign(vsp);
-		}
-		vsp = 0;
-	}
-	y += vsp;
-	
-	if (place_meeting(x+hsp, y, obj_block)) {
-		while (!place_meeting(x+sign(hsp), y, obj_block)) {
-			x += sign(hsp);
-		}
-		hsp = 0;
-	}
-	x += hsp;
-	
-	if (place_meeting(x, y + 1, obj_block)) {
-		isHit = false;
-		state = 0;
-	}
+    show_debug_message("STATE = STAGGERED");
+    
+    // hsp = sign(image_index) * 6;
+    
+    if (isStaggered) {
+        vsp = -3;
+        isStaggered = false;
+    }
+    
+    vsp += grvt;
+    
+    if (place_meeting(x, y+vsp, obj_block)) {
+        while (!place_meeting(x, y+sign(vsp), obj_block)) {
+            y += sign(vsp);
+        }
+        vsp = 0;
+    }
+    y += vsp;
+    
+    if (place_meeting(x+hsp, y, obj_block)) {
+        while (!place_meeting(x+sign(hsp), y, obj_block)) {
+            x += sign(hsp);
+        }
+        hsp = 0;
+    }
+    x += hsp;
+    
+    if (place_meeting(x, y + 1, obj_block)) {
+        isHit = false;
+        state = 0;
+    }
 }
 
 // Can't walk out of bounds

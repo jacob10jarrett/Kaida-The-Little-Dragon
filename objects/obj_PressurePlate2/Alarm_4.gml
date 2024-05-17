@@ -1,0 +1,1 @@
+canBeActivated = true;
