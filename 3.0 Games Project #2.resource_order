@@ -151,6 +151,7 @@
     {"name":"obj_toFinalBoss","order":10,"path":"objects/obj_toFinalBoss/obj_toFinalBoss.yy",},
     {"name":"obj_catGrey","order":15,"path":"objects/obj_catGrey/obj_catGrey.yy",},
     {"name":"obj_enemyThree2","order":9,"path":"objects/obj_enemyThree2/obj_enemyThree2.yy",},
+    {"name":"spr_checkpoint3","order":15,"path":"sprites/spr_checkpoint3/spr_checkpoint3.yy",},
     {"name":"obj_background1_controller_caves","order":50,"path":"objects/obj_background1_controller_caves/obj_background1_controller_caves.yy",},
     {"name":"obj_MovingPlatform2","order":5,"path":"objects/obj_MovingPlatform2/obj_MovingPlatform2.yy",},
     {"name":"spr_game_logo","order":2,"path":"sprites/spr_game_logo/spr_game_logo.yy",},

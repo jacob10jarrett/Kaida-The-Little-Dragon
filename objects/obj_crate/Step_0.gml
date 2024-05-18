@@ -1,7 +1,10 @@
+// Step Event of obj_crate
 vsp += grvt;
 
-//instance_create_layer(x,y-30,"Player", obj_E);
-
+if (instance_exists(obj_player)) {
+    var player_distance = point_distance(x, y, obj_player.x, obj_player.y);
+    show_key_e = (player_distance <= 200);
+}
 
 if (!global.isPulling) {
     hsp *= 0.9; 
@@ -24,7 +27,7 @@ if (place_meeting(x, y + vsp, obj_block) || place_meeting(x, y + vsp, obj_wall))
 y += vsp;
 
 if (!place_meeting(x, y + 1, obj_block)) {
-	global.isPulling = false;
+    global.isPulling = false;
     vsp += grvt; 
     image_angle += 5; 
 } else {

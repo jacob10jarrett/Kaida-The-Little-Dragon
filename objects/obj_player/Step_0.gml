@@ -1,3 +1,20 @@
+function flip_player(new_scale) {
+    image_xscale = new_scale;
+    check_and_fix_collision();
+}
+
+function check_and_fix_collision() {
+    if (place_meeting(x, y, obj_block)) {
+        if (!place_meeting(x - 64, y, obj_block)) {
+            x -= 64;
+        } 
+        else if (!place_meeting(x + 64, y, obj_block)) {
+            x += 64;
+        }
+    }
+}
+
+// Main step event
 if (can_control) {
     key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
     key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
@@ -46,11 +63,9 @@ if (isOnPlatform) {
     }
 
     if (key_right) {
-        image_xscale = 0.75;
+        flip_player(0.75);
     } else if (key_left) {
-        image_xscale = -0.75;
-    } else {
-        image_xscale = image_xscale;
+        flip_player(-0.75);
     }
 }
 
@@ -263,7 +278,7 @@ if (state == 0) { // normal
 
         // Only allow change of image_xscale when not wall jumping
         if (moving != 0) {
-            image_xscale = 0.75 * sign(moving);
+            flip_player(0.75 * sign(moving));
         }
     } else {
         hsp = lerp(hsp, 0, 0.05);
@@ -358,17 +373,28 @@ if (state == 3) { // fireball
     image_speed = 0.75;
     vsp += grvt;
     
+    // Allow movement during fireball state
+    var moving = key_right - key_left;
+    hsp = moving * walkspeed;
+    
+    // Only allow change of image_xscale when not wall jumping
+    if (moving != 0) {
+        flip_player(0.75 * sign(moving));
+    }
+    
     if (vsp != 0 && !place_meeting(x, y+sign(vsp), obj_block)) {
         sprite_index = spr_player_sideAttackAir;
     } else {
         sprite_index = spr_player_sideAttack;
     }
     
-    if (!key_right && !key_left) hsp = 0;
-    
     if (image_index >= 3 && image_index < 4) {
         state = 0;
     }
+    
+    if (!key_right && !key_left) hsp = 0;
+    
+    if (keyboard_check_pressed(ord("X"))) state = 0;
 }
 
 if (state == 4 && instance_exists(global.pullingCrate)) { // crate pushing
@@ -447,3 +473,5 @@ if (isFlashing) {
         flash_color = original_color;
     }
 }
+
+check_and_fix_collision();

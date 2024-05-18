@@ -181,6 +181,7 @@
     {"id":{"name":"path_1","path":"paths/path_1/path_1.yy",},},
     {"id":{"name":"obj_catGrey","path":"objects/obj_catGrey/obj_catGrey.yy",},},
     {"id":{"name":"obj_enemyThree2","path":"objects/obj_enemyThree2/obj_enemyThree2.yy",},},
+    {"id":{"name":"spr_checkpoint3","path":"sprites/spr_checkpoint3/spr_checkpoint3.yy",},},
     {"id":{"name":"obj_background1_controller_caves","path":"objects/obj_background1_controller_caves/obj_background1_controller_caves.yy",},},
     {"id":{"name":"obj_MovingPlatform2","path":"objects/obj_MovingPlatform2/obj_MovingPlatform2.yy",},},
     {"id":{"name":"spr_game_logo","path":"sprites/spr_game_logo/spr_game_logo.yy",},},

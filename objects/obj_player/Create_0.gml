@@ -1,3 +1,13 @@
+key_left = false;
+key_right = false;
+key_up = false;
+key_down = false;
+key_dash = false;
+key_jump = false;
+key_jump_pressed = false;
+key_pull = false;
+key_firebreath = false;
+
 hsp = 0;
 vsp = 0;
 grvt = 0.7;
@@ -33,7 +43,7 @@ coyoteTimer = 0;
 hasJumped = false; 
 
 onPressurePlate = false;
-can_control = true;
+
 rotating_cutscene_caves = false;
 cave_cutscene_sound_played = false;
 
