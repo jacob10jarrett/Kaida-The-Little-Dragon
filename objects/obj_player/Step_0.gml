@@ -1,20 +1,3 @@
-function flip_player(new_scale) {
-    image_xscale = new_scale;
-    check_and_fix_collision();
-}
-
-function check_and_fix_collision() {
-    if (place_meeting(x, y, obj_block)) {
-        if (!place_meeting(x - 64, y, obj_block)) {
-            x -= 64;
-        } 
-        else if (!place_meeting(x + 64, y, obj_block)) {
-            x += 64;
-        }
-    }
-}
-
-// Main step event
 if (can_control) {
     key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
     key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
@@ -28,23 +11,29 @@ if (can_control) {
 }
 
 var playerMovement = key_right - key_left;
-var onGround = place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_crate) || place_meeting(x, y+1, obj_MovingAirPlatform) || instance_place(x, y+1, obj_MovingPlatform3) || instance_place(x, y+1, obj_PressurePlate2);
+var onGround = place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_crate) || place_meeting(x, y + 1, obj_MovingAirPlatform) || instance_place(x, y + 1, obj_MovingPlatform3) || instance_place(x, y + 1, obj_PressurePlate2);
 isAirborne = !onGround;
 
+// Check if player is above obj_MovingPlatform2
+var platform_below = instance_place(x, y + 1, obj_MovingPlatform2);
+if (platform_below != noone) {
+    load_game_state();
+}
+
 // Bouncy Platform
-var onBouncy = place_meeting(x, y+1, obj_bouncyPlatform);
+var onBouncy = place_meeting(x, y + 1, obj_bouncyPlatform);
 if (onBouncy && vsp >= 0) {
     vsp = -jumpHeight * 3;
     audio_play_sound(snd_whoosh, 1, false);
 }
 
-onBouncy = place_meeting(x, y+1, obj_bouncyPlatform2);
+onBouncy = place_meeting(x, y + 1, obj_bouncyPlatform2);
 if (onBouncy && vsp >= 0) {
     vsp = -jumpHeight * 4.5;
     audio_play_sound(snd_whoosh, 1, false);
 }
 
-onBouncy = place_meeting(x, y+1, obj_bouncyPlatform3);
+onBouncy = place_meeting(x, y + 1, obj_bouncyPlatform3);
 if (onBouncy && vsp >= 0) {
     vsp = -jumpHeight * 6;
     audio_play_sound(snd_whoosh, 1, false);
@@ -70,8 +59,8 @@ if (isOnPlatform) {
 }
 
 // Moving platform + standing on pressure plate logic
-var movingPlatform = instance_place(x, y+1, obj_MovingPlatform3);
-var pressurePlate = instance_place(x, y+12, obj_PressurePlate2);
+var movingPlatform = instance_place(x, y + 1, obj_MovingPlatform3);
+var pressurePlate = instance_place(x, y + 12, obj_PressurePlate2);
 var isFallingOnPlate2 = (vsp != 0) && (pressurePlate != noone) && (pressurePlate.pp_vertical_speed < 0);
 var onMovingPlatform = (movingPlatform != noone);
 var onPressurePlate = (pressurePlate != noone);
@@ -84,15 +73,17 @@ if (onMovingPlatform || onPressurePlate) {
 }
 
 // Horizontal collision
-if (place_meeting(x+hsp, y, obj_block) || place_meeting(x+hsp, y, obj_wall) ||
-place_meeting(x+hsp, y, obj_crate) || place_meeting(x+hsp, y, obj_MovingPlatform) ||
-place_meeting(x+hsp, y, obj_MovingAirPlatform) || place_meeting(x+hsp, y, obj_PressurePlate2) ||
-place_meeting(x+hsp, y, obj_firebreath_obstacle) || place_meeting(x+hsp, y, obj_puzzlePlatform))
+if (place_meeting(x + hsp, y, obj_block) || place_meeting(x + hsp, y, obj_wall) ||
+place_meeting(x + hsp, y, obj_crate) || place_meeting(x + hsp, y, obj_MovingPlatform) ||
+place_meeting(x + hsp, y, obj_MovingAirPlatform) || place_meeting(x + hsp, y, obj_PressurePlate2) ||
+place_meeting(x + hsp, y, obj_firebreath_obstacle) || place_meeting(x + hsp, y, obj_puzzlePlatform) ||
+place_meeting(x + hsp, y, obj_MovingPlatform3))
 {
-    while (!place_meeting(x+sign(hsp), y, obj_block) && !place_meeting(x+sign(hsp), y, obj_wall) &&
-    !place_meeting(x+sign(hsp), y, obj_crate) && !place_meeting(x+sign(hsp), y, obj_MovingPlatform) &&
-    !place_meeting(x+sign(hsp), y, obj_MovingAirPlatform) && !place_meeting(x+sign(hsp), y, obj_PressurePlate2) &&
-    !place_meeting(x+sign(hsp), y, obj_firebreath_obstacle) && !place_meeting(x+sign(hsp), y, obj_puzzlePlatform))
+    while (!place_meeting(x + sign(hsp), y, obj_block) && !place_meeting(x + sign(hsp), y, obj_wall) &&
+    !place_meeting(x + sign(hsp), y, obj_crate) && !place_meeting(x + sign(hsp), y, obj_MovingPlatform) &&
+    !place_meeting(x + sign(hsp), y, obj_MovingAirPlatform) && !place_meeting(x + sign(hsp), y, obj_PressurePlate2) &&
+    !place_meeting(x + sign(hsp), y, obj_firebreath_obstacle) && !place_meeting(x + sign(hsp), y, obj_puzzlePlatform) &&
+    !place_meeting(x + sign(hsp), y, obj_MovingPlatform3))
     {
         x += sign(hsp);
     }
@@ -101,15 +92,15 @@ place_meeting(x+hsp, y, obj_firebreath_obstacle) || place_meeting(x+hsp, y, obj_
 x += hsp;
 
 // Vertical collision
-if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || place_meeting(x, y+vsp, obj_crate) || place_meeting(x, y+vsp, obj_MovingAirPlatform) || place_meeting(x, y+vsp, obj_PressurePlate2)) {
-    if (!place_meeting(x, y+1, obj_block) && !place_meeting(x, y+1, obj_PressurePlate2)) {
+if (place_meeting(x, y + vsp, obj_block) || place_meeting(x, y + vsp, obj_wall) || place_meeting(x, y + vsp, obj_crate) || place_meeting(x, y + vsp, obj_MovingAirPlatform) || place_meeting(x, y + vsp, obj_PressurePlate2)) {
+    if (!place_meeting(x, y + 1, obj_block) && !place_meeting(x, y + 1, obj_PressurePlate2)) {
         if (isAirborne) {
             canDash = true;
             hasDashed = false;
             isAirborne = false;
         }
     }
-    while (!place_meeting(x, y+sign(vsp), obj_block) && !place_meeting(x, y+sign(vsp), obj_wall) && !place_meeting(x, y+sign(vsp), obj_crate) && !place_meeting(x, y+sign(vsp), obj_MovingAirPlatform) && !place_meeting(x, y+sign(vsp), obj_PressurePlate2)) {
+    while (!place_meeting(x, y + sign(vsp), obj_block) && !place_meeting(x, y + sign(vsp), obj_wall) && !place_meeting(x, y + sign(vsp), obj_crate) && !place_meeting(x, y + sign(vsp), obj_MovingAirPlatform) && !place_meeting(x, y + sign(vsp), obj_PressurePlate2)) {
         y += sign(vsp);
     }
     vsp = 0;
@@ -117,8 +108,8 @@ if (place_meeting(x, y+vsp, obj_block) || place_meeting(x, y+vsp, obj_wall) || p
 
 y += vsp;
 
-wallLeft = place_meeting(x-1, y, obj_wall);
-wallRight = place_meeting(x+1, y, obj_wall);
+wallLeft = place_meeting(x - 1, y, obj_wall);
+wallRight = place_meeting(x + 1, y, obj_wall);
 
 // Fireball charges
 if (charges >= 3) {
@@ -222,7 +213,7 @@ if (mouse_check_button_pressed(mb_right)) {
 if (canDash && key_dash && dashReset) {
     dashReset = false;
     alarm[3] = 60;
-    canDash = false;
+    canDash = true;
     hasDashed = true;
     dashDirection = point_direction(0, 0, key_right - key_left, key_down - key_up);
     dashSpeed = dashDist / dashTime;
@@ -235,11 +226,11 @@ if (key_firebreath && canFirebreath && firebreathUnlocked) {
     alarm[2] = 250;
     
     if (sign(image_xscale) > 0) {
-        instance_create_layer(x+49, y-15, "VisibleObjects", obj_fireBreathEffect); // effect
-        instance_create_layer(x+115, y, "VisibleObjects", obj_fireBreath); // hitbox
+        instance_create_layer(x + 49, y - 15, "VisibleObjects", obj_fireBreathEffect); // effect
+        instance_create_layer(x + 115, y, "VisibleObjects", obj_fireBreath); // hitbox
     } else {
-        instance_create_layer(x-49, y-15, "VisibleObjects", obj_fireBreathEffect); // effect
-        instance_create_layer(x-115, y, "VisibleObjects", obj_fireBreath); // hitbox
+        instance_create_layer(x - 49, y - 15, "VisibleObjects", obj_fireBreathEffect); // effect
+        instance_create_layer(x - 115, y, "VisibleObjects", obj_fireBreath); // hitbox
     }
     
     state = 2;
@@ -249,12 +240,12 @@ if (state == 0) { // normal
     show_debug_message("STATE = NORMAL");
 
     // Wall sliding logic
-    if ((wallLeft || wallRight) && !place_meeting(x, y+1, obj_block) && !place_meeting(x, y+1, obj_wall) && vsp > 0) {
+    if ((wallLeft || wallRight) && !place_meeting(x, y + 1, obj_block) && !place_meeting(x, y + 1, obj_wall) && vsp > 0) {
         vsp = min(vsp, wallSlideSpeed);
     }
 
     // Wall Jump Proc
-    if (key_jump_pressed && (wallLeft || wallRight) && !place_meeting(x, y+1, obj_block) && !place_meeting(x, y+1, obj_wall)) {
+    if (key_jump_pressed && (wallLeft || wallRight) && !place_meeting(x, y + 1, obj_block) && !place_meeting(x, y + 1, obj_wall)) {
         vsp = -jumpHeight;
         wallJumping = true;
         isJumping = true;
@@ -262,13 +253,13 @@ if (state == 0) { // normal
         if (wallLeft) {
             hsp = walkspeed;
             lastWallJumpDir = 1;
-            image_xscale = 0.75; // Fixed scale direction when wall jumping
+            image_xscale = 0.75; 
         } else if (wallRight) {
             hsp = -walkspeed;
             lastWallJumpDir = -1;
-            image_xscale = -0.75; // Fixed scale direction when wall jumping
+            image_xscale = -0.75; 
         }
-    } else if (place_meeting(x, y+1, obj_block) || place_meeting(x, y+1, obj_wall)) {
+    } else if (place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_wall)) {
         wallJumping = false;
     }
     
@@ -353,7 +344,7 @@ if (state == 2) { // melee
         state = 0;  // Return to normal state after the animation finishes
     }
     
-    if (vsp != 0 && !place_meeting(x, y+sign(vsp), obj_block)) {
+    if (vsp != 0 && !place_meeting(x, y + sign(vsp), obj_block)) {
         sprite_index = spr_player_sideAttackAir;
     } else {
         sprite_index = spr_player_sideAttack;
@@ -382,7 +373,7 @@ if (state == 3) { // fireball
         flip_player(0.75 * sign(moving));
     }
     
-    if (vsp != 0 && !place_meeting(x, y+sign(vsp), obj_block)) {
+    if (vsp != 0 && !place_meeting(x, y + sign(vsp), obj_block)) {
         sprite_index = spr_player_sideAttackAir;
     } else {
         sprite_index = spr_player_sideAttack;
@@ -437,16 +428,16 @@ if (state == 5) { // staggered
     
     vsp += grvt;
     
-    if (place_meeting(x, y+vsp, obj_block)) {
-        while (!place_meeting(x, y+sign(vsp), obj_block)) {
+    if (place_meeting(x, y + vsp, obj_block)) {
+        while (!place_meeting(x, y + sign(vsp), obj_block)) {
             y += sign(vsp);
         }
         vsp = 0;
     }
     y += vsp;
     
-    if (place_meeting(x+hsp, y, obj_block)) {
-        while (!place_meeting(x+sign(hsp), y, obj_block)) {
+    if (place_meeting(x + hsp, y, obj_block)) {
+        while (!place_meeting(x + sign(hsp), y, obj_block)) {
             x += sign(hsp);
         }
         hsp = 0;
