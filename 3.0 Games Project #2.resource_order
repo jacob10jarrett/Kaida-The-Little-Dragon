@@ -314,6 +314,7 @@
     {"name":"obj_blockTwo","order":12,"path":"objects/obj_blockTwo/obj_blockTwo.yy",},
     {"name":"obj_health","order":7,"path":"objects/obj_health/obj_health.yy",},
     {"name":"spr_book","order":46,"path":"sprites/spr_book/spr_book.yy",},
+    {"name":"snd_heart","order":24,"path":"sounds/snd_heart/snd_heart.yy",},
     {"name":"spr_fireBlue","order":11,"path":"sprites/spr_fireBlue/spr_fireBlue.yy",},
     {"name":"spr_melee","order":8,"path":"sprites/spr_melee/spr_melee.yy",},
     {"name":"obj_character_parent","order":2,"path":"objects/obj_character_parent/obj_character_parent.yy",},

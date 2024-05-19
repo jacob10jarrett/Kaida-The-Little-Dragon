@@ -5,4 +5,5 @@ if (global.hp < global.max_hp) {
     global.hp = global.max_hp;
 }
 
+audio_play_sound(snd_heart, 1, false)
 instance_destroy();

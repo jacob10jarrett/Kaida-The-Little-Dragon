@@ -60,6 +60,10 @@ global.pushingForce = 0.5;
 
 global.near_player = false;
 
+if (room == rm_village2) {
+    image_xscale = -0.75; 
+}
+
 state = 0;
 
 flash_duration = 60; 

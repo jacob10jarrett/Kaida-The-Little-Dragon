@@ -65,4 +65,11 @@ if(image_index = 5)
 	awake_time = 0
 }
 
-if (hp <= 0) instance_destroy();
+if (hp <= 0) {
+    var emitter = part_emitter_create(global.particle_system);
+    part_emitter_region(global.particle_system, emitter, x - 16, x + 16, y - 16, y + 16, ps_shape_ellipse, ps_distr_gaussian);
+    part_emitter_burst(global.particle_system, emitter, global.particle_type, 100);
+
+    instance_destroy();
+}
+

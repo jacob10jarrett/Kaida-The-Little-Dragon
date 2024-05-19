@@ -361,6 +361,7 @@
     {"id":{"name":"obj_blockTwo","path":"objects/obj_blockTwo/obj_blockTwo.yy",},},
     {"id":{"name":"obj_health","path":"objects/obj_health/obj_health.yy",},},
     {"id":{"name":"spr_book","path":"sprites/spr_book/spr_book.yy",},},
+    {"id":{"name":"snd_heart","path":"sounds/snd_heart/snd_heart.yy",},},
     {"id":{"name":"spr_fireBlue","path":"sprites/spr_fireBlue/spr_fireBlue.yy",},},
     {"id":{"name":"snd_song1","path":"sounds/snd_song1/snd_song1.yy",},},
     {"id":{"name":"spr_block_diagonal","path":"sprites/spr_block_diagonal/spr_block_diagonal.yy",},},

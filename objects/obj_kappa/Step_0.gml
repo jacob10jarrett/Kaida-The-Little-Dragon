@@ -53,7 +53,6 @@ if (image_index == 5) {
 }
 
 if (hp <= 0) {
-    // Trigger the particle effect before destroying the instance
     var emitter = part_emitter_create(global.particle_system);
     part_emitter_region(global.particle_system, emitter, x - 16, x + 16, y - 16, y + 16, ps_shape_ellipse, ps_distr_gaussian);
     part_emitter_burst(global.particle_system, emitter, global.particle_type, 100);
@@ -62,7 +61,3 @@ if (hp <= 0) {
 }
 
 if (hp <= 0) instance_destroy();
-
-// Draw Event of obj_kappa
-draw_self();
-draw_healthbar(x - 30, y - 65, x + 30, y - 63, hp, c_dkgray, c_red, c_green, 0, false, false);
