@@ -11,16 +11,24 @@ if (can_control) {
 }
 
 var playerMovement = key_right - key_left;
-var onGround = place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_crate) || place_meeting(x, y + 1, obj_MovingAirPlatform) || instance_place(x, y + 1, obj_MovingPlatform3) || instance_place(x, y + 1, obj_PressurePlate2);
+var onGround = place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_crate) || place_meeting(x, y + 1, obj_MovingAirPlatform) || instance_place(x, y + 1, obj_MovingPlatform3) || instance_place(x, y + 16, obj_PressurePlate2);
 isAirborne = !onGround;
 
-// Check if player is above obj_MovingPlatform2
+if (onGround) {
+    coyoteTimer = coyoteTime;
+} else {
+    coyoteTimer -= (1 / room_speed);
+}
+
+if (onGround && vsp >= 0) {
+    canDash = true;
+}
+
 var platform_below = instance_place(x, y + 1, obj_MovingPlatform2);
 if (platform_below != noone) {
     load_game_state();
 }
 
-// Bouncy Platform
 var onBouncy = place_meeting(x, y + 1, obj_bouncyPlatform);
 if (onBouncy && vsp >= 0) {
     vsp = -jumpHeight * 3;
@@ -39,7 +47,6 @@ if (onBouncy && vsp >= 0) {
     audio_play_sound(snd_whoosh, 1, false);
 }
 
-// Moving air platform logic
 var platform = instance_place(x, y + 1, obj_MovingAirPlatform);
 var isOnPlatform = place_meeting(x, y + 1, obj_MovingAirPlatform);
 
@@ -58,9 +65,8 @@ if (isOnPlatform) {
     }
 }
 
-// Moving platform + standing on pressure plate logic
 var movingPlatform = instance_place(x, y + 1, obj_MovingPlatform3);
-var pressurePlate = instance_place(x, y + 12, obj_PressurePlate2);
+var pressurePlate = instance_place(x, y + 1, obj_PressurePlate2);
 var isFallingOnPlate2 = (vsp != 0) && (pressurePlate != noone) && (pressurePlate.pp_vertical_speed < 0);
 var onMovingPlatform = (movingPlatform != noone);
 var onPressurePlate = (pressurePlate != noone);
@@ -72,26 +78,22 @@ if (onMovingPlatform || onPressurePlate) {
     }
 }
 
-// Horizontal collision
 if (place_meeting(x + hsp, y, obj_block) || place_meeting(x + hsp, y, obj_wall) ||
 place_meeting(x + hsp, y, obj_crate) || place_meeting(x + hsp, y, obj_MovingPlatform) ||
 place_meeting(x + hsp, y, obj_MovingAirPlatform) || place_meeting(x + hsp, y, obj_PressurePlate2) ||
 place_meeting(x + hsp, y, obj_firebreath_obstacle) || place_meeting(x + hsp, y, obj_puzzlePlatform) ||
-place_meeting(x + hsp, y, obj_MovingPlatform3))
-{
+place_meeting(x + hsp, y, obj_MovingPlatform3)) {
     while (!place_meeting(x + sign(hsp), y, obj_block) && !place_meeting(x + sign(hsp), y, obj_wall) &&
     !place_meeting(x + sign(hsp), y, obj_crate) && !place_meeting(x + sign(hsp), y, obj_MovingPlatform) &&
     !place_meeting(x + sign(hsp), y, obj_MovingAirPlatform) && !place_meeting(x + sign(hsp), y, obj_PressurePlate2) &&
     !place_meeting(x + sign(hsp), y, obj_firebreath_obstacle) && !place_meeting(x + sign(hsp), y, obj_puzzlePlatform) &&
-    !place_meeting(x + sign(hsp), y, obj_MovingPlatform3))
-    {
+    !place_meeting(x + sign(hsp), y, obj_MovingPlatform3)) {
         x += sign(hsp);
     }
     hsp = 0;
 }
 x += hsp;
 
-// Vertical collision
 if (place_meeting(x, y + vsp, obj_block) || place_meeting(x, y + vsp, obj_wall) || place_meeting(x, y + vsp, obj_crate) || place_meeting(x, y + vsp, obj_MovingAirPlatform) || place_meeting(x, y + vsp, obj_PressurePlate2)) {
     if (!place_meeting(x, y + 1, obj_block) && !place_meeting(x, y + 1, obj_PressurePlate2)) {
         if (isAirborne) {
@@ -111,21 +113,18 @@ y += vsp;
 wallLeft = place_meeting(x - 1, y, obj_wall);
 wallRight = place_meeting(x + 1, y, obj_wall);
 
-// Fireball charges
 if (charges >= 3) {
     canFire = true;
 } else {
     canFire = false;
 }
 
-// Spawn fireball
 if (mouse_check_button_pressed(mb_right) && canFireball) {
     canFireball = false;
     alarm[1] = 175;
     instance_create_layer(x, y, "VisibleObjects", obj_fireball);
 }
 
-// Crate pushing
 var _isFacingCrate = false;
 var _crate = instance_nearest(x, y, obj_crate);
 if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150) {
@@ -142,22 +141,31 @@ if (instance_exists(_crate) && point_distance(x, y, _crate.x, _crate.y) <= 150) 
     }
 }
 
-// Player death
 if (global.hp <= 0) {
     global.previous_room = room;
     room_goto(rm_gameOver);
 }
 
-/*----------------------------------------- ANIMATIONS --------------------------------------------------*/
 var isMovingDown = (pressurePlate != noone) && (pressurePlate.pp_vertical_speed < 0);
 var isFallingOnPlate2 = (vsp > 0 || vsp < 0) && isMovingDown && pressurePlate;
 
-if (isFallingOnPlate2) {
-    idle = false;
-    falling = true;
+// Adjust animation when player is on obj_PressurePlate2
+if (onPressurePlate || isFallingOnPlate2) {
+    if (hsp == 0) {
+        sprite_index = spr_player_idle;
+        if (!wallJumping) {
+            image_xscale = (key_right - key_left != 0) ? 0.75 * sign(key_right - key_left) : image_xscale;
+        }
+        image_yscale = 0.75;
+    } else {
+        sprite_index = spr_player_walk;
+        image_xscale = 0.75 * sign(hsp);
+        image_yscale = 0.75;
+    }
+} else if (isFallingOnPlate2) {
+    idle = true;
+    falling = false;
     sprite_index = spr_player_fly;
-} else if (onPressurePlate && pressurePlate.pp_vertical_speed == 0) {
-    sprite_index = spr_player_idle;
 } else {
     if (!isOnPlatform && !wallJumping) {
         if (hsp != 0) {
@@ -166,7 +174,7 @@ if (isFallingOnPlate2) {
         }
     }
 
-    if (!place_meeting(x, y + 1, obj_block) && !place_meeting(x, y + 1, obj_PressurePlate2)) {
+    if (!place_meeting(x, y + 1, obj_block) && !place_meeting(x, y + 32, obj_PressurePlate2)) {
         sprite_index = (sign(vsp) != 0) ? spr_player_fly : spr_player_idle;
         if (!wallJumping && state != 5) {
             image_xscale = (key_right - key_left != 0) ? 0.75 * sign(key_right - key_left) : image_xscale;
@@ -188,11 +196,9 @@ if (isFallingOnPlate2) {
     }
 }
 
-/*------------------------------------------- States ----------------------------------------------------*/
-
-// Melee proc	State -> 2
 if (mouse_check_button_pressed(mb_left) && state != 5 && canMelee) {
     instance_create_layer(x, y, "VisibleObjects", obj_melee);
+    audio_play_sound(snd_whoosh2, 1, false);
     if (sign(image_xscale) == 1) {
         instance_create_layer(x + 125, y, "VisibleObjects", obj_scratch);
     } else {
@@ -204,12 +210,10 @@ if (mouse_check_button_pressed(mb_left) && state != 5 && canMelee) {
     state = 2;
 }
 
-// Fireball proc	State -> 3
 if (mouse_check_button_pressed(mb_right)) {
     state = 3;
 }
 
-// Dash proc	State -> 1
 if (canDash && key_dash && dashReset) {
     dashReset = false;
     alarm[3] = 60;
@@ -226,25 +230,23 @@ if (key_firebreath && canFirebreath && firebreathUnlocked) {
     alarm[2] = 250;
     
     if (sign(image_xscale) > 0) {
-        instance_create_layer(x + 49, y - 15, "VisibleObjects", obj_fireBreathEffect); // effect
-        instance_create_layer(x + 115, y, "VisibleObjects", obj_fireBreath); // hitbox
+        instance_create_layer(x + 49, y - 15, "VisibleObjects", obj_fireBreathEffect);
+        instance_create_layer(x + 115, y, "VisibleObjects", obj_fireBreath);
     } else {
-        instance_create_layer(x - 49, y - 15, "VisibleObjects", obj_fireBreathEffect); // effect
-        instance_create_layer(x - 115, y, "VisibleObjects", obj_fireBreath); // hitbox
+        instance_create_layer(x - 49, y - 15, "VisibleObjects", obj_fireBreathEffect);
+        instance_create_layer(x - 115, y, "VisibleObjects", obj_fireBreath);
     }
     
     state = 2;
 }
 
-if (state == 0) { // normal
+if (state == 0) {
     show_debug_message("STATE = NORMAL");
 
-    // Wall sliding logic
     if ((wallLeft || wallRight) && !place_meeting(x, y + 1, obj_block) && !place_meeting(x, y + 1, obj_wall) && vsp > 0) {
         vsp = min(vsp, wallSlideSpeed);
     }
 
-    // Wall Jump Proc
     if (key_jump_pressed && (wallLeft || wallRight) && !place_meeting(x, y + 1, obj_block) && !place_meeting(x, y + 1, obj_wall)) {
         vsp = -jumpHeight;
         wallJumping = true;
@@ -253,11 +255,11 @@ if (state == 0) { // normal
         if (wallLeft) {
             hsp = walkspeed;
             lastWallJumpDir = 1;
-            image_xscale = 0.75; 
+            image_xscale = 0.75;
         } else if (wallRight) {
             hsp = -walkspeed;
             lastWallJumpDir = -1;
-            image_xscale = -0.75; 
+            image_xscale = -0.75;
         }
     } else if (place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_wall)) {
         wallJumping = false;
@@ -267,7 +269,6 @@ if (state == 0) { // normal
         var moving = key_right - key_left;
         hsp = moving * walkspeed;
 
-        // Only allow change of image_xscale when not wall jumping
         if (moving != 0) {
             flip_player(0.75 * sign(moving));
         }
@@ -277,7 +278,6 @@ if (state == 0) { // normal
     
     vsp += grvt;
 
-    // Coyote time
     if (onGround) {
         coyoteTimer = coyoteTime;
         hasJumped = false;
@@ -289,8 +289,7 @@ if (state == 0) { // normal
         hasJumped = false;
     }
 
-    // Jump Proc
-    if (key_jump_pressed && ((onGround || coyoteTimer > 0) || isOnPlatform || onPressurePlate)) {
+    if (key_jump_pressed && (onGround || coyoteTimer > 0)) {
         vsp = -jumpHeight;
         isJumping = true;
         jumpPressedTime = 1;
@@ -308,7 +307,7 @@ if (state == 0) { // normal
     }
 }
 
-if (state == 1) { // dash
+if (state == 1) {
     show_debug_message("STATE = DASHING");
     
     sprite_index = spr_player_dash;
@@ -317,7 +316,6 @@ if (state == 1) { // dash
     hsp = lengthdir_x(dashSpeed, dashDirection);
     vsp = lengthdir_y(dashSpeed, dashDirection);
 
-    // Create a dash trail instance
     var trail = instance_create_depth(x, y, depth + 1, obj_dashTrail);
     with (trail) {
         sprite_index = other.sprite_index;
@@ -335,13 +333,13 @@ if (state == 1) { // dash
     }
 }
 
-if (state == 2) { // melee
+if (state == 2) {
     show_debug_message("STATE = MELEE");
     image_speed = 0.75;
     vsp += grvt;
     
     if (image_index >= sprite_get_number(spr_player_sideAttack) - 1) {
-        state = 0;  // Return to normal state after the animation finishes
+        state = 0;
     }
     
     if (vsp != 0 && !place_meeting(x, y + sign(vsp), obj_block)) {
@@ -359,16 +357,14 @@ if (state == 2) { // melee
     if (keyboard_check_pressed(ord("X"))) state = 0;
 }
 
-if (state == 3) { // fireball
+if (state == 3) {
     show_debug_message("STATE = FIREBALL");
     image_speed = 0.75;
     vsp += grvt;
     
-    // Allow movement during fireball state
     var moving = key_right - key_left;
     hsp = moving * walkspeed;
     
-    // Only allow change of image_xscale when not wall jumping
     if (moving != 0) {
         flip_player(0.75 * sign(moving));
     }
@@ -388,7 +384,7 @@ if (state == 3) { // fireball
     if (keyboard_check_pressed(ord("X"))) state = 0;
 }
 
-if (state == 4 && instance_exists(global.pullingCrate)) { // crate pushing
+if (state == 4 && instance_exists(global.pullingCrate)) {
     vsp += grvt;
     if (!place_meeting(global.pullingCrate.x, global.pullingCrate.y + 1, obj_block)) {
         state = 0;
@@ -416,10 +412,8 @@ if (key_pull && state != 4) {
     global.pullingCrate = noone;
 }
 
-if (state == 5) { // staggered
+if (state == 5) {
     show_debug_message("STATE = STAGGERED");
-    
-    // hsp = sign(image_index) * 6;
     
     if (isStaggered) {
         vsp = -3;
@@ -450,11 +444,9 @@ if (state == 5) { // staggered
     }
 }
 
-// Can't walk out of bounds
 x = clamp(x, 0, room_width);
 y = clamp(y, 0, room_height);
 
-// Flash player red when hurt
 if (isFlashing) {
     flash_timer -= 1 / room_speed;
     if (flash_timer > 0) {

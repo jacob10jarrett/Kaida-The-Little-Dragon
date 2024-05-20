@@ -1,11 +1,10 @@
 y += pp_vertical_speed;
 
 if (activated) {
-    y = obj_MovingPlatform3.y - sprite_height;
+    y = obj_MovingPlatform2.y - sprite_height;
 }
 
-// Check if the player is directly above the plate
-var playerCheck = instance_place(x, y - sprite_height / 2, obj_player);
+var playerCheck = instance_place(x, y - 1, obj_player);
 
 if (playerCheck) {
     playerAbove = true;
@@ -15,16 +14,27 @@ if (playerCheck) {
 
 if (playerAbove && !activated && canBeActivated) {
     with (obj_MovingPlatform2) {
-        vertical_speed = 4;
-        alarm[0] = 540;
+        if (!moving) { 
+            vertical_speed = 4;
+            alarm[0] = 540;
+            soundPlayed = false; 
+        }
     }
     activated = true;
     canBeActivated = false;
 
-    if (!audio_is_playing(snd_pressureplate)) {
-        audio_play_sound(snd_pressureplate, 0, false);
+    if (!soundPlayed) { 
+        if (!audio_is_playing(snd_pressureplate) && !audio_is_playing(snd_rumble)) {
+            audio_play_sound(snd_pressureplate, 0, false);
+        }
+        audio_play_sound(snd_rumble, 0, 0.1, 1, false);
+        soundPlayed = true; 
     }
-    audio_play_sound(snd_rumble, 0, 0.1, 1, false);
+
     alarm[2] = 1080;
 }
 
+if (!playerAbove && !activated && y != initial_y) {
+    y = initial_y;
+    x = initial_x;
+}
