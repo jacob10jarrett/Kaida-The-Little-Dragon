@@ -1,4 +1,4 @@
-alarm[0] = room_speed * 1.5; 
+alarm[0] = 360; 
 global.expanding = false;
 
 global.darknessSurface = -1; 

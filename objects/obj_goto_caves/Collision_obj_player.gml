@@ -1,2 +1,2 @@
-room_goto(rm_caves);
+room_goto_next()
 

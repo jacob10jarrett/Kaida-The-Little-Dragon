@@ -1,14 +1,27 @@
-if (can_control) {
-    key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
-    key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
-    key_up = keyboard_check(vk_up);
-    key_down = keyboard_check(vk_down);
-    key_dash = keyboard_check_pressed(vk_shift);
-    key_jump = keyboard_check(vk_space);
-    key_jump_pressed = keyboard_check_pressed(vk_space);
-    key_pull = keyboard_check(ord("E"));
-    key_firebreath = keyboard_check_pressed(vk_tab);
-}
+if (!jumped_out) {
+    jumped_out = true;
+} else {
+    if (can_control && !global.dialogue_active) {
+        key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
+        key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
+        key_up = keyboard_check(vk_up);
+        key_down = keyboard_check(vk_down);
+        key_dash = keyboard_check_pressed(vk_shift);
+        key_jump = keyboard_check(vk_space);
+        key_jump_pressed = keyboard_check_pressed(vk_space);
+        key_pull = keyboard_check(ord("E"));
+        key_firebreath = keyboard_check_pressed(vk_tab);
+    } else {
+        key_left = 0;
+        key_right = 0;
+        key_up = 0;
+        key_down = 0;
+        key_dash = 0;
+        key_jump = 0;
+        key_jump_pressed = 0;
+        key_pull = 0;
+        key_firebreath = 0;
+    }
 
 var playerMovement = key_right - key_left;
 var onGround = place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_crate) || place_meeting(x, y + 1, obj_MovingAirPlatform) || instance_place(x, y + 1, obj_MovingPlatform3) || instance_place(x, y + 16, obj_PressurePlate2);
@@ -456,5 +469,7 @@ if (isFlashing) {
         flash_color = original_color;
     }
 }
+}
 
 check_and_fix_collision();
+

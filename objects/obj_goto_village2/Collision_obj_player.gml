@@ -1,1 +1,1 @@
-room_goto(rm_village2);
+room_goto_next()

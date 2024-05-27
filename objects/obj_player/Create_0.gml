@@ -8,6 +8,7 @@ key_jump_pressed = false;
 key_pull = false;
 key_firebreath = false;
 
+jumped_out = false;
 hsp = 0;
 vsp = 0;
 grvt = 0.7;

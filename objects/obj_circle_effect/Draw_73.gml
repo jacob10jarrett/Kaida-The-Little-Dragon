@@ -2,8 +2,8 @@ if (surface_exists(global.darknessSurface)) {
     surface_set_target(global.darknessSurface);
     draw_clear_alpha(c_black, 1);
     
-    var px = obj_player.x;
-    var py = obj_player.y;
+    var px = obj_player_reference.x;
+    var py = obj_player_reference.y;
 
     gpu_set_blendmode(bm_subtract);
     draw_circle_color(px, py, global.maskRadius, c_white, c_white, false);
