@@ -1,5 +1,4 @@
-room_goto(rm_cave_to_village_text);
-
+room_goto(rm_village2)
 
 
 

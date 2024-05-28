@@ -5,7 +5,7 @@
   "bbox_bottom": 143,
   "bbox_left": 0,
   "bbox_right": 143,
-  "bbox_top": 5,
+  "bbox_top": 6,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9e04322c-bb78-43ee-b702-12507913cc46",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ac72d8a4-451f-4202-96e9-46ba9a9f5e1a",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 144,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9865d3aa-4aed-4947-bd34-7eb28b91a58c","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9d7ac223-6d6a-4513-8bf1-17f90b4da89c","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9e04322c-bb78-43ee-b702-12507913cc46","path":"sprites/spr_character/spr_character.yy",},},},"Disabled":false,"id":"e4728307-6c7d-4af4-ab9a-8f23cc84d5ea","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ac72d8a4-451f-4202-96e9-46ba9a9f5e1a","path":"sprites/spr_character/spr_character.yy",},},},"Disabled":false,"id":"07a28f50-5164-42af-b213-519a67756daa","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

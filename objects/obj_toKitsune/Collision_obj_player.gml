@@ -1,3 +1,3 @@
-room_goto(rm_kitsune)
+room_goto(rm_mountain_to_kitsune_text)
 
 

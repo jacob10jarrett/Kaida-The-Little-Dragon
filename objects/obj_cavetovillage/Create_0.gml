@@ -2,8 +2,8 @@
 text_index = 0;
 current_texts = ["", ""];
 texts = [
-    "Kaida learned the ways passed down by her ancestors.", 
-	"The flames within her burned brighter than ever before."
+    "Kaida mastered the ancient ways of her ancestors.",
+    "The flames within her heart blazed with newfound strength and determination."
 ];
 text_display_time = 180;  
 text_fade_time = 120;   
