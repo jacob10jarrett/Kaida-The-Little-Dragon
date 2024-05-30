@@ -26,7 +26,6 @@ for (var i = 0; i < array_length(texts); i++) {
 
 if (fade_stages[array_length(texts) - 1] == 2) {
     fade_alpha += 1 / text_fade_time;
-	audio_sound_gain(snd_wind, 0, 180)
     if (fade_alpha >= 1) {
         room_goto_next(); 
     }

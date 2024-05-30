@@ -8,4 +8,8 @@ if (!global.dialogue_active) && room != rm_prologue {
     global.showUI = true;
 }
 
+if room = rm_intermission {
+	global.showUI = false;
+}
+
 

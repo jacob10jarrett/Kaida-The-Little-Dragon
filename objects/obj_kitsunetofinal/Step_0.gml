@@ -25,9 +25,28 @@ for (var i = 0; i < array_length(texts); i++) {
 }
 
 if (fade_stages[array_length(texts) - 1] == 2) {
-    fade_alpha += 1 / text_fade_time;
-    audio_sound_gain(snd_nature2, 0, 180);
-    if (fade_alpha >= 1) {
-        room_goto_next(); 
+    if (stage == 1) {
+        // Transition to stage 2 texts
+        texts = texts_stage2;
+		audio_sound_gain(snd_suspense, 0, 5000)
+        array_resize(current_texts, array_length(texts));
+        array_resize(step_counts, array_length(texts));
+        array_resize(fade_stages, array_length(texts));
+        array_resize(fade_steps, array_length(texts));
+        for (var i = 0; i < array_length(texts); i++) {
+            fade_steps[i] = text_fade_time / string_length(texts[i]);
+            step_counts[i] = 0;
+            fade_stages[i] = 0;
+            current_texts[i] = "";
+        }
+        stage = 2;
+    } else {
+        // Transition to the next room
+        fade_alpha += 1 / text_fade_time;
+        if (fade_alpha >= 1) {
+            room_goto_next(); 
+        }
     }
 }
+
+

@@ -1,1 +1,1 @@
-room_goto(rm_mountain_to_kitsune_text);
+instance_create_layer(0, 0, "Instances", obj_fade_out);

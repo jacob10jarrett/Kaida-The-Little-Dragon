@@ -12,7 +12,7 @@ for (var i = 0; i < array_length(texts); i++) {
     draw_text(room_width / 2, y_pos, current_texts[i]);
 }
 
-if (fade_stages[array_length(texts) - 1] == 2) {
+if (fade_stages[array_length(texts) - 1] == 2 && stage == 2) {
     draw_set_alpha(fade_alpha);
     draw_set_color(c_black);
     draw_rectangle(0, 0, room_width, room_height, false);

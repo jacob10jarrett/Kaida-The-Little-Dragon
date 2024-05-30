@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snd_castle.mp3",
   "type": 1,
-  "volume": 1.0,
+  "volume": 0.3,
 }

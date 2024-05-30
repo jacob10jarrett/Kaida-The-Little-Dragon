@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "rm_kitsune_to_finalboss_text",
-  "creationCodeFile": "",
+  "creationCodeFile": "rooms/rm_kitsune_to_finalboss_text/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

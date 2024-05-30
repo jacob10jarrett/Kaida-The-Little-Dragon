@@ -1,1 +1,1 @@
-audio_stop_sound(snd_finalboss);
+audio_sound_gain(snd_finalboss, 0, 4000)

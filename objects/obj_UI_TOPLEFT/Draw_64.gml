@@ -3,7 +3,7 @@ if (global.showUI) {
 	
 if (instance_exists(obj_player))
 	{
-		//draw_sprite(spr_hpBar, 0, 20, 60);					
+		//draw_sprite(spr_hpBar, 0, 20, 60);	
 		var scale_factor = 1.5;
 		for (var i=0; i<global.hp; i++)	/* draw hearts */
 		{

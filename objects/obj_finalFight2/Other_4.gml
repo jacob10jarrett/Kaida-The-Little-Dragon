@@ -1,0 +1,1 @@
+audio_play_sound(snd_finalboss2, 1, true);

@@ -22,6 +22,11 @@ if (!jumped_out) {
         key_pull = 0;
         key_firebreath = 0;
     }
+	
+if (room == rm_intermission) {
+	canDash = false;
+    hsp *= 0.4;
+}
 
 var playerMovement = key_right - key_left;
 var onGround = place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_crate) || place_meeting(x, y + 1, obj_MovingAirPlatform) || instance_place(x, y + 1, obj_MovingPlatform3) || instance_place(x, y + 16, obj_PressurePlate2);
@@ -162,7 +167,6 @@ if (global.hp <= 0) {
 var isMovingDown = (pressurePlate != noone) && (pressurePlate.pp_vertical_speed < 0);
 var isFallingOnPlate2 = (vsp > 0 || vsp < 0) && isMovingDown && pressurePlate;
 
-// Adjust animation when player is on obj_PressurePlate2
 if (onPressurePlate || isFallingOnPlate2) {
     if (hsp == 0) {
         sprite_index = spr_player_idle;
