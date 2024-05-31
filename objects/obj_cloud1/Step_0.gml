@@ -1,0 +1,1 @@
+x += parallax_speed * direction;

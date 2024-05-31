@@ -1,1 +1,0 @@
-audio_sound_gain(snd_finalboss, 0, 4000)

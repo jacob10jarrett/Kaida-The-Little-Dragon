@@ -28,7 +28,7 @@ if (fade_stages[array_length(texts) - 1] == 2) {
     if (stage == 1) {
         // Transition to stage 2 texts
         texts = texts_stage2;
-		audio_sound_gain(snd_suspense, 0, 5000)
+		audio_sound_gain(snd_wind, 0, 5000)
         array_resize(current_texts, array_length(texts));
         array_resize(step_counts, array_length(texts));
         array_resize(fade_stages, array_length(texts));
